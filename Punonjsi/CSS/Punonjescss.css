@@ -1,3 +1,72 @@
-.top-page{
+#top-page{
+    width: 100%;
     display: inline-flex;
+    color: blueviolet;
+    border-color: brown;
+    border-style: double;
+    margin-bottom: 3%;
 }
+#top-page-left{
+    width: 50%;
+    text-align: center;
+    border-color: red;
+    border-style: double;
+}
+
+#top-page-right{
+    width: 50%;
+    text-align: center;
+    border-color: blue;
+    border-style: double;
+}
+
+#page-down{
+    width: 100%;
+    display: inline-flex;
+    border-color: brown;
+    border-style: double;
+}
+
+#page-down-majtas{
+    width: 10%;
+    border-color: green;
+    border-style: double;
+    text-align: center;
+}
+#page-down-djathtas
+{
+    width: 900%;
+    display: inline-flex;
+    border-color: blue;
+    border-style: double;
+}
+
+#todo-part{
+    width: 33%;
+    margin-left: 3px;
+    
+}
+
+#doing-part{
+    width: 33%;
+    margin-left: 3px;
+  
+}
+
+#done-part{
+    width: 33%;
+    margin-left: 3px;
+}
+
+th{
+    text-align: center;
+}
+
+table, th, td {
+   
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 3%;
+    text-align: center;
+  }
+
