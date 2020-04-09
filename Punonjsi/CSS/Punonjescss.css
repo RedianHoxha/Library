@@ -1,44 +1,47 @@
+html, body {
+    height: 99%;
+    margin: 0;
+  }
+
+
 #top-page{
     width: 100%;
+    height: 20%;
     display: inline-flex;
-    color: blueviolet;
-    border-color: brown;
+    color: black;
+    border-color: lightslategray;
     border-style: double;
-    margin-bottom: 3%;
+    background-color:lightcyan;
 }
 #top-page-left{
-    width: 50%;
+    width: 70%;
     text-align: center;
-    border-color: red;
-    border-style: double;
 }
 
 #top-page-right{
-    width: 50%;
+    width: 30%;
     text-align: center;
-    border-color: blue;
-    border-style: double;
+
 }
 
 #page-down{
     width: 100%;
+    height: 80%;
     display: inline-flex;
     border-color: brown;
     border-style: double;
+    background-color:lightslategrey;
 }
 
 #page-down-majtas{
     width: 10%;
-    border-color: green;
-    border-style: double;
     text-align: center;
 }
 #page-down-djathtas
 {
-    width: 900%;
+    width: 90%;
     display: inline-flex;
-    border-color: blue;
-    border-style: double;
+
 }
 
 #todo-part{
@@ -65,8 +68,29 @@ th{
 table, th, td {
    
     border-collapse: collapse;
-    border: 1px solid black;
+
     padding: 3%;
     text-align: center;
   }
 
+.button{
+    margin-top: 4%;
+    border-radius: 12px;
+    background-color: lightskyblue;
+    border: 2px solid lightgrey;
+    cursor: pointer;
+    font-size: 160%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.buttonansore{
+    background-color: lightblue;
+    border: 2px solid lightgrey;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-top: 6%;
+    margin-bottom: 5%;
+    font-size: 70%;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top:35%;
+}
