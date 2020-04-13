@@ -41,7 +41,8 @@ p{
     
 
 }
-#tabela-dhurime{
+#grid{
+    margin-top: 5%;
     padding-top: 15px;
     width: 80%;
     border: 1px solid black;
@@ -53,6 +54,7 @@ p{
  th, td {
 
     text-align: center;
+    border: 1px solid gray;
   }
   tr {
       border: 1px solid gray;
@@ -67,16 +69,82 @@ input[type=button]{
     border-radius: 3px;
     text-align: center;
     margin-bottom: 1px;
-    background-color: khaki;
+    background-color: lightgray;
 }
-input[type=submit]{
-    border-radius: 3px;
-    text-align: center;
-    margin-bottom: 1px;
-    background-color: khaki;
+
+#button-shto{
+    border-radius: 3px !important;
+    text-align: center !important;
+    margin-bottom: 1px !important;
+    background-color:lightgray !important;
+    padding: 3px 3px !important;
+    font-size: 15px !important;
 }
+
+
+.btn-primary.focus{
+    color: black !important;
+}
+
+.btn-primary {
+    color: black !important;
+    background-color: seashell;
+}
+
+.btn-group-lg {
+     padding: 1% 1%; 
+    font-size: 1%;
+}
+
+.btn-primary{
+
+}
+
+
 
 #button-perfundim{
     display: inline-flex;
     margin-left: 80%;
+    padding-top: 3%;
 }
+
+
+.modal-content{
+    background-color:lightblue !important;
+}
+
+
+
+.modal-title{
+    text-align: center;
+
+}
+
+.modal-body{
+    background-color: salmon;
+}
+
+.modal-footer{
+    text-align: center;
+}
+
+
+#test{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#btnEdit{
+    margin-right: 0px;
+    margin-left: 10%;
+    text-align: center;
+    background-color: lightgreen;
+}
+
+#btndelete{
+    background-color: lightcoral;
+    margin-left: 0px;
+    text-align: center;
+}
+
+
