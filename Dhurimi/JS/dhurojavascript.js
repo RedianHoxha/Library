@@ -40,11 +40,6 @@ $(document).ready(function () {
             { field: 'Pershkrimi', sortable: true ,editor: true},
             { field: 'Zhanri', sortable: true ,editor: false},
             { field: 'Cmimi',editor: true},
-            // { field: 'Titulli', title: 'Nationality', sortable: true },
-            // { field: 'Autori', sortable: true, type: 'date' },
-            // { field: 'IsActive', title: 'Active?', type: 'checkbox', width: 90, align: 'center' },
-            //{ width: 56, align: 'center', renderer: renderer,width: 64, tmpl: '<span class="material-icons gj-cursor-pointer">delete</span>', align: 'center', events: { 'click': Delete }}
-            //{field : 'Action',width: 56, align: 'center', renderer: renderer, width: 64, tmpl: '<span class="material-icons gj-cursor-pointer">delete</span>', align: 'center', events: { 'click': Delete }},
             { width: 56, align: 'center', renderer: renderer },
             { width: 64, tmpl: '<span class="material-icons gj-cursor-pointer">delete</span>', align: 'center', events: { 'click': Delete } }
         ],
