@@ -1,3 +1,37 @@
+
+<?php 
+
+$servername = "localhost";
+$user = 'root';
+$password = '';
+$database = 'library';
+
+$conn = mysqli_connect($servername, $user, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+    $emri = $_POST['fname'];
+    $mbiemri = $_POST['lname'];
+    $email = $_POST['email'];
+    $telefoni = $_POST['tel'];
+    $adresa = $_POST['adresa'];
+
+
+
+    $sql = 'Insert into  useri (Emer,Mbiemer,Email,Tel,Adresa,Username,Password,Roli) 
+            values ($emri, $mbiemri,$email,$telefoni,$adresa,$emri+ " "+$mbiemri,$email,$emri);';
+
+    mysqli_query($conn, $sql); 
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +43,7 @@
             <div class="login100-pic js-tilt">
                 <img src="liber.svg" alt="libraria">
 </div>
-            <form class="login100-form validate-form">
+            <form class="login100-form validate-form" action="#" method="POST">
                 <span class="login100-form-title">
                  <h2> Faqe Anetaresie !</h2> 
                 </span>
