@@ -16,27 +16,15 @@ if (!$conn) {
     $emri = $_POST['fname'];
     $mbiemri = $_POST['lname'];
     $email = $_POST['email'];
-    $telefoni = $_POST['number'];
-    $adresa = $_POST['adress'];
-    $pass = $_POST['pass'];
-    $passconfirm = $_POST['passconf'];
-
-
-    echo  $emri;
-    echo  $mbiemri;
-    echo  $email;
-    echo  $telefoni;
-    echo  $adresa;
-    echo  $pass;
-    echo  $passconfirm;
+    $telefoni = $_POST['tel'];
+    $adresa = $_POST['adresa'];
 
 
 
+    $sql = 'Insert into  useri (Emer,Mbiemer,Email,Tel,Adresa,Username,Password,Roli) 
+            values ($emri, $mbiemri,$email,$telefoni,$adresa,$emri+ " "+$mbiemri,$email,$emri);';
 
-    // $sql = 'Insert into  useri (Emer,Mbiemer,Email,Tel,Adresa,Username,Password,Roli) 
-    //         values ($emri, $mbiemri,$email,$telefoni,$adresa,$emri+ " "+$mbiemri,$email,$emri);';
-
-    // mysqli_query($conn, $sql); 
+    mysqli_query($conn, $sql); 
 ?>
 
 
@@ -60,14 +48,14 @@ if (!$conn) {
                  <h2> Faqe Anetaresie !</h2> 
                 </span>
                 <div class="wrap-input100 validate-input" data-validate=" ss">
-                    <input class="input100" type="text" name="fname" placeholder="Emri juaj:">
+                    <input class="input100" type="text" name="text" placeholder="Emri juaj:">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate=" dd">
-                    <input class="input100" type="text" name="lname" placeholder="Mbiemri:">
+                    <input class="input100" type="text" name="text" placeholder="Mbiemri:">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -103,7 +91,7 @@ if (!$conn) {
                     </span>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Password eshte i domosdoshem.">
-                    <input class="input100" type="password" name="passconf" placeholder="Rikonfirmim passwordi:">
+                    <input class="input100" type="password" name="pass" placeholder="Rikonfirmim passwordi:">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-lock" aria-hidden="true"></i>
@@ -111,10 +99,9 @@ if (!$conn) {
                 </div>
                 
                 <div class="container-login100-form-btn">
-                <button type="submit" id="button-shto" class="login100-form-btn" onclick="">Regjistrohu !</button>
-                    <!-- <button class="login100-form-btn">
+                    <button class="login100-form-btn">
                         Regjistrohu !
-                    </button> -->
+                    </button>
                 </div>
 
                 
