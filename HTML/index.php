@@ -30,7 +30,7 @@
                 <div id="top-page">
                     <div id="top-page-pershendetje">
                         <p>Faleminderit qe po kontriboni ne pasurimine librarise sone!</p>
-                        <p> do te vendosim dhe nej dtae nej gje ketu</p>
+                        <p> Libraria jone eshte nje nder me te famshmet ne shqiperi</p>
                     </div>
               
                             <div id="person-form">
