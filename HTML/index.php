@@ -1,4 +1,6 @@
+<?php ?>
 <!DOCTYPE html>
+
 <html>
     <head>
         <link  href="../CSS/FormaDhurimeStilizime.css" rel="stylesheet" type="text/css">
@@ -12,16 +14,13 @@
         <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.css" rel="stylesheet" type="text/css" />
         <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.js" type="text/javascript"></script> 
         <script src="../JS/dhurojavascript.js"></script>
-
         <meta charset="utf-8">
-
         <title>Dhuro</title>
         <script>
             jQuery(document).ready(function(e) {
                 jQuery('#mymodal').trigger('click');
             });
         </script>
-
     </head>
     <body>
         <div id="full-page">
@@ -33,7 +32,6 @@
                         <p>Faleminderit qe po kontriboni ne pasurimine librarise sone!</p>
                         <p> do te vendosim dhe nej dtae nej gje ketu</p>
                     </div>
-
               
                             <div id="person-form">
                             
@@ -48,12 +46,10 @@
                                     </div>  
                             </div>
                         </div>
-
                         <div id="bottom-page">
                             <div id="liber-form">
                                 <div class="margin-top-10">
                                     <table id="grid">
-
                                     </table>
                                 </div>
                             </div>
@@ -62,7 +58,6 @@
                                 <button type="submit" id="button-shto" class="btn btn-primary btn-lg" onclick="">Shto</button>
                             </div>
             
-
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
@@ -110,10 +105,8 @@
                         </div>
                       </div>
                     
-
                 </div>
             </form>
         </div>
-
     </body>
 </html>

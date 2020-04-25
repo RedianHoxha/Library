@@ -1,7 +1,8 @@
 html, body {
     height: 97%;
     margin: 1px;
-    background-image: url(../../Foto/formback.jpg);
+    background-image: url("../FOTO/formback.jpg");
+   
   }
 
 #full-page{
