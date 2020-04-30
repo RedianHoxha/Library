@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../CSS/styleSara.css" />
+    <style>
+      /* .faleminderit {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        font-family: Century Gothic;
+        color: white;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.6s ease;
+        transform: translateY(-10px);
+      } */
+
+      form {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        font-family: Century Gothic;
+        color: white;
+      }
+      input {
+        margin: 14px;
+      }
+      .ok {
+        background: none;
+        border: none;
+        color: white;
+        font-size: unset;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 6px;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+      }
+
+      .ok:hover {
+        background: white;
+        border: none;
+        color: rgb(68, 173, 206);
+        font-size: unset;
+        margin: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+
+    <title>Forme dhurimi</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="nav">
+          <div class="logo">
+            <ul>
+              <li>
+                <img src="../FOTO/logo.png" />
+              </li>
+            </ul>
+          </div>
+
+          <ul>
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/Rreth nesh.html">Rreth nesh</a></li>
+            <li>
+              <div class="menu">
+                <button id="dd">Libraria jonë</button>
+
+                <ul>
+                  <li><a href="#">Autorët</a></li>
+                  <li><a href="#">Zhanret</a></li>
+                  <li><a href="#">Të dhuruar</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="../HTML/kontakti.html">Kontakti</a></li>
+            <li class="active"><a href="#">DHURO!</a></li>
+          </ul>
+        </div>
+        <div class="nav2">
+          <ul>
+            <li><a href="../HTML/NefoProfile.html">Profili</a></li>
+            <li><a href="../HTML/login.html">Identifikohu</a></li>
+          </ul>
+        </div>
+        <form>
+          <h1>Ju lutem vendosni të dhënat tuaja</h1>
+          <br />
+          <br />
+          Emri: <br />
+          <input type="text" placeholder="  Emri juaj" />
+          <br />
+          Emri i kompanisë: <br />
+          <input type="text" placeholder="  Emri kompanisë" />
+          <br />
+          Nr. telefoni: <br />
+          <input type="number" required placeholder="  Numri juaj" />
+          <br />
+          Email: <br />
+          <input type="email" required placeholder="  E-maili juaj" />
+          <br />
+          <br />
+
+          <button class="ok" type="submit">Ok</button>
+        </form>
+
+        <!-- <h1 class="faleminderit">
+          Faleminderit për kontributin tuaj. Do ju kontaktojmë së shpejti.
+        </h1> -->
+      </nav>
+    </header>
+  </body>
+</html>
