@@ -1,3 +1,4 @@
+
 <?php 
 
 $link = mysqli_connect("localhost", "root", "", "library");
@@ -12,9 +13,15 @@ if($link === false){
     $email = $_POST['email'];
     $telefoni = $_POST['tel'];
     $adresa = $_POST['adresa'];
+    $tabelamelibra =  $_POST['hiddenValue'];
 
- 
-// Attempt insert query execution
+ //echo $tabelamelibra;
+    // foreach($tabelamelibra as $value)
+    // {
+    //    echo $value;
+    // }
+
+//Attempt insert query execution
 $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Usename,Password,Roli)
 VALUES('$emri','$mbiemri', '$email', '$telefoni', '$adresa','$email','$email','$mbiemri')";
 if(mysqli_query($link, $sql)){

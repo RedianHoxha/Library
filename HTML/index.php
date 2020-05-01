@@ -43,19 +43,25 @@
                                         <p>Email</p><input type="text" id="email" name="email" autocomplete="off" placeholder="hoxharedian@gmail.com">
                                         <p>Telefon</p><input type="text" id="nr" name="tel" placeholder="0685308860" autocomplete="off">
                                         <p>Adresa</p><input type="text" id="adress"  name="adresa" placeholder="Ju lutem vendosni adresen" autocomplete="off">
+                                        <input type="hidden" name="hiddenValue" id="test">
                                     </div>  
                             </div>
                         </div>
                         <div id="bottom-page">
                             <div id="liber-form">
                                 <div class="margin-top-10">
-                                    <table id="grid">
+                                    <table id="grid" name="tablegrid">
+                                        <tr>
+                                            <td>redi</td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>
                             <div id="button-perfundim">   
                                 <button type="button" id="button-shto" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" value="Shto">New</button>   
-                                <button type="submit" id="button-shto" class="btn btn-primary btn-lg" onclick="">Shto</button>
+                                <button type="submit" id="button-shto" class="btn btn-primary btn-lg" onclick="getTable()">Shto</button>
+                                <!-- <button type="button" id="button-shto" class="btn btn-primary btn-lg" onclick="getTable()" value="Shto">test</button>   
+                                 -->
                             </div>
             
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -75,9 +81,9 @@
                                         <label for="autor">Autori:</label>
                                         <br> <input type='text'  id="autor" name='autor'/></br>
                                         <label for="pershkrim">Pershkrim:</label>
-                                        <br><textarea id="pershkrim" rows="4" cols="50"></textarea><br>
+                                        <br><textarea id="pershkrim" rows="4" cols="50" name="pershkrim"></textarea><br>
                                         <label for="zhanri">Zgjidhni zhanrin e librit:</label><br>
-                                                <select id="zhanri">
+                                                <select id="zhanri" name="zhanri">
                                                     <option value="fantazi">Fantazi</option>
                                                     <option value="filozofik">Filozofik</option>
                                                     <option value="humor">Humor</option>
