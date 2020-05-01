@@ -51,6 +51,9 @@
                             <div id="liber-form">
                                 <div class="margin-top-10">
                                     <table id="grid" name="tablegrid">
+                                        <tr>
+                                            <td>redi</td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>

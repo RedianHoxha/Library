@@ -1,7 +1,7 @@
 html, body {
     height: 97%;
     margin: 1px;
-    background-image: url("../FOTO/formback.jpg");
+    background-image: url("../FOTO/home2.jpg");
    
   }
 
@@ -33,6 +33,7 @@ html, body {
 
 p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
 }
 
 #bottom-page{

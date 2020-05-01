@@ -15,20 +15,20 @@ if($link === false){
     $adresa = $_POST['adresa'];
     $tabelamelibra =  $_POST['hiddenValue'];
 
-echo $tabelamelibra;
+ //echo $tabelamelibra;
     // foreach($tabelamelibra as $value)
     // {
     //    echo $value;
     // }
 
-// Attempt insert query execution
-// $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Usename,Password,Roli)
-// VALUES('$emri','$mbiemri', '$email', '$telefoni', '$adresa','$email','$email','$mbiemri')";
-// if(mysqli_query($link, $sql)){
-//     echo "Records added successfully.";
-// } else{
-//     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-// }
+//Attempt insert query execution
+$sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Usename,Password,Roli)
+VALUES('$emri','$mbiemri', '$email', '$telefoni', '$adresa','$email','$email','$mbiemri')";
+if(mysqli_query($link, $sql)){
+    echo "Records added successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
  
 mysqli_close($link);
 
