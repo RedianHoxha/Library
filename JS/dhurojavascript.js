@@ -6,10 +6,7 @@ var renderer;
 
 var isdelete=false;
 renderer = function (value, record, $cell, $displayEl, idel) {
-    // if(isdelete)
-    // {
-    //     return ;
-    // }
+
     var $editBtn = $('<i class="fa fa-pencil gj-cursor-pointer" data-key="' + idel + '"></i>'),
         $updateBtn = $('<i class="fa fa-save gj-cursor-pointer" data-key="' + idel + '"></i>').hide();
         $editBtn.on('click', function (e) {
@@ -38,7 +35,7 @@ $(document).ready(function () {
             { field: 'Titulli', sortable: true ,editor: true},
             { field: 'Autori', sortable: true ,editor: true},
             { field: 'Pershkrimi', sortable: true ,editor: true},
-            { field: 'Zhanri', sortable: true ,editor: false},
+            { field: 'Zhanri', sortable: true ,editor: true},
             { field: 'Cmimi',editor: true},
             { width: 56, align: 'center', renderer: renderer },
             { width: 64, tmpl: '<span class="material-icons gj-cursor-pointer">delete</span>', align: 'center', events: { 'click': Delete } }
@@ -105,43 +102,6 @@ function returnLibrari(){
     return this.Libraria;
 }
 
-// function shfaq()
-// {
-  
-//     var isbn = document.getElementById("isbn").value;
-//     var titulli = document.getElementById("titull").value;
-//     var autori = document.getElementById("autor").value;
-//     var pershkrimi = document.getElementById("pershkrim").value;
-//     var e = document.getElementById("zhanri");
-//     var zhanrilibrit = e.options[e.selectedIndex].value;
-//     var cmim= document.getElementById("cmim").value;
-
-
-
-//     var table = document.getElementById("grid");
- 
-//     var row = table.insertRow(i);
-
-//     var id=row.insertCell(0);
-//     var Isbn = row.insertCell(1);
-//     var titull = row.insertCell(2);
-//     var autor = row.insertCell(3);
-//     var zhanri = row.insertCell(4);
-//     var pershkrim = row.insertCell(5);
-//     var cmimi = row.insertCell(6);
-//     var actionedit =row.insertCell(7);
-
-//     id.innerHTML=i;
-//     Isbn.innerHTML = isbn;
-//     titull.innerHTML = titulli;
-//     autor.innerHTML = autori;
-//     pershkrim.innerHTML =pershkrimi;
-//     zhanri.innerHTML = zhanrilibrit;
-//     cmimi.innerHTML =cmim;
-//     actionedit.innerHTML= "<button id='btnEdit' onclick='edito()';>Edit</button> <button id='btndelete' onclick='Delete("+(i)+",event)';>Delete</button>";
-//     i=i+1;
-//     clear();
-// }
 
 function clear()
 {
@@ -156,5 +116,45 @@ function clear()
 }
 
 
+var Liber=
+{
+    isbn : "",
+    titull : "",
+    autor : "",
+    pershkrim : "",
+    zhanri : "",
+    cmimi : ""
+}
 
 
+function getTable()
+{
+    var arraymelibra = [];
+    var oTable = document.getElementById('grid');
+    var rowLength = oTable.rows.length;
+    for (i = 1; i < rowLength; i++)
+    {
+        var row = oTable.rows.item(i).cells;
+        //Liber = new Objectliber();
+        Liber = {};
+        Liber.isbn = row[1].innerText;
+        Liber.titull = row[2].innerText;
+        Liber.autor = row[3].innerText;
+        Liber.pershkrim = row[4].innerText;
+        Liber.zhanri = row[5].innerText;
+        Liber.cmimi = row[6].innerText;
+
+        arraymelibra.push(Liber);
+  
+    }
+
+    //alert(arraymelibra.length);  
+    $("#test").val(JSON.stringify(arraymelibra));
+    localStorage.setItem("libradb",JSON.stringify(arraymelibra));
+   
+}
+
+function shefi()
+{
+    alert("JS eshte shefi");
+}
