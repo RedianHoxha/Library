@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+             .menu ul {
+  position: fixed;
+  background: white;
+  margin-top: 3%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s ease;
+  transform: translateY(-10px);
+} 
+
+.menu a {
+  color: rgb(68, 173, 206);
+  background: white;
+  margin-top: 10px;
+}
+
+.menu ul li a:hover {
+  background: rgb(68, 173, 206);
+  border: none;
+  color: white;
+  font-size: unset;
+
+  align-items: center;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav{
+  
+  margin-top: 1%;
+  margin-left: 4%;
+}
+
+.nav2 {
+
+  margin-top: 1%;
+}
+
+
+ul li.active a {
+  background-color: white;
+  color: rgb(68, 173, 206);
+}
+
+ul li a:hover {
+  background-color: white;
+  color: rgb(68, 173, 206);
+  transition: 0.6s ease;
+}
+
+ul {
+  list-style-type: none;
+ display: flex;
+  
+}
+ul li {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+#dd {
+  background: none;
+  border: none;
+  color: white;
+  font-size: unset;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+#dd:hover {
+  background: white;
+  border: none;
+  color: rgb(68, 173, 206);
+  font-size: unset;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.6s ease;
+} 
+
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+#toppage{
+    width: 100%;
+    height: 40%;
+    background-color: blue;
+}
+#bottompage{
+    width: 80%;
+    height: 50%;
+    background-color: chartreuse;
+}
+
+#tegjithe{
+    display: flex;
+}
+#left{
+    float: left;
+    display: flex;
+}
+
+#right{margin-top: 2%;
+   float: left;
+   position: relative;
+    display: flex;
+}
+
+        </style>
+
+    </head>
+    <body>
+        <div id="toppage">
+        
+            <!-- <div class="nav">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Rreth nesh</a></li>
+                  <li>
+                    <div class="menu">
+                      <button id="dd">Libraria jonë</button>
+    
+                      <ul>
+                        <li><a href="#">Autorët</a></li>
+                        <li><a href="#">Zhanret</a></li>
+                        <li><a href="#">Të dhuruar</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Kontakti</a></li>
+                  <li class="active"><a href="index.php">DHURO!</a></li>
+                  <li class="active"><a href="#">DHURO!</a></li>
+                </ul>
+              </div>
+              <div class="nav2">
+                <ul>
+                  <li><a href="#">Profili</a></li>
+                  <li><a href="#">Identifikohu</a></li>
+                </ul>
+              </div>
+
+            </div> -->
+            <div id="tegjithe">
+                <div id="left">
+                    <input type="button" value="Home">
+                    <input type="button" value="About">
+                    <input type="button" id="dd" value="Libraria jone">
+                    <ul>
+                        <li><a href="#">Autorët</a></li>
+                        <li><a href="#">Zhanret</a></li>
+                        <li><a href="#">Të dhuruar</a></li>
+                      </ul>
+                    <input type="button" value="Kontakti">
+                </div>
+                <div id="right">
+
+                    <input type="button" value="Profili">
+                    <input type="button" value="identifikohu">
+                </div>
+            </div>
+
+        <div id="bottompage">
+            <p>hello</p>
+
+
+        </div>
+    </body>
+</html>

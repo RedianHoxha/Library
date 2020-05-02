@@ -24,95 +24,133 @@
     </head>
     <body>
         <div id="full-page">
-            
-            <form method="POST" action="../PHP/rregjistroliberphp.php" id="formadhurimit">    
-            
-                <div id="top-page">
-                    <div id="top-page-pershendetje">
-                        <p>Faleminderit qe po kontriboni ne pasurimine librarise sone!</p>
-                        <p> Libraria jone eshte nje nder me te famshmet ne shqiperi</p>
-                    </div>
-              
-                            <div id="person-form">
+            <div id="back">
+            <button type="button" class="btn btn-primary btn-outline-info btn-info  ">Kthehu ne Home</button>
+            </div>
+            <div id="fq">
+                <form method="POST" action="../PHP/rregjistroliberphp.php" id="formadhurimit">    
+                
+                    <div id="top-page">
+                        <div id="top-page-pershendetje" >
+                            <p> Ju lutem plotesoni te dhenat e kerkuara</p>
                             
-                                    <div id="fullname">
-                                        <p id="txt">First name<p><input type="text" id="fname" name="fname" placeholder="Redian" autocomplete="off">
-                                        <p id="txt">Last name<p><input type="text" id="lname" name="lname" placeholder="Hoxha" autocomplete="off">
+                            </div>
+                
+                                <!-- <div id="person-form">
+                                
+                                        <div id="fullname">
+                                            <p id="txt">First name<p><input type="text" id="fname" name="fname" placeholder="Redian" autocomplete="off">
+                                            <p id="txt">Last name<p><input type="text" id="lname" name="lname" placeholder="Hoxha" autocomplete="off">
+                                        </div>
+                                        <div id="contact">
+                                            <p>Email</p><input type="text" id="email" name="email" autocomplete="off" placeholder="hoxharedian@gmail.com">
+                                            <p>Telefon</p><input type="text" id="nr" name="tel" placeholder="0685308860" autocomplete="off">
+                                            <p>Adresa</p><input type="text" id="adress"  name="adresa" placeholder="Ju lutem vendosni adresen" autocomplete="off">
+                                            <input type="hidden" name="hiddenValue" id="test">
+                                        </div>  
+                                </div> -->
+                                <div id="fullname">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="fname" name="fname">First Name</span>
+                                        </div>
+                                    <input type="text" class="form-control" id="fname" name="fname">
                                     </div>
-                                    <div id="contact">
-                                        <p>Email</p><input type="text" id="email" name="email" autocomplete="off" placeholder="hoxharedian@gmail.com">
-                                        <p>Telefon</p><input type="text" id="nr" name="tel" placeholder="0685308860" autocomplete="off">
-                                        <p>Adresa</p><input type="text" id="adress"  name="adresa" placeholder="Ju lutem vendosni adresen" autocomplete="off">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="lname" name="lname">Last Name</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="lname" name="lname">
+                                    </div>
+                                </div>  
+
+                                <div id="contact">
+                                       <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="email" name="email">Email</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="email" name="email">
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="tel" name="tel">Telephone</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="tel" name="tel">
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="adresa" name="adresa">Adresa</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="adresa" name="adresa">
+                                        </div>
                                         <input type="hidden" name="hiddenValue" id="test">
-                                    </div>  
-                            </div>
-                        </div>
-                        <div id="bottom-page">
-                            <div id="liber-form">
-                                <div class="margin-top-10">
-                                    <table id="grid" name="tablegrid">
-                                        <tr>
-                                            <td>redi</td>
-                                        </tr>
-                                    </table>
                                 </div>
                             </div>
-                            <div id="button-perfundim">   
-                                <button type="button" id="button-shto" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" value="Shto">New</button>   
-                                <button type="submit" id="button-shto" class="btn btn-primary btn-lg" onclick="getTable()">Shto</button>
-                                <!-- <button type="button" id="button-shto" class="btn btn-primary btn-lg" onclick="getTable()" value="Shto">test</button>   
-                                 -->
-                            </div>
-            
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              <h4 class="modal-title" id="myModalLabel">New Book</h4>
-                            </div>
-                            <div class="rreg-form">
-                                <div id="test">
-                                    <fieldset>
-                                        <label for="isbn">ISBN:</label><br> 
-                                        <input type='text' id="isbn" name='isbn'/></br>
-                                        <label for="titull">Titulli:</label>
-                                        <br> <input type='text' id="titull" name='titull'/></br>
-                                        <label for="autor">Autori:</label>
-                                        <br> <input type='text'  id="autor" name='autor'/></br>
-                                        <label for="pershkrim">Pershkrim:</label>
-                                        <br><textarea id="pershkrim" rows="4" cols="50" name="pershkrim"></textarea><br>
-                                        <label for="zhanri">Zgjidhni zhanrin e librit:</label><br>
-                                                <select id="zhanri" name="zhanri">
-                                                    <option value="fantazi">Fantazi</option>
-                                                    <option value="filozofik">Filozofik</option>
-                                                    <option value="humor">Humor</option>
-                                                    <option value="aventure">Aventure</option>
-                                                    <option value="romance">Romance</option>
-                                                    <option value="mister">Mister</option>
-                                                    <option value="horror">Horror</option>
-                                                    <option value="historik">Historik</option>
-                                                    <option value="shkencor">Shkencor</option>
-                                                    <option value="motivues">Motivues</option>
-                                                    <option value="enciklopedi">Enciklopedi</option>
-                                                    <option value="fjalor">Fjalor</option>
-                                                    <option value="autobiografi">Autobiografi</option>
-                                                    <option value="biografi">Biografi</option>
-                                                </select><br>
-                                                <label for="cmim">Cmim:</label>
-                                                <br><input type="number" id="cmim" name="cmim"><br><br>
-                                    </fieldset>
+                            <div id="bottom-page">
+                                <div id="liber-form">
+                                    <div class="margin-top-10">
+                                        <table id="grid" name="tablegrid">
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="button-perfundim">   
+                                    <button type="button"  class="btn btn-primary btn-outline-info btn-info" data-toggle="modal" data-target="#myModal" value="Shto">New</button>   
+                                    <button type="submit"  class= "btn btn-primary btn-outline-info btn-info" onclick="getTable()">Shto</button>
+                                    <!-- <button type="button" id="button-shto" class="btn btn-primary btn-lg" onclick="getTable()" value="Shto">test</button>   
+                                    -->
+                                </div>
+                
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">New Book</h4>
+                                </div>
+                                <div class="rreg-form">
+                                    <div id="test">
+                                        <fieldset>
+                                            <label for="isbn">ISBN:</label><br> 
+                                            <input type='text' id="isbn" name='isbn'/></br>
+                                            <label for="titull">Titulli:</label>
+                                            <br> <input type='text' id="titull" name='titull'/></br>
+                                            <label for="autor">Autori:</label>
+                                            <br> <input type='text'  id="autor" name='autor'/></br>
+                                            <label for="pershkrim">Pershkrim:</label>
+                                            <br><textarea id="pershkrim" rows="4" cols="50" name="pershkrim"></textarea><br>
+                                            <label for="zhanri">Zgjidhni zhanrin e librit:</label><br>
+                                                    <select id="zhanri" name="zhanri">
+                                                        <option value="fantazi">Fantazi</option>
+                                                        <option value="filozofik">Filozofik</option>
+                                                        <option value="humor">Humor</option>
+                                                        <option value="aventure">Aventure</option>
+                                                        <option value="romance">Romance</option>
+                                                        <option value="mister">Mister</option>
+                                                        <option value="horror">Horror</option>
+                                                        <option value="historik">Historik</option>
+                                                        <option value="shkencor">Shkencor</option>
+                                                        <option value="motivues">Motivues</option>
+                                                        <option value="enciklopedi">Enciklopedi</option>
+                                                        <option value="fjalor">Fjalor</option>
+                                                        <option value="autobiografi">Autobiografi</option>
+                                                        <option value="biografi">Biografi</option>
+                                                    </select><br>
+                                                    <label for="cmim">Cmim:</label>
+                                                    <br><input type="number" id="cmim" name="cmim"><br><br>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" onclick="Save()" class="btn btn-primary"  data-dismiss="modal">Add</button>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                              <button type="button" onclick="Save()" class="btn btn-primary"  data-dismiss="modal">Add</button>
                             </div>
-                          </div>
                         </div>
-                      </div>
-                    
-                </div>
-            </form>
+                        
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>
