@@ -16,7 +16,7 @@ html, body {
 }
 
 #top-page-pershendetje{
-    text-align: center;
+    margin-left: 38%;
 }
 
 #person-form{
@@ -28,12 +28,23 @@ html, body {
 
 #fullname{
     display: inline-flex;
+    margin-left: 38% ;
+
+}
+
+#contact{
+    
+    margin-left: 45%;
+}
+.input-group-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:lightskyblue;
 
 }
 
 p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: brown;
+    color: lightskyblue;
 }
 
 #bottom-page{
@@ -67,21 +78,21 @@ p{
     box-sizing: border-box;  
     border-radius: 4px;
 }
-input[type=button]{
+/* input[type=button]{
     border-radius: 3px;
     text-align: center;
     margin-bottom: 1px;
     background-color: lightgray;
-}
+} */
 
-#button-shto{
+/* #button-shto{
     border-radius: 3px !important;
     text-align: center !important;
     margin-bottom: 1px !important;
     background-color:lightgray !important;
     padding: 3px 3px !important;
     font-size: 15px !important;
-}
+} */
 
 
 .btn-primary.focus{
@@ -96,10 +107,6 @@ input[type=button]{
 .btn-group-lg {
      padding: 1% 1%; 
     font-size: 1%;
-}
-
-.btn-primary{
-
 }
 
 
