@@ -9,15 +9,27 @@ if($link === false){
 if (isset($_POST['login_user'])) {
    $username= $_POST['username'];
    $password=$_POST['password'];
-$sqlquery="Select * from useri where Usename='$username' and PassWord='$password'";
+   $passwordenkriptuar=$_POST['hidenpassword'];
+
+//    echo $passwordenkriptuar;
+//    echo $password;
+
+$sqlquery="Select * from useri where Usename='$username' and PassWord='$passwordenkriptuar'";
 $result=mysqli_query($link, $sqlquery);
+
 if(mysqli_num_rows($result)>0){
+    
+    session_start();
     $_SESSION['success'] = "You are now logged in";
-    header('location: ../HTML/index.php');
+    //echo "<script>console.log('Debug Objects: " . $username. "' );</script>";
+    $_SESSION['user']= $username;
+    header('location: ../HTML/homeperdorues.php');
+
 } else{
     echo "ERROR:  " . mysqli_error($link);
 }
-}
+
+ }
 mysqli_close($link);
 
 ?>

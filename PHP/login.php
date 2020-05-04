@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="../CSS/theme.css">
+<link rel="stylesheet" type="text/css" href="../CSS/theme_login.css">
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="../JS/validimLogin.js"></script>
+<script src="../JS/logohu.js"></script>
 </head>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
             <div class="login100-pic js-tilt">
-                <img src="../FOTO/liber.svg" alt="libraria">
+                <img src="../FOTO/librari_login.svg" alt="libraria">
 </div>
             <form class="login100-form validate-form"id="login_form" method="POST" action="phpLogin.php">
                 <span class="login100-form-title">
@@ -33,12 +34,11 @@
                         <i class="fa fa-lock" aria-hidden="true"></i>
                     </span>
                 </div>
-                
+                <input type="hidden" name="hidenpassword" id="hidenpassword">
                 <div class="container-login100-form-btn">
-                   <button class="login100-form-btn" type="submit" class="btn" name="login_user">
-                        Login
-                    </button>
+                   <button class="login100-form-btn" type="submit" class="btn" name="login_user" onclick="dekripto()"> Login </button> 
                 </div>
+                
 
                 <div class="text-center p-t-12">
                     <span class="txt1">

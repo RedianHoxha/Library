@@ -1,3 +1,9 @@
+      <?php 
+        session_start();
+        //include('../PHP/session.php');
+        $user=$_SESSION['user'];
+      ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,6 +48,7 @@
     <title>HomePage</title>
   </head>
   <body>
+
     <header>
       <nav>
         <div class="nav">
@@ -73,8 +80,8 @@
         </div>
         <div class="nav2">
           <ul>
-            <li><a href="../HTML/NefoProfile.html">Profili</a></li>
-            <li><a href="../PHP/login.php">Identifikohu</a></li>
+            <li><a href="../HTML/NefoProfile.html"><?php echo $user ?></a></li>
+            <li><a href="../PHP/logout.php">Dil</a></li>
           </ul>
         </div>
         <div class="title">

@@ -25,7 +25,7 @@
     <body>
         <div id="full-page">
             <div id="back">
-            <button type="button" class="btn btn-primary btn-outline-info btn-info  ">Kthehu ne Home</button>
+            <button type="button" class="btn btn-primary btn-outline-info btn-info" onclick="location.href = 'home.html';">Kthehu ne Home</button>
             </div>
             <div id="fq">
                 <form method="POST" action="../PHP/rregjistroliberphp.php" id="formadhurimit">    
@@ -85,6 +85,7 @@
                                             <input type="text" class="form-control" id="adresa" name="adresa">
                                         </div>
                                         <input type="hidden" name="hiddenValue" id="test">
+                                        
                                 </div>
                             </div>
                             <div id="bottom-page">
@@ -97,7 +98,7 @@
                                 <div id="button-perfundim">   
                                     <button type="button"  class="btn btn-primary btn-outline-info btn-info" data-toggle="modal" data-target="#myModal" value="Shto">New</button>   
                                     <button type="submit"  class= "btn btn-primary btn-outline-info btn-info" onclick="getTable()">Shto</button>
-                                    <!-- <button type="button" id="button-shto" class="btn btn-primary btn-lg" onclick="getTable()" value="Shto">test</button>   
+                                    <!--<button type="button" id="button-shto" class="btn btn-primary btn-lg" onclick="enkripto('redi')" value="Shto">test</button>   
                                     -->
                                 </div>
                 
