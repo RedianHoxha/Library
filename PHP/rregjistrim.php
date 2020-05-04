@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="../CSS/theme_rr.css">
+<link rel="stylesheet" type="text/css" href="../CSS/theme_rregjistrim.css">
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="../JS/validimRegjistrim.js"></script>
 </head>
@@ -9,7 +9,7 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <div class="login100-pic js-tilt">
-                <img src="../FOTO/librari.svg" alt="libraria">
+                <img src="../FOTO/liber_rregjistrim.svg" alt="libraria">
 </div>
             <form class="login100-form " id="forme_regjistrimi" action="phpRegjistrim.php" method="POST">
                 <span class="login100-form-title">
@@ -48,7 +48,7 @@
                     </span>
                 </div>
                   <div class="wrap-input100">
-                    <input class="input100" id="form_address" type="text" name="adrese" pattern="[a-zA-Z]+" placeholder="Vendosni adresen:">
+                    <input class="input100" id="form_address" type="text" name="adrese"  placeholder="Vendosni adresen:">
                     <span class="error_form" id="address_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
