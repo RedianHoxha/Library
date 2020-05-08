@@ -8,10 +8,11 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 if (isset($_GET['edit'])) {
-    $id = $_SESSION['idlib'];
+    // $id = $_SESSION['idlib'];
     $update = true;
 
-    $sql="SELECT * FROM librari WHERE IdLibri=$id;";
+    $sql="SELECT * FROM librari WHERE IdLibri= $_GET['edit']";
+    echo $sql;
     $result=mysqli_query($link, $sql);
 
     if (count($result) == 1 ) {

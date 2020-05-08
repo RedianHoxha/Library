@@ -11,23 +11,35 @@
     </head>
     <body>
         <div class="regj-form">
+        <?php
+        $link = mysqli_connect("localhost", "root", "", "library");
+ 
+        // Check connection
+        if($link === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+          if(isset($_GET['edit']))
+            {
+            $acc_query = mysqli_query($link, "SELECT * FROM `librari` WHERE IdLibri = '$_GET[edit]'") or die(mysql_error());
+            $acc_fetch = mysqli_fetch_array($acc_query);
+                      ?>
             <form action='' method='post'>
                 <div id="test">
                     <fieldset>
                         <legend>Regjistro liber!</legend><br>
 
-                        <input type="hidden" name="id" value="<?php echo $idlibri; ?>">
+                        <input type="hidden" name="id" value="<?php echo $acc_fetch['IdLibri']; ?>">
 
                         <label for="isbn">ISBN:</label><br> 
-                        <input type='text' id="isbn" name="isbn" value="<?php echo $isbn;?>"></br>
+                        <input type='text' id="isbn" name="isbn" value="<?php echo $acc_fetch['ISBN'];?>"></br>
                         <label for="titull">Titulli:</label>
-                        <br> <input type='text' id="titull" name="titull" value="<?php echo $titulli; ?>"></br>
+                        <br> <input type='text' id="titull" name="titull" value="<?php echo $acc_fetch['Titull']; ?>"></br>
                         <label for="autor">Autori:</label>
-                        <br> <input type='text' id="autori" name="autori" value="<?php echo  $autor; ?>"></br>
+                        <br> <input type='text' id="autori" name="autori" value="<?php echo  $acc_fetch['Autor']; ?>"></br>
                         <label for="pershkrim">Pershkrim:</label>
-                        <br><textarea id="pershkrim"  name="pershkrimi" rows="4" cols="50" value="<?php echo $pershkrim; ?>"></textarea><br>
+                        <br><textarea id="pershkrim"  name="pershkrimi" rows="4" cols="50" value="<?php echo $acc_fetch['Pershkrim']; ?>"></textarea><br>
                         <label for="zhanri">Zgjidhni zhanrin e librit:</label><br>
-                                <select id="zhanri" name="zhanri" value="<?php echo  $zhanri;?>">
+                                <select id="zhanri" name="zhanri" value="<?php echo  $acc_fetch['Zhanri']; ?>">
                                     <option value="fantazi">Fantazi</option>
                                     <option value="filozofik">Filozofik</option>
                                     <option value="humor">Humor</option>
@@ -48,8 +60,10 @@
                                 <input type="submit" value="Ndrysho!" />
                     </fieldset>
                 </div>
-          
             </form>
+            <?php
+            }
+        ?>
         </div>
     </body>
 </html>
