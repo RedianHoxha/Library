@@ -28,8 +28,8 @@ td, th {
  }
  div#foo {
     margin: 40vh auto;
-    width: 2330px;
-    height: 830px;
+    width: 1030px;
+    height: 430px;
   }
   .features-table {
     width: 100%;
@@ -55,15 +55,6 @@ td, th {
   }
   
   
-  
-  .features-table td:nth-child(8) 
-
- {
-    background: #efefef;
-    background: rgba(144,144,144,0.15);
-    border-right: 1px solid white;
-  }
-
   a {
     font-family: Poppins-Regular;
     font-size: 14px;
