@@ -97,17 +97,19 @@ $(function() {
    
     }
     function check_address() {
+        var pattern = /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
         var address = $("#form_address").val();
-        if (address !== '') {
+        if (pattern.test(address) && address !== '') {
             $("#address_error_message").hide();
             $("#form_address").css("border-bottom","2px solid #34F458");
         } else {
-            $("#address_error_message").html("Ju lutem vendosi adresen tuaj!");
+            $("#address_error_message").html("Invalid Address");
             $("#address_error_message").show();
             $("#form_address").css("border-bottom","2px solid #F90A0A");
+            $("#address_error_message").css("color","#9c0808");
             error_address = true;
         }
-    }
+}
     function check_password() {
     var password_length = $("#form_password").val().length;
     if (password_length < 8) {

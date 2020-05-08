@@ -44,7 +44,7 @@
                     </span>
                 </div>
                 <div class="wrap-input100 ">
-                    <input class="input100" id="username" type="text" name="username" placeholder="Improvizoni username:">
+                    <input class="input100" id="username" type="text" name="username" placeholder="Username:">
                     <span class="error_form" id="username_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
