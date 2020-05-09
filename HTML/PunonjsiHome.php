@@ -1,3 +1,9 @@
+<?php 
+        session_start();
+        //include('../PHP/session.php');
+        $user=$_SESSION['user'];
+      ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,8 +15,9 @@
                 <p>Punen e sotme mos e lej</p>
                 </div>
                 <div id="top-page-right">
-                    <input  class="button" type="button" onclick="" value="Go to Web">
-                    <input  class="button"type="button" onclick="" value="Log out">
+                    <input  class="button" type="button"  value="<?php echo $user ?>" onclick="window.location='NefoProfile.html'">
+                    <input  class="button" type="button"  value="Web" onclick="window.location='homeperdorues.php'">
+                    <input  class="button"type="button"  value="Log out" onclick="window.location='../PHP/logout.php'">
                 </div>
         </div>
 
@@ -19,8 +26,8 @@
     <body>
         <div id="page-down">
             <div id="page-down-majtas">
-                <input  class="buttonansore" type="button" value="Shto punonjes">
-                <input  class="buttonansore" type="button" value="Shto Libra">
+                <input  class="buttonansore" type="button" value="Shto punonjes" >
+                <input  class="buttonansore" type="button" value="Shto Libra" onclick="window.location='Libraria.php'">
             </div>
             <div id="page-down-djathtas">
                 <div id="todo-part">
