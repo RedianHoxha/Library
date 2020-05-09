@@ -7,8 +7,9 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 if (isset($_GET['del'])) {
-	$id = $_GET['del'];
-$sql = "DELETE FROM librari WHERE id=$id";
-mysqli_query($link, $sql);
+
+    mysqli_query($link, "delete  FROM `librari` WHERE IdLibri = '$_GET[del]'") or die(mysql_error());
+    
+
 header('location: Libraria.php');
 }
