@@ -78,9 +78,11 @@
             <li><a href="dhuro.php">DHURO!</a></li>
           </ul>
         </div>
+        
         <div class="nav2">
           <ul>
             <li><a href="NefoProfile.html"><?php echo $user ?></a></li>
+            <li><a href="PunonjsiHome.php">Work Page</a></li>
             <li><a href="../PHP/logout.php">Dil</a></li>
           </ul>
         </div>
