@@ -24,7 +24,7 @@ if($link === false){
     $queryValues = rtrim($queryValues, ',');
     $queryValues = 'VALUES'. $queryValues; 
     $sqlLibrari = $sqlLibrari.$queryValues;
-    echo $sqlLibrari;
+
 
 // //Attempt insert query execution
 
@@ -35,17 +35,12 @@ $username = $p1.$p2;
 
 $sqlUser = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Usename,Password,Roli)
 VALUES('$emri','$mbiemri', '$email', '$telefoni', '$adresa','$username','Dhurues','Dhurues')";
-if(mysqli_query($link, $sqlUser)){
-    echo "Records added successfully.";
+if(mysqli_query($link, $sqlUser) && mysqli_query($link, $sqlLibrari)){
+    header('location:../HTML/homeperdorues.html');
 } else{
     echo "ERROR: Could not able to execute $sqlUser. " . mysqli_error($link);
 }
 
-if(mysqli_query($link, $sqlLibrari)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sqlLibrari. " . mysqli_error($link);
-}
  
 mysqli_close($link);
 
