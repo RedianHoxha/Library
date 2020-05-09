@@ -27,9 +27,9 @@ td, th {
     background-color: rgb(199, 203, 228);
  }
  div#foo {
-    margin: 5%;
-    width: 90%;
-    height: 90%;
+  margin: 40vh auto;
+  width: 1030px;
+  height: 430px;
   }
   .features-table {
     width: 100%;
