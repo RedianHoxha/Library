@@ -12,7 +12,7 @@
             <div class="login100-pic js-tilt">
                 <img src="../FOTO/librari_login.svg" alt="libraria">
 </div>
-            <form class="login100-form validate-form"id="login_form" method="POST" action="phpLogin.php">
+            <form class="login100-form validate-form" id="login_form" method="POST" action="phpLogin.php">
                 <span class="login100-form-title">
                    <h1> Mire se vini! </h1>
                 </span>

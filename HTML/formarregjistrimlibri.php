@@ -23,10 +23,10 @@
             $acc_query = mysqli_query($link, "SELECT * FROM `librari` WHERE IdLibri = '$_GET[edit]'") or die(mysql_error());
             $acc_fetch = mysqli_fetch_array($acc_query);
                       ?>
-            <form action='' method='post'>
+            <form action='../PHP/edit.php?edit=<?php echo $_GET['edit'] ?>' method='post'>
                 <div id="test">
                     <fieldset>
-                        <legend>Regjistro liber!</legend><br>
+                        <legend>Edito Librin!</legend><br>
 
                         <input type="hidden" name="id" value="<?php echo $acc_fetch['IdLibri']; ?>">
 
@@ -36,8 +36,7 @@
                         <br> <input type='text' id="titull" name="titull" value="<?php echo $acc_fetch['Titull']; ?>"></br>
                         <label for="autor">Autori:</label>
                         <br> <input type='text' id="autori" name="autori" value="<?php echo  $acc_fetch['Autor']; ?>"></br>
-                        <label for="pershkrim">Pershkrim:</label>
-                        <br><textarea id="pershkrim"  name="pershkrimi" rows="4" cols="50" value="<?php echo $acc_fetch['Pershkrim']; ?>"></textarea><br>
+                       
                         <label for="zhanri">Zgjidhni zhanrin e librit:</label><br>
                                 <select id="zhanri" name="zhanri" value="<?php echo  $acc_fetch['Zhanri']; ?>">
                                     <option value="fantazi">Fantazi</option>
@@ -56,7 +55,7 @@
                                     <option value="biografi">Biografi</option>
                                 </select><br>
                                 <label for="cmim">Cmim:</label>
-                                <br><input type="number" id="cmimi" name="cmimi" ><br><br>
+                                <br><input type="text" id="cmimi" name="cmimi" value="<?php echo  $acc_fetch['Cmimi']; ?>" ><br><br>
                                 <input type="submit" value="Ndrysho!" />
                     </fieldset>
                 </div>
