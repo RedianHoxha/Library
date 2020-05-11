@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/17c7570040.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
 .container{
-    background-color: slategray;
-    width:10cm;
-    height:39.05rem;
-    margin-left: 0;
+    background-color: #a6a2a2;
+    width:85%;
+    height:100%;
+    margin-left: -20px;
     margin-top: 0;
     
 }
 .buttonconatiner{
-background-color: rgb(8, 61, 61);
+background-color:rgb(108, 117, 126);
 margin-bottom: 10%;
 height: 60px;
-
-
+border-radius: 25px;
 }
 .formcontainer{
     padding-top: 40%;
@@ -28,31 +28,33 @@ height: 60px;
 .button_text{
 text-align: center;
 color:white;
-padding-top: 5%;
+padding-top: 2%;
+font-size: 187.5%;
 }
 .example_e{
     color: white;
     font-size: 100%;
-   
-   
+}
+body{
+    background-image: url("../FOTO/download.jpg");
 }
 
     </style>
 </head>
 <body>
     <div class="container position-absolute">
-<div class="formcontainer">
+    <div class="formcontainer">
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener">Edit your profile!</a></div>
+        <div class="button_text " ><a class="example_e" href="../HTML/NefoeditProfile.php" target="_blank" rel="nofollow noopener"><i class="fa fa-pencil"> Profili juaj/modifiko!</i></a> </div>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener">Your Orders!</a></div><br>
+        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener"><i class="fa fa-list"> Porosite!</i></a></div><br>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener">Wish List🤍</a></div><br>
+        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener"><i class="fa fa-heart"> Te preferuarat!</i></a></div><br>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener">Address!</a></div><br>
+        <div class="button_text" ><a class="example_e" href="../HTML/AddressBook.php" target="_blank" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
     </div>
 </div>
     </div>
