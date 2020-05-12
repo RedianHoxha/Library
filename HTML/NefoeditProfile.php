@@ -43,7 +43,7 @@
         }
           if(isset($_GET['edit']))
             {
-            $acc_query = mysqli_query($link, "SELECT * FROM `useri` WHERE Usename = 'seadtatari'");
+            $acc_query = mysqli_query($link, "SELECT * FROM `useri` WHERE Usename = 'nefotatari'");
             if(mysqli_num_rows($acc_query)>0){
             //$acc_fetch = mysqli_fetch_array($acc_query);
             echo 'ekziston';
