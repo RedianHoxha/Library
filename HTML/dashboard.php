@@ -45,16 +45,13 @@ body{
     <div class="container position-absolute">
     <div class="formcontainer">
     <div class="buttonconatiner">
-        <div class="button_text " ><a class="example_e" href="../HTML/NefoeditProfile.php" target="_blank" rel="nofollow noopener"><i class="fa fa-pencil"> Profili juaj/modifiko!</i></a> </div>
+        <div class="button_text " ><a class="example_e" href="../HTML/NefoeditProfile.php" name="edit" ><i class="fa fa-pencil"> Profili juaj/modifiko!</i></a> </div>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener"><i class="fa fa-list"> Porosite!</i></a></div><br>
+        <div class="button_text" ><a class="example_e" href="" rel="nofollow noopener"><i class="fa fa-heart"> Te preferuarat!</i></a></div><br>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="" target="_blank" rel="nofollow noopener"><i class="fa fa-heart"> Te preferuarat!</i></a></div><br>
-    </div>
-    <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="../HTML/AddressBook.php" target="_blank" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
+        <div class="button_text" ><a class="example_e" href="../HTML/AddressBook.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
     </div>
 </div>
     </div>
