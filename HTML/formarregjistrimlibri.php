@@ -22,7 +22,7 @@
             {
             $acc_query = mysqli_query($link, "SELECT * FROM `librari` WHERE IdLibri = '$_GET[edit]'") or die(mysql_error());
             $acc_fetch = mysqli_fetch_array($acc_query);
-                      ?>
+        ?>
             <form action='../PHP/edit.php?edit=<?php echo $_GET['edit'] ?>' method='post'>
                 <div id="test">
                     <fieldset>
