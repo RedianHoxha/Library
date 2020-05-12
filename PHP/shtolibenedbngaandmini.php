@@ -31,6 +31,7 @@ if (isset($_POST['add'])) {
             $sqlqueriperliber = "Select * from librari where ISBN='$isbn' and Statusi = 'Blere'";
             $sasialibreveekzistues = mysqli_query($link, $sqlqueriperliber);
             $acc_fetch = mysqli_fetch_array($sasialibreveekzistues);
+            
             $sasiaktuale = $acc_fetch['Sasia'];
         
             $sum =  $sasiaktuale + $sasia; 

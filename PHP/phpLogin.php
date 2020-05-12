@@ -20,11 +20,24 @@ $result=mysqli_query($link, $sqlquery);
 if(mysqli_num_rows($result)>0){
     
     session_start();
-    $_SESSION['success'] = "You are now logged in";
+    $row = mysqli_fetch_array($result);
+    $rolilogusit = $row['Roli'];
+    //echo $rolilogusit;
+    //$_SESSION['success'] = "You are now logged in";
     //echo "<script>console.log('Debug Objects: " . $username. "' );</script>";
-    $_SESSION['user']= $username;
-    header('location: ../HTML/homeperdorues.php');
-
+    if($rolilogusit == 'Admin'){
+        $_SESSION['user']= $username;
+        header('location: ../HTML/homeperdorues.php');
+       // echo $rolilogusit;
+    }
+    else{
+        //echo 'ti nuk je admin';
+        $_SESSION['user']= $username;
+        header('location: ../HTML/homelexues.php');
+    }
+  
+    //
+echo $username;
 } else{
     echo "ERROR:  " . mysqli_error($link);
 }
