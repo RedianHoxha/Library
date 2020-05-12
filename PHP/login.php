@@ -12,13 +12,13 @@
             <div class="login100-pic js-tilt">
                 <img src="../FOTO/librari_login.svg" alt="libraria">
 </div>
-            <form class="login100-form validate-form"id="login_form" method="POST" action="phpLogin.php">
+            <form class="login100-form validate-form" id="login_form" method="POST" action="phpLogin.php">
                 <span class="login100-form-title">
                    <h1> Mire se vini! </h1>
                 </span>
 
                 <div class="wrap-input100 validate-input" data-validate=" ss">
-                    <input class="input100" id="username" type="text" name="username" placeholder="username:">
+                    <input class="input100" id="username" type="text" name="username" placeholder="Username:">
                     <span class="error_form" id="username_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Password eshte i domosdoshem.">
-                    <input class="input100" id="password" type="password" name="password" placeholder="Passwordi juaj:">
+                    <input class="input100" id="password" type="password" name="password" placeholder="Password:">
                     <span class="error_form" id="password_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">

@@ -1,3 +1,8 @@
+<?php 
+        session_start();
+        //include('../PHP/session.php');
+        $user=$_SESSION['user'];
+      ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +73,7 @@
                         <img src="../FOTO/logo.png" /></li>
             </div>
             <ul>
-                <li><a href="homeperdorues.html">Home</a></li>
+                <li><a href="homeperdorues.php">Home</a></li>
                 <li class="active"><a href="#">Rreth nesh</a></li>
                 <li>
                     <div class="menu">
@@ -82,13 +87,14 @@
                     </div>
                 </li>
                 
-                <li><a href="kontakti.html">Kontakti</a></li>
-                <li><a href="dhurovizitor.php">DHURO!</a></li>
+                <li><a href="kontakti.php">Kontakti</a></li>
+                <li><a href="dhuro.php">DHURO!</a></li>
             </ul>
         </div>
         <div class="nav2">
             <ul>
-                <li><a href="../PHP/login.php">Identifikohu</a></li>
+                <li><a href="NefoProfile.html"><?php echo $user ?></a></li>
+                <li><a href="../PHP/logout.php">Dil</a></li>
             </ul>
         </div>
         <div id="map" ></div>
