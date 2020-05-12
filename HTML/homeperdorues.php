@@ -80,7 +80,7 @@
         </div>
         <div class="nav2">
           <ul>
-            <li><a href="../HTML/NefoeditProfile.php"><?php echo $user ?></a></li>
+            <li><a href="../HTML/NefoProfile.html"><?php echo $user ?></a></li>
             <li><a href="../PHP/logout.php">Dil</a></li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ $(function() {
     $("#lname_error_message").hide();
     $("#username_error_message").hide();
     $("#email_error_message").hide();
-    $("#tel_error_message").hide();
+  //  $("#tel_error_message").hide();
     $("#address_error_message").hide();
     $("#pass1_error_message").hide();
     $("#pass2_error_message").hide();
@@ -12,7 +12,7 @@ $(function() {
     var error_lname = false;
     var error_username = false;
     var error_email = false;
-    var error_tel = false;
+  //  var error_tel = false;
     var error_address=false;
     var error_pass1 = false;
     var error_pass2 = false;
@@ -29,9 +29,9 @@ $(function() {
     $("#form_email").focusout(function() {
     check_email();
     });
-    $("#form_tel").focusout(function() {
-        check_tel();
-        });
+    // $("#form_tel").focusout(function() {
+    //     check_tel();
+    //     });
     $("#form_address").focusout(function() {
         check_address();
     });
@@ -101,19 +101,19 @@ $(function() {
         }
    
     }
-    function check_tel() {
-        var tel = $("#form_tel").val();
-        if (tel !== '') {
-            $("#tel_error_message").hide();
-            $("#form_tel").css("border-bottom","2px solid #34F458");
-        } else {
-            $("#tel_error_message").html("Vendoseni nr ne formatin e duhur");
-            $("#tel_error_message").show();
-            $("#form_tel").css("border-bottom","2px solid #F90A0A");
-            $("#tel_error_message").css("color","#9c0808");
-            error_tel = true;
-        }
-        }
+    // function check_tel() {
+    //     var tel = $("#form_tel").val();
+    //     if (tel !== '') {
+    //         $("#tel_error_message").hide();
+    //         $("#form_tel").css("border-bottom","2px solid #34F458");
+    //     } else {
+    //         $("#tel_error_message").html("Vendoseni nr ne formatin e duhur");
+    //         $("#tel_error_message").show();
+    //         $("#form_tel").css("border-bottom","2px solid #F90A0A");
+    //         $("#tel_error_message").css("color","#9c0808");
+    //         error_tel = true;
+    //     }
+    //     }
     function check_address() {
             var pattern = /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
             var address = $("#form_address").val();

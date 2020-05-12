@@ -59,14 +59,14 @@
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>
                 </div>
-                <div class="wrap-input100 " >
+                <!-- <div class="wrap-input100 " >
                     <input class="input100" id="form_tel"type="number" name="tel" placeholder="Vendosni nr. cel:">
                     <span class="error_form" id="tel_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>
-                </div>
+                </div> -->
                   <div class="wrap-input100">
                     <input class="input100" id="form_address" type="text" name="adrese"  placeholder="Vendosni adresen:">
                     <span class="error_form" id="address_error_message"></span>
