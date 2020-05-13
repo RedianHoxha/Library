@@ -26,7 +26,7 @@
     <body>
         <div id="page-down">
             <div id="page-down-majtas">
-                <input  class="buttonansore" type="button" value="Shto punonjes" >
+                <input  class="buttonansore" type="button" value="Shto punonjes" onclick="window.location='Punonjes.php'" >
                 <input  class="buttonansore" type="button" value="Shto Libra" onclick="window.location='Libraria.php'">
             </div>
             <div id="page-down-djathtas">
