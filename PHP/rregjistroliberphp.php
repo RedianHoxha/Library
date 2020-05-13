@@ -33,7 +33,7 @@ $p2 = substr($mbiemri,0,3);
 $username = $p1.$p2;
 
 
-$sqlUser = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Usename,Password,Roli)
+$sqlUser = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,Password,Roli)
 VALUES('$emri','$mbiemri', '$email', '$telefoni', '$adresa','$username','Dhurues','Dhurues')";
 if(mysqli_query($link, $sqlUser) && mysqli_query($link, $sqlLibrari)){
     header('location:../HTML/homeperdorues.html');

@@ -23,8 +23,8 @@
                         <img src="../FOTO/logo.png" /></li>
             </div>
             <ul>
-                <li><a href="homeperdorues.php">Home</a></li>
-                <li><a href="Rrethnesh.php">Rreth nesh</a></li>
+                <li><a href="homelexues.php">Home</a></li>
+                <li><a href="Rrethneshlexues.php">Rreth nesh</a></li>
                 <li>
                     <div class="menu">
                         <button id="dd">Libraria jonë</button>
@@ -37,13 +37,12 @@
                     </div>
                 </li>
                 <li class="active"><a href="#">Kontakti</a></li>
-                <li><a href="dhuro.php">DHURO!</a></li>
+                <li><a href="dhurolexues.php">DHURO!</a></li>
             </ul>
         </div>
         <div class="nav2">
             <ul>
                 <li><a href="NefoProfile.html"><?php echo $user ?></a></li>
-                <li><a href="PunonjsiHome.php">Work Page</a></li>
                 <li><a href="../PHP/logout.php">Dil</a></li>
             </ul>
         </div>
