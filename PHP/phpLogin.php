@@ -14,7 +14,7 @@ if (isset($_POST['login_user'])) {
 //    echo $passwordenkriptuar;
 //    echo $password;
 
-$sqlquery="Select * from useri where Usename='$username' and PassWord='$passwordenkriptuar'";
+$sqlquery="Select * from useri where Username='$username' and PassWord='$passwordenkriptuar'";
 $result=mysqli_query($link, $sqlquery);
 
 if(mysqli_num_rows($result)>0){

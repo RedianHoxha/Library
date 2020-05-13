@@ -8,7 +8,7 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-echo $_GET['edit'];
+//echo $_GET['edit'];
 if(isset($_GET['edit']))
 {
     $isbn = $_POST['isbn'];

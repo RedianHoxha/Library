@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="theme_ShtoPunonjes.css">
+<link rel="stylesheet" type="text/css" href="../CSS/theme_ShtoPunonjes.css">
 
 </head>
 <div class="limiter">
