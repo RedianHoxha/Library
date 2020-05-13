@@ -7,17 +7,25 @@ $link = mysqli_connect("localhost", "root", "", "library");
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-echo $_GET['edit'];
-if(isset($_GET['edit']))
-{
-    $emer = $_POST['emer'];
-    $mbiemer = $_POST['mbiemer'];
-    $username  = $_POST['username'];
-    $email= $_GET['email'];
 
-$sql = "update useri set Emer = '$emer', Mbiemer = '$mbiemer', Usename = '$username', Email = '$email' WHERE IdUser = $_GET[edit]";
+$iduser = $_GET['editProfile'];
+
+if(isset($_GET['editProfile']))
+{
+    $emer = $_POST['emri'];
+    $mbiemer = $_POST['mbiemri'];
+    $username  = $_POST['username'];
+    $email= $_POST['email'];
+
+    // echo $email;
+    // echo $emer;
+    // echo $username;
+    // echo $email;
+    $sql = "update useri set Emer = '$emer', Mbiemer = '$mbiemer', Username = '$username', Email = '$email' WHERE IdUser = $_GET[editProfile]";
+
+
 mysqli_query($link,$sql);
-header('location: ../HTML/NefoeditProfile.php');
+header('location: login.php');
 
 }
 else

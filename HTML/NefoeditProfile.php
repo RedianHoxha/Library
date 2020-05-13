@@ -40,22 +40,22 @@
          if($link === false){
              die("ERROR: Could not connect. " . mysqli_connect_error());
          }
-         $sqlquery="Select * from useri";
+         $sqlquery="Select * from useri  where Username = '$user'";
                     $result=mysqli_query($link, $sqlquery);
                     $row = mysqli_fetch_array($result)
          ?>
     
      <div class="form-group">
-       <form class="h5 py-4"action='../PHP/editProfile.php?editProfile=<?php echo $_GET['edit'] ?>' method='post'>
+       <form class="h5 py-4"action='../PHP/editProfile.php?editProfile=<?php echo $row['IdUser'] ?>' method='post'>
        <label  for="emri">Emri:</label><br>
-       <input class="form-control" type="text" id="emri" name="emri"  value="<?php echo $user ?>" ><br>
+       <input class="form-control" type="text" id="emri" name="emri"  value="<?php echo $row['Emer']; ?>" ><br>
        <label for="mbiemri">Mbiemri:</label><br>
        <input class="form-control" type="text" id="mbiemri" name="mbiemri"value="<?php echo $row['Mbiemer']; ?>"><br>
        <label for="username">Username:</label><br>
-       <input class="form-control" type="text" id="username" name="username"value="<?php echo $row['Usename']; ?>"><br>
+       <input class="form-control" type="text" id="username" name="username"value="<?php echo $row['Username']; ?>"><br>
         <label for="email">Emaili :</label><br>
         <input class="form-control" type="email" id="email" name="email"value="<?php echo $row['Email']; ?>"><br>
-        <button type="button" class="btn btn-secondary btn-lg btn-block">Update</button>
+        <button type="submit" class="btn btn-secondary btn-lg btn-block" name="update">Update</button>
         </form>
     </div>
     </div>
