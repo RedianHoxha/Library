@@ -2,16 +2,17 @@
   margin: 0;
   padding: 0;
   font-family: Century Gothic;
+  font-size: medium;
 }
 
-header {
+body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../FOTO/home2.jpg");
-  height: 100vh;
   background-size: cover;
   background-position: top;
+}
+header {
   margin-top: -10px;
-  background-attachment: fixed;
 }
 
 ul {
@@ -19,12 +20,14 @@ ul {
   float: left;
   margin-top: 25px;
 }
+
 ul li {
   display: inline-block;
   text-decoration: none;
   color: #fff;
   text-decoration: none;
   color: #fff;
+  margin-top: 15px;
 }
 
 ul li a {
@@ -50,7 +53,7 @@ ul li a {
 
 .nav2 {
   float: right;
-  margin-top: 11px;
+  margin-top: -60px;
 }
 
 ul li.active a {
@@ -62,6 +65,7 @@ ul li a:hover {
   background-color: white;
   color: rgb(68, 173, 206);
   transition: 0.6s ease;
+  text-decoration: none;
 }
 
 .main {
@@ -69,7 +73,7 @@ ul li a:hover {
   margin: auto;
 }
 
-.title {
+/* .title {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -80,83 +84,35 @@ h1 {
   color: #fff;
   font-family: Century Gothic;
   font-weight: lighter;
-}
-
-.search {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-}
-
-.search a {
-  margin-left: 10px;
-  text-decoration: none;
-  color: #fff;
-  padding: 5px 20px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-}
-
-.search a:hover {
-  background-color: white;
-
-  color: rgb(68, 173, 206);
-  transition: 0.6s ease;
-}
+} */
 
 input {
-  width: 150px;
+  width: 300px;
   height: 30px;
-  border: transparent;
+  /* border: transparent; */
   border-radius: 80px;
+  border-width: thin;
+  border-color: gray;
 }
 
-.about {
-  position: absolute;
-  top: 40%;
-  left: 10%;
+textarea {
+  border-radius: 10px;
 
-  width: 500px;
-}
-
-.about h1,
-h4 {
-  color: white;
-  font-family: Century Gothic;
-  font-weight: lighter;
-}
-
-#map {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-}
-
-img {
-  float: left;
-  width: 50px;
-  height: 50px;
-  margin-top: -15px;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.contact {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-}
-.contact ul li a:hover {
-  background-color: transparent;
-  color: transparent;
-  transition: 0.6s ease;
+  border-color: gray;
 }
 
 .menu {
   position: relative;
+}
+
+#button-shto {
+  background: white;
+  border: none;
+  color: rgb(68, 173, 206);
+  font-size: unset;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #dd {
@@ -219,4 +175,18 @@ img {
   opacity: 1;
   pointer-events: all;
   transform: translateY(0px);
+}
+
+#bottompage {
+  position: absolute;
+  top: 55%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+#pershendetje,
+#person-form {
+  color: white;
+  font-family: Century Gothic;
+  font-weight: lighter;
 }
