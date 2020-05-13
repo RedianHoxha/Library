@@ -81,7 +81,7 @@
         
         <div class="nav2">
           <ul>
-            <li><a href="NefoeditProfile.html"><?php echo $user ?></a></li>
+            <li><a href="NefoProfile.html"><?php echo $user ?></a></li>
             <li><a href="PunonjsiHome.php">Work Page</a></li>
             <li><a href="../PHP/logout.php">Dil</a></li>
           </ul>

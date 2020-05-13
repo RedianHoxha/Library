@@ -24,7 +24,7 @@ if($link === false){
 
    if(mysqli_num_rows($result)==0){
 
-    $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
+    $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Usename,PassWord,Roli)
     VALUES('$emri','$mbiemri', '$email',11234567 , '$adresa','$username','$passwordenkriptuar','$roli')";
     if(mysqli_query($link, $sql)){
         
