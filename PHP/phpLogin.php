@@ -7,9 +7,9 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 if (isset($_POST['login_user'])) {
-   $username= $_POST['username'];
-   $password=$_POST['password'];
-   $passwordenkriptuar=$_POST['hidenpassword'];
+   $username= mysqli_real_escape_string($link,$_POST['username']);
+   $password=mysqli_real_escape_string($link,$_POST['password']);
+   $passwordenkriptuar=mysqli_real_escape_string($link,$_POST['hidenpassword']);
 
 //    echo $passwordenkriptuar;
 //    echo $password;
