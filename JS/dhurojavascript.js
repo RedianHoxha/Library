@@ -154,10 +154,6 @@ function getTable()
    
 }
 
-function shefi()
-{
-    alert("JS eshte shefi");
-}
 
 
 
