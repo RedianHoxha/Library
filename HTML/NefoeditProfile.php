@@ -56,6 +56,7 @@
         <label for="email">Emaili :</label><br>
         <input class="form-control" type="email" id="email" name="email"value="<?php echo $row['Email']; ?>"><br>
         <button type="submit" class="btn btn-secondary btn-lg btn-block" name="update">Update</button>
+
         </form>
     </div>
     </div>
