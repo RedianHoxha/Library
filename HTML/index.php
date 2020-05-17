@@ -16,11 +16,8 @@
             background-color: rgb(68, 173, 206);
             transition: 0.6s ease;
             cursor: pointer;
-            /* margin-top: 2%; */
+            margin-top: 2%;
         }
-
-
-
 
          .container {
            
@@ -118,7 +115,7 @@
             </div>
             <div class="search">
                 <input type="text" placeholder="Kërko" />
-                <a href="#">Kërko</a>
+                <a href="search.php">Kërko</a>
             </div>
         </nav>
         <div class="miresevini">
@@ -127,7 +124,20 @@
             </h1>
         </div>
     </header>
+    <?php $link = mysqli_connect("localhost", "root", "", "library");
+        
+    // Check connection
+    if($link === false){
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+    }
+    ?>
+
     <div class="container">
+
+        <?php $sqlquery="Select * from librari";
+                    $result=mysqli_query($link, $sqlquery);
+
+                while ($row = mysqli_fetch_array($result)) { ?>
         <div class="row">
             <div class="col-md-4">
                 <div class="properties">
@@ -136,20 +146,23 @@
                             <img src="../FOTO/kadare.jpg" />
                         </div>
                         <div>
-                            <input type="text" id="titulli" placeholder="Ketu do jet titulli i librit" /><br />
-                            <input type="text" id="autori" placeholder="ketu do jet autori i librit" /><br />
-                            <input type="text" id="cmimi" placeholder="ketu do jet cmimi i librit" /> <br />
+                            <input type="text" id="titulli" value="<?php echo $row['Titull']; ?>"><br />
+                            <input type="text" id="autori" value="<?php echo $row['Autor']; ?>"/><br />
+                            <input type="text" id="cmimi" value="<?php echo $row['Cmimi']; ?>"> <br />
                         </div>
                     </div>
 
                     <div class="butonat">
-                        <button onclick="">Bli</button> <br />
-                        <button onclick="">Rezervo</button> <br />
-                        <button onclick="">Shto ne Wishlist</button> <br />
+                        <button onclick="location.href = 'blerje.php?Bli=<?php echo $row['IdLibri']; ?>'" name="Bli">Bli</button> <br />
+                        <button onclick="location.href = 'rezervim.php?rezervo=<?php echo $row['IdLibri']; ?>'" name="Rezervo">Rezervo</button> <br />
+                        <button onclick="location.href = 'blerje.html?edit=<?php echo $row['IdLibri']; ?>'">Shto ne Wishlist</button> <br />
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+        </div>
+    </div>
+    <?php } ?>
+            <!-- <div class="col-md-4">
                 <div class="properties">
                     <div id="fotodhepershkrim">
                         <div id="foto">
@@ -248,7 +261,7 @@
                         <button onclick="">Shto ne Wishlist</button> <br />
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

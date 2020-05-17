@@ -5,6 +5,20 @@
 
 <body>
 
+<?php
+        $link = mysqli_connect("localhost", "root", "", "library");
+ 
+        // Check connection
+        if($link === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+          if(isset($_GET['edit']))
+            {
+            $acc_query = mysqli_query($link, "SELECT * FROM `librari` WHERE IdLibri = '$_GET[rezervo]'") or die(mysql_error());
+            $acc_fetch = mysqli_fetch_array($acc_query);
+            
+        ?>
+
     <form method="post" action="//submit.form" onsubmit="return validateForm();">
 
         <div style="max-width: 400px;">
@@ -19,7 +33,7 @@
         margin-left: -250px;
         width: 390px;
         height: 100px;
-         ">Taking an advendure? Yeah, it started because you decided to buy a book...</div>
+         ">Taking an advendure? Yeah, it started because you decided to read  <?php echo $acc_fetch['Titull']; ?></div>
         <p style="max-width : 450px; font-size : 12px;"></p>
         <div style="padding-bottom: 18px; padding-bottom: 30px;
         font-size: 20px;
@@ -157,6 +171,10 @@
                 type="submit" /></div>
 
     </form>
+
+    <?php
+            }
+        ?>
 
     <script type="text/javascript">
         function validateForm() {
