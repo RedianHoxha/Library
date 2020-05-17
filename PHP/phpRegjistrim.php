@@ -16,18 +16,19 @@ if($link === false){
    $password=$_POST['pass1'];
    $reset_password=$_POST['pass2'];
     $roli = "Vizitor";
+
    $passwordenkriptuar=$_POST['hidenpassword'];
 
     
 
-   $sqlusername= "select * from useri where Usename='$username'";
+   $sqlusername= "select * from useri where Username='$username'";
    $result=mysqli_query($link, $sqlusername);
 
    if(mysqli_num_rows($result)==0){
 
-    $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Usename,PassWord,Roli)
+    $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
     VALUES('$emri','$mbiemri', '$email',$tel , '$adresa','$username','$passwordenkriptuar','$roli')";
-    if(mysqli_query($link, $sql)){
+  if(mysqli_query($link, $sql)){
         
         header('location:login.php');
     } else{

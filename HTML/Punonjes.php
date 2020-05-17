@@ -21,7 +21,9 @@
       </div>
      <div id="foo">  
         <table id="fixed-table" class="table features-table">
-            <?php $link = mysqli_connect("localhost", "root", "", "library");
+
+
+        <?php $link = mysqli_connect("localhost", "root", "", "library");
         
         // Check connection
         if($link === false){
