@@ -4,6 +4,15 @@
   font-family: Century Gothic;
 }
 
+.kopertina {
+  float: left;
+  text-align: left;
+  height: 200px;
+  width: 45%;
+  /* background: rgb(179, 123, 235); */
+  background-image: url("../FOTO/Becoming-Michelle-Obama-400x600.jpg");
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../FOTO/home2.jpg");
