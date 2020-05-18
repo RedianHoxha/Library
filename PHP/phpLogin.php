@@ -11,12 +11,12 @@ if (isset($_POST['login_user'])) {
    $password=mysqli_real_escape_string($link,$_POST['password']);
    $passwordenkriptuar=mysqli_real_escape_string($link,$_POST['hidenpassword']);
 
-//    echo $passwordenkriptuar;
-//    echo $password;
+   echo $passwordenkriptuar;
+   echo $password;
 
 $sqlquery="Select * from useri where Username='$username' and PassWord='$passwordenkriptuar'";
 $result=mysqli_query($link, $sqlquery);
-
+ echo mysqli_num_rows($result);
 if(mysqli_num_rows($result)>0){
     
     session_start();
