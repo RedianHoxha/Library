@@ -17,7 +17,7 @@ if($link === false){
     $reset_password=mysqli_real_escape_string( $link,$_POST['pass2']);
 
 
-    $roli = "Vizitor";
+    $roli =$_POST['option_select'];
 
 
 
@@ -37,7 +37,7 @@ if($link === false){
     VALUES('$emri','$mbiemri', '$email',$tel , '$adresa','$username','$passwordenkriptuar','$roli')";
   if(mysqli_query($link, $sql)){
         
-        header('location:login.php');
+        header('location:../HTML/Punonjes.php');
     } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
     }

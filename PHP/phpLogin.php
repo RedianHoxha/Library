@@ -37,7 +37,7 @@ if(mysqli_num_rows($result)>0){
     }
   
     //
-echo $username;
+//echo $username;
 } else{
     echo "ERROR:  " . mysqli_error($link);
 }
