@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,10 +23,15 @@
 
          .container {
            
-            margin-top: 50px;
+            
             width: 100%;
             text-align: center;
-        } */
+           
+        } 
+
+        #background{
+            background-image: url("../FOTO/home2.jpg");
+        }
 
         .left {
             float: left;
@@ -68,8 +75,15 @@
         }
         .col-md-4{
         margin-top: 5%;
-        }
+        padding: 5%;
+        background-color:white;
+        box-shadow: 1px 2px 20px 0px rgb(179, 123, 235);
+    }
 
+p{
+    text-align:center;
+
+}
     </style>
 
     <title>HomePage</title>
@@ -124,44 +138,51 @@
             </h1>
         </div>
     </header>
+
     <?php $link = mysqli_connect("localhost", "root", "", "library");
-        
     // Check connection
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
     ?>
-
+<div id="background">
     <div class="container">
 
-        <?php $sqlquery="Select * from librari";
-                    $result=mysqli_query($link, $sqlquery);
-
-                while ($row = mysqli_fetch_array($result)) { ?>
         <div class="row">
+        
+                   <?php $sqlquery="Select * from librari where Sasia > 0 LIMIT 6";
+                    $result = mysqli_query($link, $sqlquery);
+
+                    while ($row = mysqli_fetch_array($result)) { ?>
+
             <div class="col-md-4">
                 <div class="properties">
                     <div id="fotodhepershkrim">
                         <div id="foto">
-                            <img src="../FOTO/kadare.jpg" />
+                            <img src="../FOTO/<?php echo $row['Foto']; ?>" />
                         </div>
                         <div>
-                            <input type="text" id="titulli" value="<?php echo $row['Titull']; ?>"><br />
-                            <input type="text" id="autori" value="<?php echo $row['Autor']; ?>"/><br />
-                            <input type="text" id="cmimi" value="<?php echo $row['Cmimi']; ?>"> <br />
+                            <p> <?php echo $row['Titull']; ?></p>
+                            <p> <?php echo $row['Autor']; ?></p>
+                            <p> <?php echo $row['Cmimi']; ?></p>
                         </div>
                     </div>
 
                     <div class="butonat">
-                        <button onclick="location.href = 'blerje.php?Bli=<?php echo $row['IdLibri']; ?>'" name="Bli">Bli</button> <br />
-                        <button onclick="location.href = 'rezervim.php?rezervo=<?php echo $row['IdLibri']; ?>'" name="Rezervo">Rezervo</button> <br />
-                        <button onclick="location.href = 'blerje.html?edit=<?php echo $row['IdLibri']; ?>'">Shto ne Wishlist</button> <br />
+                        <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Bli</button> <br />
+                        <!--para se te bej rezervim ai suhet te rregjistrohet-->
+                        <button onclick="location.href = 'rezervim.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
+                        <button onclick="location.href = 'blerje.html?edit=<?php echo $row['Titull']; ?>'">Shto ne Wishlist</button> <br />
                     </div>
                 </div>
             </div>
+            <?php 
+                } 
+            ?>
         </div>
     </div>
-    <?php } ?>
+</div>
+    
             <!-- <div class="col-md-4">
                 <div class="properties">
                     <div id="fotodhepershkrim">

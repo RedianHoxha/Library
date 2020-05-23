@@ -25,7 +25,7 @@
     <body>
         <div id="full-page">
             <div id="back">
-            <button type="button" class="btn btn-primary btn-outline-info btn-info" onclick="location.href = 'homeperdorues.html';">Kthehu ne Home</button>
+            <button type="button" class="btn btn-primary btn-outline-info btn-info" onclick="location.href = 'index.php';">Kthehu ne Home</button>
             </div>
             <div id="fq">
                 <form method="POST" action="../PHP/rregjistroliberphp.php" id="formadhurimit">    

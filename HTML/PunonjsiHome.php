@@ -37,10 +37,10 @@
                             <td>ID</td>
                             <td>Pershkrimi</td> 
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td> <a href="" >a112</a></td>
                             <td>Rezervim</td> 
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
                 <div id="doing-part">
@@ -50,10 +50,10 @@
                             <td>ID</td>
                             <td>Pershkrimi</td> 
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td> <a href="" >a122</a></td>
                             <td>Blerje</td> 
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
                 <div id="done-part">
@@ -63,10 +63,10 @@
                             <td>ID</td>
                             <td>Pershkrimi</td> 
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td> <a href="" >a132</a></td>
                             <td>Dhurim</td> 
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>
