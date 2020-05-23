@@ -11,6 +11,7 @@ header {
   background-size: cover;
   background-position: top;
   margin-top: -10px;
+  background-attachment: fixed;
 }
 
 ul {
@@ -42,7 +43,7 @@ ul li a {
   margin-right: 10px;
   margin-left: 10px;
 }
-.nav{
+.nav {
   margin-top: 10px;
   margin-left: 5px;
 }
