@@ -25,7 +25,7 @@ if(isset($_GET['editProfile']))
 
 
 mysqli_query($link,$sql);
-header('location: login.php');
+header('location: ../HTML/NefoeditProfile.php');
 
 
 }

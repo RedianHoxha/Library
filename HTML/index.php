@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,8 +170,8 @@ p{
                     <div class="butonat">
                         <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Bli</button> <br />
                         <!--para se te bej rezervim ai suhet te rregjistrohet-->
-                        <button onclick="location.href = 'rezervim.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
-                        <button onclick="location.href = 'blerje.html?edit=<?php echo $row['Titull']; ?>'">Shto ne Wishlist</button> <br />
+                        <button onclick="location.href = 'rezervimthjeshte.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
+                        <button onclick="location.href = 'rezervimthjeshte.php?edit=<?php echo $row['Titull']; ?>'">Shto ne Wishlist</button> <br />
                     </div>
                 </div>
             </div>
