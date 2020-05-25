@@ -187,7 +187,7 @@ p{
                     <div class="butonat">
                         <button onclick="location.href = 'blerje.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Bli</button> <br />
                         <button onclick="location.href = 'rezervim.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
-                        <button onclick="location.href = 'blerje.html?edit=<?php echo $row['Titull']; ?>'">Shto ne Wishlist</button> <br />
+                        <button onclick="location.href = 'shtowishlist.php?wishlist=<?php echo $row['IdLibri']; ?>'" name="wishlist">Shto ne Wishlist</button> <br />
                     </div>
                 </div>
             </div>

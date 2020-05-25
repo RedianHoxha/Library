@@ -3,7 +3,7 @@
 
 function enkripto()
 {
-
+alert('hello');
     var pass = $("#form_password").val();
     alert(pass);
 
