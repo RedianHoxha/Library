@@ -65,8 +65,8 @@ $username = $p1.$p2;
 
                         //echo $iduserri;
 
-                        $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi)
-                        values ('$datablerjes','$idlibri', '$sasilibrash', '$iduserri')";
+                        $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi,statusi)
+                        values ('$datablerjes','$idlibri', '$sasilibrash', '$iduserri','To Do')";
                         //echo $sqlinsertekbli;
                          mysqli_query($link, $sqlinsertekbli);
 
@@ -98,7 +98,7 @@ $username = $p1.$p2;
 
           
 
-                $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi) values ('$datablerjes','$idlibri', '$sasilibrash', ' $iduser')";
+                $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi,statusi) values ('$datablerjes','$idlibri', '$sasilibrash', ' $iduser','To Do')";
                 mysqli_query($link, $sqlinsertekbli);
                 //$last_idbli = mysqli_insert_id($link);
 

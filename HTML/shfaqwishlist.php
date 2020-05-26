@@ -1,5 +1,6 @@
 <html>
     <head>
+    <link  href="../CSS/style-shfaqwishlist.css" rel="stylesheet" type="text/css">
 <title>My wish list</title>
     </head>
     <body>

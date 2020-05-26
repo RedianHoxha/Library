@@ -109,7 +109,7 @@ if (isset($_POST['Bli']))
 
           
 
-                $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi) values('$datablerjes','$idlibri', '$sasilibrash', ' $iduser')";
+                $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi,statusi) values('$datablerjes','$idlibri', '$sasilibrash', ' $iduser','To Do')";
                  //echo  $sqlinsertekbli;
                 mysqli_query($link, $sqlinsertekbli);
                 //$last_idbli = mysqli_insert_id($link);
@@ -136,6 +136,7 @@ if (isset($_POST['Bli']))
 
                 $sqlupdatelibrat = "update librari set Sasia = '$diferenca' where IdLibri = '$idlibri' ";
                 mysqli_query($link, $sqlupdatelibrat);
+                header('location: ../HTML/homeperdorues.php');
 
     }
     else

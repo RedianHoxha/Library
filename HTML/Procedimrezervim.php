@@ -38,8 +38,8 @@
             $sasiaktuale --;
 
             
-            $sqlinsertekrezervo = " insert into rezervo (DatRezervimi, Kohezgjatja, IdLibri ,IdLexusi)
-            values ('$datasotme','$datakthimit', '$idlibri', '$iduser')";
+            $sqlinsertekrezervo = " insert into rezervo (DatRezervimi, Kohezgjatja, IdLibri ,IdLexusi,statusi)
+            values ('$datasotme','$datakthimit', '$idlibri', '$iduser','To Do')";
             //echo $sqlinsertekrezervo;
             mysqli_query($link, $sqlinsertekrezervo);
 

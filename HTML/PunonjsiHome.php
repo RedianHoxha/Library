@@ -1,7 +1,15 @@
 <?php 
+     
+            
         session_start();
         //include('../PHP/session.php');
         $user=$_SESSION['user'];
+        $link = mysqli_connect("localhost", "root", "", "library");
+    
+    // Check connection
+    if($link === false){
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+    }
       ?>
 
 <!DOCTYPE html>
@@ -32,41 +40,65 @@
             <div id="page-down-djathtas">
                 <div id="todo-part">
                     <table style="width:100%">
-                       <th><td colspan="2">TO DO</td></th>
-                        <tr>
-                            <td>ID</td>
-                            <td>Pershkrimi</td> 
+                       <th><td><b>Blerjet</b></td></th>
+                        <tr colspan="2">
+                            <td >ID Blerje</td>
+                            <td>Statusi punes</td> 
                         </tr>
-                        <!-- <tr>
-                            <td> <a href="" >a112</a></td>
-                            <td>Rezervim</td> 
-                        </tr> -->
+                        <?php $sqlquerybli="Select * from bli where statusi = 'To Do'";
+                
+                    $resultbli=mysqli_query($link, $sqlquerybli);
+
+                while ($row = mysqli_fetch_array($resultbli)) { ?>
+                <tbody>
+                    <tr>
+                        <td><?php echo $row['IdBlerje']; ?></td>
+                        <td><?php echo $row['statusi']; ?></td>
+                    </tr>
+                </tbody>
+                <?php } ?>
+
                     </table>
                 </div>
                 <div id="doing-part">
                     <table style="width:100%"> 
-                        <th><td colspan="2">TO DO</td></th>  
+                        <th><td colspan="2"><b>Rezervimet</b></td></th>  
                         <tr>
-                            <td>ID</td>
-                            <td>Pershkrimi</td> 
+                            <td>ID Rezervimi</td>
+                            <td>Statusi</td> 
                         </tr>
-                        <!-- <tr>
-                            <td> <a href="" >a122</a></td>
-                            <td>Blerje</td> 
-                        </tr> -->
+                        <?php $sqlqueryrezervo="Select * from rezervo  where statusi  = 'To Do'";
+                //echo $sqlquery;
+                    $resultrezervo=mysqli_query($link, $sqlqueryrezervo);
+
+                while ($row = mysqli_fetch_array($resultrezervo)) { ?>
+                <tbody>
+                    <tr>
+                        <td><?php echo $row['IdRezervimi']; ?></td>
+                        <td><?php echo $row['statusi']; ?></td>
+                    </tr>
+                </tbody>
+                <?php } ?>
                     </table>
                 </div>
                 <div id="done-part">
                     <table style="width:100%">
-                        <th><td colspan="2">TO DO</td></th>  
+                        <th><td colspan="2"><b>Punet e mia</b></td></th>  
                         <tr>
-                            <td>ID</td>
-                            <td>Pershkrimi</td> 
+                            <td>ID Pune</td>
+                            <td>Statusi</td> 
                         </tr>
-                        <!-- <tr>
-                            <td> <a href="" >a132</a></td>
-                            <td>Dhurim</td> 
-                        </tr> -->
+                        <?php $sqlquerypunet="Select * from rezervo  where statusi  = 'To Do'";
+                    $resultpunet=mysqli_query($link, $sqlquerypunet);
+
+                while ($row = mysqli_fetch_array($resultpunet)) { ?>
+                <tbody>
+                    <tr>
+                        <td><?php echo $row['IdLibri']; ?></td>
+                        <td><?php echo $row['IdLexusi']; ?></td>
+                    </tr>
+                </tbody>
+                <?php } ?>
                     </table>
                 </div>
             </div>
