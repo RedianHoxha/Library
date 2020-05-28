@@ -25,9 +25,17 @@ if(mysqli_num_rows($result)>0){
     //echo $rolilogusit;
     //$_SESSION['success'] = "You are now logged in";
     //echo "<script>console.log('Debug Objects: " . $username. "' );</script>";
-    if($rolilogusit == 'Admin'){
+    if($rolilogusit != 'Vizitor'){
         $_SESSION['user']= $username;
-        header('location: ../HTML/homeperdorues.php');
+        if($rolilogusit == 'Admin')
+        {
+            header('location: ../HTML/PunonjsiHome.php');
+        }
+        else
+        {
+            header('location: ../HTML/punonjesthjeshtehome.php');
+        }
+        
        // echo $rolilogusit;
     }
     else{
@@ -37,7 +45,7 @@ if(mysqli_num_rows($result)>0){
     }
   
     //
-echo $username;
+//echo $username;
 } else{
     echo "ERROR:  " . mysqli_error($link);
 }

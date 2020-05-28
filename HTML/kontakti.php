@@ -2,9 +2,33 @@
         session_start();
         //include('../PHP/session.php');
         $user=$_SESSION['user'];
+
+        $link = mysqli_connect("localhost", "root", "", "library");
+ 
+        // Check connection
+        if($link === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+        
+        $ekzistonuseri = "select * from useri where Username = '$user'";
+        //echo $ekzistonuseri;
+        $resultuseri=mysqli_query($link, $ekzistonuseri);
+        $rowekzistus = mysqli_fetch_array($resultuseri);
+        $roli = $rowekzistus['Roli'];
+        $destinacioni;
+        
+        if($roli === 'Admin')
+        { 
+            $destinacioni = "PunonjsiHome.php";
+        }
+        else{
+            $destinacioni = "punonjesthjeshtehome.php";
+        }
       ?>
 <!DOCTYPE html>
 <html lang="en">
+
+
 
 <head>
     <meta charset="UTF-8" />
@@ -42,8 +66,8 @@
         </div>
         <div class="nav2">
             <ul>
-                <li><a href="NefoProfile.html"><?php echo $user ?></a></li>
-                <li><a href="PunonjsiHome.php">Work Page</a></li>
+                <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
+                <li><a href=<?php echo $destinacioni?>>Work Page</a></li>
                 <li><a href="../PHP/logout.php">Dil</a></li>
             </ul>
         </div>

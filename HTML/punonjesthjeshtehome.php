@@ -1,16 +1,16 @@
 <?php 
      
             
-        session_start();
-        //include('../PHP/session.php');
-        $user=$_SESSION['user'];
-        $link = mysqli_connect("localhost", "root", "", "library");
-    
-    // Check connection
-    if($link === false){
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
-      ?>
+     session_start();
+     //include('../PHP/session.php');
+     $user=$_SESSION['user'];
+     $link = mysqli_connect("localhost", "root", "", "library");
+ 
+ // Check connection
+ if($link === false){
+     die("ERROR: Could not connect. " . mysqli_connect_error());
+ }
+   ?>
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@
                 </div>
                 <div id="top-page-right">
                     <input  class="button" type="button"  value="<?php echo $user ?>" onclick="window.location='NefoProfile.php'">
-                    <input  class="button" type="button"  value="Web" onclick="window.location='homeadmin.php'">
+                    <input  class="button" type="button"  value="Web" onclick="window.location='homeperdorues.php'">
                     <input  class="button"type="button"  value="Log out" onclick="window.location='../PHP/logout.php'">
                 </div>
         </div>
@@ -32,12 +32,7 @@
 
     </head>
     <body>
-        <div id="page-down">
-            <div id="page-down-majtas">
-                <input  class="buttonansore" type="button" value="Shto punonjes" onclick="window.location='Punonjes.php'" >
-                <input  class="buttonansore" type="button" value="Shto Libra" onclick="window.location='Libraria.php'">
-            </div>
-            <div id="page-down-djathtas">
+    <div id="page-down-djathtas">
                 <div id="todo-part">
                     <table style="width:100%">
                        <th><td><b>Blerjet</b></td></th>
@@ -87,24 +82,20 @@
                         <tr>
                             <td>ID Pune</td>
                             <td>Statusi</td> 
-                            <td>Tip Pune</td> 
                         </tr>
-                        <?php $sqlquerypunet="Select * from shqyrtopune  where statusi = 'In Progres' and userpunonjsi = '$user'";
+                        <?php $sqlquerypunet="Select * from shqyrtopune  where statusi  = 'Done' or statusi = 'In Progres' and userpunonjsi = '$user'";
                     $resultpunet=mysqli_query($link, $sqlquerypunet);
 
                 while ($row = mysqli_fetch_array($resultpunet)) { ?>
                 <tbody>
                     <tr>
-                    <td><a href="ndryshostatuspune.php?pune=<?php echo $row['TipiPunes']; ?>&ndrysho=<?php echo $row['idpune']; ?>"><?php echo $row['idpune']; ?></a></td>   
-                    <td><?php echo $row['statusi']; ?></td>
-                        <td><?php echo $row['TipiPunes']; ?></td>
-
+                        <td><?php echo $row['idpune']; ?></td>
+                        <td><?php echo $row['statusi']; ?></td>
                     </tr>
                 </tbody>
                 <?php } ?>
                     </table>
                 </div>
             </div>
-        </div>
     </body>
 </html>

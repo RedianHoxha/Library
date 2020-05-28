@@ -1,4 +1,4 @@
-      <?php 
+<?php 
         session_start();
         //include('../PHP/session.php');
         $user=$_SESSION['user'];
@@ -127,7 +127,7 @@ p{
             <div class="nav2">
             <ul>
             <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
-            <li><a href="punonjesthjeshtehome.php">Work Page</a></li>
+            <li><a href="PunonjsiHome.php">Work Page</a></li>
             <li><a href="../PHP/logout.php">Dil</a></li>
           </ul>
             </div>

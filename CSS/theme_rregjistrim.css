@@ -446,3 +446,22 @@ iframe {
     opacity: 1;
   }
 }
+
+.box select {
+  background-color: #cfdce0;
+  color: rgb(81, 34, 109);
+  padding: 12px;
+  width: 285px;
+  border-radius: 25px;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+
+
+.box select option {
+  padding: 30px;
+}
