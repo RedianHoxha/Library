@@ -33,6 +33,7 @@ if (isset($_POST['Bli']))
   $resultuseri=mysqli_query($link, $ekzistonuseri);
   $rowekzistus = mysqli_fetch_array($resultuseri);
   $iduser = $rowekzistus['IdUser'];
+  $roli = $rowekzistus['Roli'];
  // echo $iduser;
 
     $sasailibrave = "select * from librari  where Titull = '$titull' and Statusi = 'Blere' and Sasia > 0";
@@ -109,7 +110,7 @@ if (isset($_POST['Bli']))
 
           
 
-                $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi) values('$datablerjes','$idlibri', '$sasilibrash', ' $iduser')";
+                $sqlinsertekbli = " insert into bli (DateBlerje, IdLibri, Sasia ,IdBlersi,statusi) values('$datablerjes','$idlibri', '$sasilibrash', ' $iduser','To Do')";
                  //echo  $sqlinsertekbli;
                 mysqli_query($link, $sqlinsertekbli);
                 //$last_idbli = mysqli_insert_id($link);
@@ -136,6 +137,20 @@ if (isset($_POST['Bli']))
 
                 $sqlupdatelibrat = "update librari set Sasia = '$diferenca' where IdLibri = '$idlibri' ";
                 mysqli_query($link, $sqlupdatelibrat);
+
+                if($roli === 'Admin')
+                {
+                  header('location: ../HTML/homeadmin.php');
+
+                }
+                else if ($roli === 'Vizitor')
+                {
+                  header('location: ../HTML/homelexues.php');
+                }
+                else{
+                 header('location: ../HTML/homeperdorues.php');
+   
+                }
 
     }
     else

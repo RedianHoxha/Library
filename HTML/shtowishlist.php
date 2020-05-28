@@ -23,7 +23,7 @@
                 $row = mysqli_fetch_array($rezultatkthyer);
 
                 $isbn = $row['ISBN'];
-                echo $isbn;
+                //echo $isbn;
                 $titull = $row['Titull'];
                 $autor = $row['Autor'];
                 $pershkrim = $row['Pershkrim'];
@@ -33,7 +33,7 @@
                 $cmimi = $row['Cmimi'];
 
                 $kontrollonqseshtemepare = "select * from wishlist where IdLibri = '$idlibri' and username = '$user'";
-                echo $kontrollonqseshtemepare;
+                //echo $kontrollonqseshtemepare;
                 $rezultlibri=mysqli_query($link, $kontrollonqseshtemepare);
 
                 if(mysqli_num_rows($rezultlibri) == 0)
@@ -41,17 +41,43 @@
                     
                     $sql = "insert into wishlist (IdLibri,ISBN,Titull,Autor,Pershkrim,Zhanri,Sasia,Statusi,Cmimi,username)
                      values ('$idlibri','$isbn','$titull','$autor','$pershkrim','$zhanri','$sasia ','$status','$cmimi','$user')";
-                     echo $sql;
+                     //echo $sql;
                     mysqli_query($link,$sql);
 
                 }
 
-            //header('location: homelexues.php');
 
+            $sqlroliuserit = "select *from useri where Username = '$user'";
+            echo $sqlroliuserit;
+            $rezultat = mysqli_query($link,$sqlroliuserit);
+
+            if(mysqli_num_rows($rezultat) != 0)
+            {
+                $row = mysqli_fetch_array($rezultat);
+                $roliuserit = $row['Roli'];
+
+                echo $roliuserit;
+                if($roliuserit == 'Admin')
+                {
+                    //echo 'siper';
+                    header('location: homeadmin.php');
+                }
+                else if($roliuserit == 'Vizitor')
+                {
+                    //echo 'poshte';
+                    header('location: homelexues.php');
+                }
+                else{
+                    header('location: homeperdorues.php');
+                }
             }
-            else{
-                echo 'jemi ketu poshte';
-            }
-          
+            
+
         }
+        else
+        {
+                echo 'jemi ketu poshte';
+        }
+          
+    }
 ?>
