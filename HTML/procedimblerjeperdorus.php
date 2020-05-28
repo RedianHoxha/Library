@@ -33,6 +33,7 @@ if (isset($_POST['Bli']))
   $resultuseri=mysqli_query($link, $ekzistonuseri);
   $rowekzistus = mysqli_fetch_array($resultuseri);
   $iduser = $rowekzistus['IdUser'];
+  $roli = $rowekzistus['Roli'];
  // echo $iduser;
 
     $sasailibrave = "select * from librari  where Titull = '$titull' and Statusi = 'Blere' and Sasia > 0";
@@ -136,7 +137,20 @@ if (isset($_POST['Bli']))
 
                 $sqlupdatelibrat = "update librari set Sasia = '$diferenca' where IdLibri = '$idlibri' ";
                 mysqli_query($link, $sqlupdatelibrat);
-                header('location: ../HTML/homeperdorues.php');
+
+                if($roli === 'Admin')
+                {
+                  header('location: ../HTML/homeadmin.php');
+
+                }
+                else if ($roli === 'Vizitor')
+                {
+                  header('location: ../HTML/homelexues.php');
+                }
+                else{
+                 header('location: ../HTML/homeperdorues.php');
+   
+                }
 
     }
     else

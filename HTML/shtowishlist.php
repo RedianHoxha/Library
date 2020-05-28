@@ -60,12 +60,15 @@
                 if($roliuserit == 'Admin')
                 {
                     //echo 'siper';
-                    header('location: homeperdorues.php');
+                    header('location: homeadmin.php');
                 }
-                else
+                else if($roliuserit == 'Vizitor')
                 {
                     //echo 'poshte';
                     header('location: homelexues.php');
+                }
+                else{
+                    header('location: homeperdorues.php');
                 }
             }
             

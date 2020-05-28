@@ -23,8 +23,8 @@
                 <p>Punen e sotme mos e ler per neser mor ta marsha</p>
                 </div>
                 <div id="top-page-right">
-                    <input  class="button" type="button"  value="<?php echo $user ?>" onclick="window.location='NefoProfile.html'">
-                    <input  class="button" type="button"  value="Web" onclick="window.location='homeperdorues.php'">
+                    <input  class="button" type="button"  value="<?php echo $user ?>" onclick="window.location='NefoProfile.php'">
+                    <input  class="button" type="button"  value="Web" onclick="window.location='homeadmin.php'">
                     <input  class="button"type="button"  value="Log out" onclick="window.location='../PHP/logout.php'">
                 </div>
         </div>
@@ -52,8 +52,8 @@
                 while ($row = mysqli_fetch_array($resultbli)) { ?>
                 <tbody>
                     <tr>
-                        <td><?php echo $row['IdBlerje']; ?></td>
-                        <td><?php echo $row['statusi']; ?></td>
+                    <td><a href="ndryshostatuspune.php?pune=blerje&ndrysho=<?php echo $row['IdBlerje']; ?>"><?php echo $row['IdBlerje']; ?></a></td>   
+                    <td><?php echo $row['statusi']; ?></td>
                     </tr>
                 </tbody>
                 <?php } ?>
@@ -74,8 +74,8 @@
                 while ($row = mysqli_fetch_array($resultrezervo)) { ?>
                 <tbody>
                     <tr>
-                        <td><?php echo $row['IdRezervimi']; ?></td>
-                        <td><?php echo $row['statusi']; ?></td>
+                    <td><a href="ndryshostatuspune.php?pune=rezervim&ndrysho=<?php echo $row['IdRezervimi']; ?>"><?php echo $row['IdRezervimi']; ?></a></td>   
+                    <td><?php echo $row['statusi']; ?></td>
                     </tr>
                 </tbody>
                 <?php } ?>
@@ -87,15 +87,18 @@
                         <tr>
                             <td>ID Pune</td>
                             <td>Statusi</td> 
+                            <td>Tip Pune</td> 
                         </tr>
-                        <?php $sqlquerypunet="Select * from rezervo  where statusi  = 'To Do'";
+                        <?php $sqlquerypunet="Select * from shqyrtopune  where statusi = 'In Progres' and userpunonjsi = '$user'";
                     $resultpunet=mysqli_query($link, $sqlquerypunet);
 
                 while ($row = mysqli_fetch_array($resultpunet)) { ?>
                 <tbody>
                     <tr>
-                        <td><?php echo $row['IdLibri']; ?></td>
-                        <td><?php echo $row['IdLexusi']; ?></td>
+                    <td><a href="ndryshostatuspune.php?pune=<?php echo $row['TipiPunes']; ?>&ndrysho=<?php echo $row['idpune']; ?>"><?php echo $row['idpune']; ?></a></td>   
+                    <td><?php echo $row['statusi']; ?></td>
+                        <td><?php echo $row['TipiPunes']; ?></td>
+
                     </tr>
                 </tbody>
                 <?php } ?>
