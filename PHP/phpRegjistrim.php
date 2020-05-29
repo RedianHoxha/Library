@@ -33,14 +33,46 @@ if($link === false){
 
    if(mysqli_num_rows($result)==0){
 
-    $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
-    VALUES('$emri','$mbiemri', '$email',$tel , '$adresa','$username','$passwordenkriptuar','$roli')";
-  if(mysqli_query($link, $sql)){
+    $sql = $link->prepare("INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
+Values (?, ?, ?, ?, ?, ?, ?, ?)");
+$sql->bind_param("sssdssss", '&emri', '&mbiemri', '&email', '&tel', '&adresa', '&username', '&passwordenkriptuar', '&roli');
+if (!$sql->execute() || $sql.affected_rows == 0) {
+ echo "error executing query";
+//  exit;
+}
+else {
+ echo "success";
+//  exit;
+}
+
+//    $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
+//    VALUES('$emri','$mbiemri', '$email','$tel' , '$adresa','$username','$passwordenkriptuar','$roli')";
+//   
+// $sql ="INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
+// Values (:e,:m,:emal,:t,:ad,:us,:pas,:rol)";
+
+// //     $sql->bindParam(':e',$emri);
+// // $sql->bindParam(':m',$mbiemri);
+// // $sql->bindParam(':emal',$email);
+// // $sql->bindParam(':t',$tel);
+// // $sql->bindParam(':ad',$adresa);
+// // $sql->bindParam(':us',$username);
+// // $sql->bindParam(':pas',$passwordenkriptuar);
+// // $sql->bindParam(':rol',$roli);
+
+// $sql ->Execute('$emri','$mbiemri', '$email','$tel' , '$adresa','$username','$passwordenkriptuar','$roli'); 
+
+
+ 
+
+
+
+// if(mysqli_query($link, $sql)){
         
-        header('location:login.php');
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-    }
+//         header('location:login.php');
+//     } else{
+//         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+//     }
 }
 else{
     header('location:rregjistrim.php?Invalid=Please enter another Username!');

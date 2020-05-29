@@ -16,13 +16,16 @@ $resultuseri=mysqli_query($link, $ekzistonuseri);
 $rowekzistus = mysqli_fetch_array($resultuseri);
 $roli = $rowekzistus['Roli'];
 $destinacioni;
+$destinacionhome;
 
 if($roli === 'Admin')
 { 
     $destinacioni = "PunonjsiHome.php";
+    $destinacionhome = "homeadmin.php";
 }
 else{
     $destinacioni = "punonjesthjeshtehome.php";
+    $destinacionhome = "homeperdorues.php";
 }
       ?>
 <!DOCTYPE html>
@@ -95,7 +98,7 @@ else{
                         <img src="../FOTO/logo.png" /></li>
             </div>
             <ul>
-                <li><a href="homeperdorues.php">Home</a></li>
+                <li><a href=<?php echo $destinacionhome?>>Home</a></li>
                 <li class="active"><a href="#">Rreth nesh</a></li>
                 <li>
                     <div class="menu">
@@ -116,7 +119,6 @@ else{
         <div class="nav2">
             <ul>
                 <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
-
                 <li><a href=<?php echo $destinacioni?>>Work Page</a></li>
                 <li><a href="../PHP/logout.php">Dil</a></li>
             </ul>

@@ -24,30 +24,30 @@ if (isset($_POST['ndrysho']))
      $tipipunes = $_POST['tip_pune'];
 
      $sqlekzistonpune = "select * from shqyrtopune where idpune ='$idpune' and TipiPunes ='$tipipunes' and userpunonjsi = '$user'";
-     echo $sqlekzistonpune;
+     //echo $sqlekzistonpune;
      $result = mysqli_query($link, $sqlekzistonpune);
-     echo mysqli_num_rows($result);
+     //echo mysqli_num_rows($result);
      if(mysqli_num_rows($result) == 0)
      {
 
 
-        echo 'ushtua i ri';
+        //echo 'ushtua i ri';
         $sqlinser = "insert into shqyrtopune (idpune,userpunonjsi,statusi,TipiPunes) values ('$idpune','$user','$statusiri','$tipipunes')";
-           echo $sqlinser;
+           //echo $sqlinser;
          mysqli_query($link,$sqlinser);
      }
      else 
      {
-         echo 'update';
-         $sqlupdatetable = "update shqyrtopune set statusi =  '$statusiri' where idpune ='$idpune' and TipiPunes ='$tipipunes' and userpunonjsi = '$user'";
-         echo $sqlupdatetable;
+         //echo 'update';
+         $sqlupdatetable = "update  shqyrtopune set statusi =  '$statusiri' where idpune ='$idpune' and TipiPunes ='$tipipunes' and userpunonjsi = '$user'";
+         //echo $sqlupdatetable;
          mysqli_query($link,$sqlupdatetable);
      }
 
 
     if($tipipunes === 'blerje')
     {
-       echo 'blerje'; 
+      // echo 'blerje'; 
     $sqlupdeto = "update bli set statusi = '$statusiri' where IdBlerje = '$idpune'";
     //echo $sqlupdeto;
     mysqli_query($link,$sqlupdeto);
@@ -55,7 +55,7 @@ if (isset($_POST['ndrysho']))
     }
     else if($tipipunes === 'rezervim')
     {
-        echo 'rezervim';
+       // echo 'rezervim';
         $sqlupdetorezervo = "update rezervo set statusi = '$statusiri' where IdRezervimi = '$idpune'";
         //echo $sqlupdetorezervo;
         mysqli_query($link,$sqlupdetorezervo);
@@ -63,13 +63,13 @@ if (isset($_POST['ndrysho']))
     }
 
     
-    // if($roli === 'Admin')
-    // { 
-    //     header('location:PunonjsiHome.php');
-    // }
-    // else{
-    //   header('location: ../HTML/punonjesthjeshtehome.php');
-    // }
+    if($roli === 'Admin')
+    { 
+        header('location:PunonjsiHome.php');
+    }
+    else{
+      header('location: ../HTML/punonjesthjeshtehome.php');
+    }
 
  }
 ?>
