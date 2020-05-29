@@ -24,7 +24,7 @@
         ?>
         <!-- -->
 
-        <form class="login100-form validate-form" onsubmit="return validateForm();" action='procedimblerje.php?Bli=<?php echo $row['Titull']; ?>' method='post'>
+        <form class="login100-form validate-form" onsubmit="return validateForm();" action='procedimblerjetest.php?Bli=<?php echo $row['Titull']; ?>' method='post'>
 
         <div style="max-width: 400px;">
         </div>

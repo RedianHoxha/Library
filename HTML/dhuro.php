@@ -1,3 +1,39 @@
+<?php 
+        session_start();
+        //include('../PHP/session.php');
+        $user=$_SESSION['user'];
+        
+        $link = mysqli_connect("localhost", "root", "", "library");
+
+        if($link === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+        
+        $ekzistonuseri = "select * from useri where Username = '$user'";
+        //echo $ekzistonuseri;
+        $resultuseri=mysqli_query($link, $ekzistonuseri);
+        $rowekzistus = mysqli_fetch_array($resultuseri);
+        $roli = $rowekzistus['Roli'];
+        $destinacioni;
+        $destinacionhome;
+        
+        if($roli === 'Admin')
+        { 
+            $destinacioni = "PunonjsiHome.php";
+            $destinacionhome = "homeadmin.php";
+        }
+        else{
+            $destinacioni = "punonjesthjeshtehome.php";
+            $destinacionhome = "homeperdorues.php";
+        }
+          
+
+        $sqlquery="Select * from useri  where Username = '$user'";
+        $result=mysqli_query($link, $sqlquery);
+        $rowuseri = mysqli_fetch_array($result);
+    ?>
+    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +76,7 @@
                 </div>
     
                 <ul>
-                    <li><a href="../HTML/homeadmin.php">Home</a></li>
+                <li><a href=<?php echo $destinacionhome?>>Home</a></li>
                     <li><a href="../HTML/Rrethnesh.php">Rreth nesh</a></li>
                     <li>
                         <div class="menu">
@@ -54,15 +90,13 @@
                         </div>
                     </li>
                     <li><a href="kontakti.php">Kontakti</a></li>
-                    <!-- <li class="active"><a href="index.php">DHURO!</a></li> -->
-                    <li><a href="index.php">DHURO!</a></li>
                 </ul>
             </div>
     
             <div>
                 <ul class="nav2">    
                     <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
-                    <li><a href="PunonjsiHome.php">Work Page</a></li>
+                    <li><a href=<?php echo $destinacioni?>>Work Page</a></li>
                     <li><a href="../PHP/logout.php">Dil</a></li>
                 </ul>
             </div>
@@ -73,7 +107,7 @@
 
             <div id="bottompage">
                 <div>
-                    <form id="forma" method="POST" action="../PHP/rregjistroliberphp.php">
+                    <form id="forma" method="POST" action="rregjistroliberdhuroperdorues.php">
                         <div id="fullform">
                             <div id="pershendetje">
                                 <h3>Ju lutem plotesoni të dhënat e kerkuara</h3>
@@ -83,19 +117,19 @@
 
                                 <div id="fullname">
                                     <p id="txt">First name
-                                    <p><input type="text" id="fname" name="fname" placeholder="Redian"
+                                    <p><input type="text" id="fname" name="fname" value="<?php echo $rowuseri['Emer']; ?>"
                                             autocomplete="off">
                                     <p id="txt">Last name
-                                    <p><input type="text" id="lname" name="lname" placeholder="Hoxha"
+                                    <p><input type="text" id="lname" name="lname" value="<?php echo $rowuseri['Mbiemer']; ?>"
                                             autocomplete="off">
                                 </div>
                                 <div id="contact">
                                     <p>Email</p><input type="text" id="email" name="email" autocomplete="off"
-                                        placeholder="hoxharedian@gmail.com">
-                                    <p>Telefon</p><input type="text" id="nr" name="tel" placeholder="0685308860"
+                                    value="<?php echo $rowuseri['Email']; ?>">
+                                    <p>Telefon</p><input type="text" id="nr" name="tel" value="<?php echo $rowuseri['Tel']; ?>"
                                         autocomplete="off">
                                     <p>Adresa</p><input type="text" id="adress" name="adresa"
-                                        placeholder="Ju lutem vendosni adresen" autocomplete="off">
+                                    value="<?php echo $rowuseri['Adresa ']; ?>" autocomplete="off">
                                     <input type="hidden" name="hiddenValue" id="test">
                                 </div>
                             </div>

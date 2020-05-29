@@ -48,7 +48,7 @@ body{
         <div class="button_text " ><a class="example_e" href="../HTML/NefoeditProfile.php" name="edit" ><i class="fa fa-pencil"> Profili juaj/modifiko!</i></a> </div>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="" rel="nofollow noopener"><i class="fa fa-heart"> Te preferuarat!</i></a></div><br>
+        <div class="button_text" ><a class="example_e" href="shfaqwishlist.php" rel="nofollow noopener"><i class="fa fa-heart"> Te preferuarat!</i></a></div><br>
     </div>
     <div class="buttonconatiner">
         <div class="button_text" ><a class="example_e" href="../HTML/AddressBook.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
