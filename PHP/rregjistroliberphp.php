@@ -69,7 +69,7 @@ $ekzistonuseri = "select * from useri where Emer = '$emri' and Mbiemer='$mbiemri
                                 mysqli_query($link, $insertdhuro);
                             }
                         }
-                        header('location:../HTML/homeperdorues.html');
+                        header('location:../HTML/index.php');
                     } 
                     else
                     {
@@ -97,7 +97,7 @@ $ekzistonuseri = "select * from useri where Emer = '$emri' and Mbiemer='$mbiemri
                 }
 
             }
-           header('location:../HTML/homeperdorues.html');
+           header('location:../HTML/index.php');
         }
     
 

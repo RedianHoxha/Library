@@ -12,6 +12,7 @@
             <div class="login100-pic js-tilt">
                 <img src="../FOTO/liber_rregjistrim.svg" alt="libraria">
 </div>
+            <!-- <form class="login100-form " id="forme_regjistrimi" action="phpRegjistrim.php" method="POST"> -->
             <form class="login100-form " id="forme_regjistrimi" action="phpRegjistrim.php" method="POST">
                 <span class="login100-form-title">
                  <h2> Faqe Anetaresie !</h2> 

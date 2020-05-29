@@ -14,7 +14,6 @@ if(isset($_GET['edit']))
     $isbn = $_POST['isbn'];
     $titulli = $_POST['titull'];
     $autor  = $_POST['autori'];
-   
     $zhanri = $_POST['zhanri'];
     $cmimi = $_POST['cmimi'];
 
