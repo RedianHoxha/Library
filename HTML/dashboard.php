@@ -10,10 +10,10 @@
 .container{
     background-color: #a6a2a2;
     width:85%;
-    height:100%;
+    height:657px;
     margin-left: -20px;
     margin-top: 0;
-    
+    position:fixed;
 }
 .buttonconatiner{
 background-color:rgb(108, 117, 126);
@@ -51,7 +51,10 @@ body{
         <div class="button_text" ><a class="example_e" href="shfaqwishlist.php" rel="nofollow noopener"><i class="fa fa-heart"> Te preferuarat!</i></a></div><br>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="../HTML/AddressBook.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
+        <div class="button_text" ><a class="example_e" href="../HTML/shporta.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
+    </div>
+    <div class="buttonconatiner">
+        <div class="button_text" ><a class="example_e" href="../HTML/rezervime.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Rezervime</i></a></div><br>
     </div>
 </div>
     </div>
