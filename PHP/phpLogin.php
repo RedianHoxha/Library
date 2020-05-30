@@ -13,14 +13,6 @@ if (isset($_POST['login_user'])) {
 
 
    $rest = substr($passwordenkriptuar, 2, -2);
-//    echo ' ';
-//         echo $passwordenkriptuar;
-//         echo  ' ';
-//         echo $rest;
-//         echo  ' ';
-//         echo    $username;
-    //    echo $password;
-
     $sqlquery="Select * from useri where Username=?";
     $stmt = mysqli_stmt_init($link);
 
@@ -39,7 +31,7 @@ if (isset($_POST['login_user'])) {
         $result = mysqli_stmt_get_result($stmt);
         $row =mysqli_fetch_assoc($result);
 
-        echo mysqli_num_rows($result);
+        //echo mysqli_num_rows($result);
 
         if(mysqli_num_rows($result)!=0)
         {
