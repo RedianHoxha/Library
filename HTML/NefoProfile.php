@@ -21,6 +21,6 @@
         <div class="button_cont" align="center"><a class="example_e" href="NefoeditProfile.php"  rel="nofollow noopener">Edit your profile!</a></div><br>
         <div class="button_cont" align="center"><a class="example_e" href="shporta.php"  rel="nofollow noopener">Your Orders!</a></div><br>
         <div class="button_cont" align="center"><a class="example_e" href="shfaqwishlist.php"  rel="nofollow noopener">Wish List🤍</a></div><br>
-        <div class="button_cont" align="center"><a class="example_e" href="../HTML/AddressBook.php" rel="nofollow noopener">Address!</a></div><br>
+        <div class="button_cont" align="center"><a class="example_e" href="rezervime.php" rel="nofollow noopener">Rezervimet tuaja!</a></div><br>
     </body>
 </html>
