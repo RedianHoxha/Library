@@ -12,18 +12,16 @@
 
     <title>Edit</title>
     <style>
-    .profile h4{
+    .profile h4 {
       margin-bottom: 6px;
+      margin-top: -40px;
     }
     .form-group{
       margin-right: 70px;
     }
-    .test {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-    }
+.test{
+  margin-top: -30px;
+}
     </style>
 </head>
 <body>
@@ -34,8 +32,9 @@
     </div>
     <div class="col-sm-8">
      <div class="profile">
-        <h3><i class="fa fa-user-o"></i> YOUR PROFILE</h3>
-        <h4>Pershendetje, ketu mund te beni ndryshimet ne lidhje me te dhenat tuaja!</h4>
+        <h2></h2>
+        <h3 class="shadow-sm p-3 mb-5 bg-white rounded"><i class="fa fa-user-o"></i> YOUR PROFILE</h3>
+        <h4 class="shadow-sm p-3 mb-5 bg-white rounded">Pershendetje, ketu mund te beni ndryshimet ne lidhje me te dhenat tuaja!</h4>
      </div>
          <?php $link = mysqli_connect("localhost", "root", "", "library");
         

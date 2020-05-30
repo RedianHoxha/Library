@@ -27,12 +27,7 @@
                 flex-direction: column;
                 height: 100%;
             }
-            .test {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
+        
             .buttonconatiner{
                 background-color:rgb(108, 117, 126);
                 margin-bottom: 10%;
@@ -51,7 +46,7 @@
                 font-size: 100%;
             }
             body{
-                background-image: url("Untitled.png");
+                background-image: url("../FOTO/download.jpg");
             }
         </style>
     </head>
