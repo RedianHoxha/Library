@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <head>
     <title> Search</title>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -20,7 +21,8 @@
     
                         while ($row = mysqli_fetch_array($result)) { ?>
     
-                <div class="col-sm-6">
+                <div class="col-sm-9 col-md-6">
+
                     <div class="properties">
                         <div id="fotodhepershkrim">
                             <div id="foto">
@@ -34,8 +36,7 @@
                         </div>
     
                         <div class="butonat">
-                            <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Bli</button> <br />
-                            <!--para se te bej rezervim ai suhet te rregjistrohet-->
+                            <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                             <button onclick="location.href = 'rezervimthjeshte.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
                             <button onclick="location.href = 'rezervimthjeshte.php?edit=<?php echo $row['Titull']; ?>'">Shto ne Wishlist</button> <br />
                         </div>
