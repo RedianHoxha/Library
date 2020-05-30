@@ -224,6 +224,7 @@ img {
   margin: 0;
   padding: 0;
   font-family: Century Gothic;
+  text-decoration: none;
 }
 
 .kopertina {
@@ -303,6 +304,7 @@ ul li a:hover {
   background-color: white;
   color: rgb(68, 173, 206);
   transition: 0.6s ease;
+  text-decoration: none;
 }
 
 .main {
@@ -344,6 +346,7 @@ h1 {
 
   color: rgb(68, 173, 206);
   transition: 0.6s ease;
+  text-decoration: none;
 }
 
 input {

@@ -20,8 +20,10 @@
         background-color: rgb(68, 173, 206);
         transition: 0.6s ease;
         cursor: pointer;
+        
       }
 
+     
       .kopertina {
         float: left;
         text-align: left;
