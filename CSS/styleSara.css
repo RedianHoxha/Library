@@ -264,15 +264,15 @@ ul {
 ul li {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
   margin-top: 15px;
 }
 
 ul li a {
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
   padding: 5px 20px;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -293,7 +293,7 @@ ul li a {
 }
 
 .nav2 {
-  float: right;  
+  float: right;
   margin-top: -55px;
   margin-left: 5px;
 }
@@ -303,7 +303,7 @@ ul li.active a {
   color: rgb(68, 173, 206);
 }
 
-ul li a:hover {
+ul li a {
   background-color: white;
   color: rgb(68, 173, 206);
   transition: 0.6s ease;
@@ -464,4 +464,28 @@ img {
   opacity: 1;
   pointer-events: all;
   transform: translateY(0px);
+}
+
+.navbar-default {
+  transition: 500ms ease;
+  background: #fff;
+}
+.navbar-default.scrolled {
+  background: rgb(68, 173, 206);
+  background-color: #fff;
+}
+
+.nav {
+  /* background: transparent; */
+  margin-top: 5px;
+  margin-left: 5px;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
+}
+
+.nav2 {
+  float: right;
+  margin-top: -57px;
+  margin-left: 5px;
 }
