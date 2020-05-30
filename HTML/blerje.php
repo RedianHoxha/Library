@@ -1,6 +1,6 @@
 <?php 
         session_start();
-        //include('../PHP/session.php');
+       
         $user=$_SESSION['user'];
       ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
             }
 
         ?>
-        <!-- onsubmit="return validateForm();"-->
+     
 
         <form class="login100-form validate-form" action='procedimblerjeperdorus.php?Bli=<?php echo $row['Titull']; ?>' method='post'>
 
@@ -48,7 +48,7 @@
         height: 100px;
         "> 
         Ju jeni ne hapat e fundit per blerjen e librit.
-        Nese deshironi te blini librin <b><?php echo $row['Titull']; ?></b> te shkruar nga <b><?php echo $row['Autor'];?></b> qe ju keni caktuar mjafton ta konfirmoni blerjen.
+        Nese deshironi te blini librin <b><?php echo $row['Titull']; ?></b> te shkruar nga <b><?php echo $row['Autor'];?></b> mjafton ta konfirmoni blerjen duke plotesuar te dhenat si me poshte:
         Ky liber kushton <b><?php echo $row['Cmimi']; ?></b>.</div>
         <p style="max-width : 450px; font-size : 12px;"></p>
         <div style="padding-bottom: 18px; padding-bottom: 30px;
@@ -143,7 +143,7 @@
             width: 218px;
             height: 111px;
             border-radius: 25px; " rows="8" class="form-control">
-        Para se te konfirmoni blerjen e librit tuaj ju lutem plotesoni te dhenat tuaja me siper!</textarea>
+           Para se te konfirmoni blerjen e librit tuaj ju lutem kushojini vemendje te dhenave me siper neqoftese jane te sakta. Faleminderit !</textarea>
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;
         position:fixed;

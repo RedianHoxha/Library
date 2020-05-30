@@ -45,8 +45,8 @@
         margin-left: -250px;
         width: 390px;
         height: 100px;
-         "><b><?php echo $row['Titull']; ?></b> eshte titulli i librit qe ju sapo rezervuat.Autori i ketij libri eshte <b><?php echo $row['Autor'];?></b>
-         Ky liber flet per :<?php echo $row['Pershkrim']; ?></div>
+         "><b><?php echo $row['Titull']; ?></b> eshte titulli i librit qe ju sapo rezervuat.Autori i i librit eshte <b><?php echo $row['Autor'];?></b>
+        Permbajtja e shkurter bazohet mbi , <?php echo $row['Pershkrim']; ?></div>
         <p style="max-width : 450px; font-size : 12px;"></p>
         <div style="padding-bottom: 18px; padding-bottom: 30px;
         font-size: 20px;
@@ -159,14 +159,15 @@
         margin-top: -50px;
         margin-left: 12px;
         width: 275px;
-        height: 100px;">Shenim!<br/>
+        height: 100px;">Shenim !<br/>
             <textarea id="data_23" readonly name="data_23" style="max-width: 900px; background-color:chocolate; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             margin: 0px;
             width: 135%;
             height: 70%;
             border-radius: 20px; " rows="13" class="form-control">
-            Nuk lejohet me shume se dy jave rezervimi i nje libri!
-            Nuk lejohet me shume se dy libra ne  nje rezervim!</textarea>
+            Ju lutemi te tregoheni te kujdesshem per librat qe merrni ne dorezim,
+            pasi cdo demtim i librit gjate kohes qe ishte i rezervuar nga ju do te duhet te demshperbleni librarine . Falminderit !
+            </textarea>
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;
         position:fixed;
@@ -180,7 +181,7 @@
        
        <button class="login100-form-btn" type="submit" class="btn" name="rezervo" 
         style="border-radius: 25px;width: 280px; background-color: chocolate; font-family:'Lucida Sans', 'Lucida Sans Regular',
-         'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;height: 70px;"> Konfirmo  Rezervimin </button> 
+         'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;height: 70px;"> Konfirmo  Rezervimin ! </button> 
 
     </form>
 
