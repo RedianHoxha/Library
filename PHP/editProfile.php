@@ -12,25 +12,32 @@ $iduser = $_GET['editProfile'];
 
 if(isset($_GET['editProfile']))
 {
-    $emer = $_POST['emri'];
-    $mbiemer = $_POST['mbiemri'];
-    $username  = $_POST['username'];
-    $email= $_POST['email'];
+    $emri = mysqli_real_escape_string( $link,$_POST['emri']);
+    $mbiemri =mysqli_real_escape_string( $link, $_POST['mbiemri']);
+    $username= mysqli_real_escape_string( $link,$_POST['username']);
+    $email =mysqli_real_escape_string( $link, $_POST['email']);
+    $id = $_GET['editProfile'];
 
-    // echo $email;
-    // echo $emer;
-    // echo $username;
-    // echo $email;
-    $sql = "update useri set Emer = '$emer', Mbiemer = '$mbiemer', Username = '$username', Email = '$email' WHERE IdUser = $_GET[editProfile]";
+    $sql = "UPDATE  useri set Emer = ?, Mbiemer =?, Username = ?, Email =? 
+    WHERE IdUser = ?;";
 
+        $stmt = mysqli_stmt_init($link);
 
-mysqli_query($link,$sql);
-header('location: login.php');
+        if(!mysqli_stmt_prepare($stmt,$sql))
+        {
+            echo 'error';
+        }
+        else
+        {
+            
+            mysqli_stmt_bind_param($stmt,"ssssi",$emri,$mbiemri,$username,$email,$id);
+            mysqli_stmt_execute($stmt);
+            header('location: ../HTML/NefoeditProfile.php');
 
-
-}
+        }
+    }
 else
-{
-    echo 'Error';
-}
+    {
+        echo 'Error';
+    }
 ?>

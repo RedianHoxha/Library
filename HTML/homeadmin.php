@@ -1,3 +1,10 @@
+<?php 
+        session_start();
+        //include('../PHP/session.php');
+        $user=$_SESSION['user'];
+      ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -102,11 +109,10 @@ p{
 
                 <ul>
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a href="Rreth nesh.html">Rreth nesh</a></li>
+                    <li><a href="Rrethnesh.php">Rreth nesh</a></li>
                     <li>
                         <div class="menu">
                             <button id="dd">Libraria jonë</button>
-
                             <ul>
                                 <li><a href="#">Autoret</a></li>
                                 <li><a href="#">Zhanret</a></li>
@@ -114,14 +120,16 @@ p{
                             </ul>
                         </div>
                     </li>
-                    <li><a href="kontakti.html">Kontakti</a></li>
-                    <li><a href="dhurovizitor.php">DHURO!</a></li>
+                    <li><a href="kontakti.php">Kontakti</a></li>
+                    <li><a href="dhuro.php">DHURO!</a></li>
                 </ul>
             </div>
             <div class="nav2">
-                <ul>
-                    <li><a href="../PHP/login.php">Identifikohu</a></li>
-                </ul>
+            <ul>
+            <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
+            <li><a href="PunonjsiHome.php">Work Page</a></li>
+            <li><a href="../PHP/logout.php">Dil</a></li>
+          </ul>
             </div>
             <div class="title">
                 <h1>Çfarë do lexoni?</h1>
@@ -168,10 +176,10 @@ p{
                     </div>
 
                     <div class="butonat">
-                        <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Bli</button> <br />
+                        <button onclick="location.href = 'blerje.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Bli</button> <br />
                         <!--para se te bej rezervim ai suhet te rregjistrohet-->
-                        <button onclick="location.href = 'rezervimthjeshte.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
-                        <button onclick="location.href = 'rezervimthjeshte.php?edit=<?php echo $row['Titull']; ?>'">Shto ne Wishlist</button> <br />
+                        <button onclick="location.href = 'rezervim.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
+                        <button onclick="location.href = 'shtowishlist.php?wishlist=<?php echo $row['IdLibri']; ?>'" name="wishlist">Shto ne Wishlist</button> <br />
                     </div>
                 </div>
             </div>

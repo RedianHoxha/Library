@@ -17,7 +17,7 @@
   <body>
       <div id="butoni">
       <button onClick="window.location='../PHP/shtoliberadmini.php';" >Shto Liber</button>
-      <button onClick="window.location='homeperdorues.html';" >Ktheu ne Home</button>
+      <button onClick="window.location='PunonjsiHome.php';" >Ktheu ne Home</button>
       </div>
      <div id="foo">  
         <table id="fixed-table" class="table features-table">

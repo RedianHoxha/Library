@@ -41,7 +41,7 @@
                     </tr>
                 </thead>
                 
-                <?php $sqlquery="Select * from useri where Roli != 'Admin'";
+                <?php $sqlquery="Select * from useri where Roli != 'Admin' and Roli !='Vizitor' and Roli !='Bleres' and Roli !='Dhurues'";
                     $result=mysqli_query($link, $sqlquery);
 
                 while ($row = mysqli_fetch_array($result)) { ?>

@@ -11,38 +11,74 @@ if (isset($_POST['login_user'])) {
    $password=mysqli_real_escape_string($link,$_POST['password']);
    $passwordenkriptuar=mysqli_real_escape_string($link,$_POST['hidenpassword']);
 
-   echo $passwordenkriptuar;
-   echo $password;
 
-$sqlquery="Select * from useri where Username='$username' and PassWord='$passwordenkriptuar'";
-$result=mysqli_query($link, $sqlquery);
- echo mysqli_num_rows($result);
-if(mysqli_num_rows($result)>0){
-    
-    session_start();
-    $row = mysqli_fetch_array($result);
-    $rolilogusit = $row['Roli'];
-    //echo $rolilogusit;
-    //$_SESSION['success'] = "You are now logged in";
-    //echo "<script>console.log('Debug Objects: " . $username. "' );</script>";
-    if($rolilogusit == 'Admin'){
-        $_SESSION['user']= $username;
-        header('location: ../HTML/homeperdorues.php');
-       // echo $rolilogusit;
+   $rest = substr($passwordenkriptuar, 2, -2);
+//    echo ' ';
+//         echo $passwordenkriptuar;
+//         echo  ' ';
+//         echo $rest;
+//         echo  ' ';
+//         echo    $username;
+    //    echo $password;
+
+    $sqlquery="Select * from useri where Username=?";
+    $stmt = mysqli_stmt_init($link);
+
+    if(!mysqli_stmt_prepare($stmt,$sqlquery))
+        {
+            echo 'error';
+        }
+    else
+    {
+        echo $rest;
+
+        //echo 'ketusiper';
+        mysqli_stmt_bind_param($stmt,"s",$username);
+        mysqli_stmt_execute($stmt);
+        //echo $stmt;
+        $result = mysqli_stmt_get_result($stmt);
+        $row =mysqli_fetch_assoc($result);
+
+        echo mysqli_num_rows($result);
+
+        if(mysqli_num_rows($result)!=0)
+        {
+            //echo 'ketu';
+        
+            session_start();
+            $rolilogusit = $row['Roli'];
+
+            $_SESSION['user']= $username;
+
+            
+            if($rolilogusit != 'Vizitor')
+            {
+                    if($rolilogusit == 'Admin')
+                    {
+                        //echo $rolilogusit;
+                        header('location: ../HTML/PunonjsiHome.php');
+                    }
+                    else
+                    {
+                        //echo $rolilogusit . '2';
+                        header('location: ../HTML/punonjesthjeshtehome.php');
+                    }
+            
+        
+            }
+            else{
+            //echo 'ti nuk je admin';
+                        $_SESSION['user']= $username;
+                        header('location: ../HTML/homelexues.php');
+            }
+        }
+        else{
+            echo 'ketu poshte';
+        }
     }
-    else{
-        //echo 'ti nuk je admin';
-        $_SESSION['user']= $username;
-        header('location: ../HTML/homelexues.php');
-    }
-  
-    //
-echo $username;
-} else{
-    echo "ERROR:  " . mysqli_error($link);
 }
 
- }
 mysqli_close($link);
+
 
 ?>
