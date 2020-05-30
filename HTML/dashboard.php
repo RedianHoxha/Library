@@ -51,7 +51,7 @@ body{
         <div class="button_text" ><a class="example_e" href="shfaqwishlist.php" rel="nofollow noopener"><i class="fa fa-heart"> Te preferuarat!</i></a></div><br>
     </div>
     <div class="buttonconatiner">
-        <div class="button_text" ><a class="example_e" href="../HTML/AddressBook.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
+        <div class="button_text" ><a class="example_e" href="shporta.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
     </div>
 </div>
     </div>
