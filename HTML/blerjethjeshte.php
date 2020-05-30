@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html style="background-image: url(https://www.ppt-backgrounds.net/uploads/autumn-frame-PPT.jpg);">
+<html style="background-image: url(https://wallpaperaccess.com/full/1156778.jpg);">
 
 </html>
 
@@ -32,12 +32,14 @@
         font-size: 35px;
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         position: absolute;
-        top: 90px;
+        top: 125px;
         left: 50%;
         margin-top: -50px;
         margin-left: -250px;
-        width: 390px;
+        width: 630px;
         height: 100px;
+        
+        
         "> 
         Ju jeni ne hapat e fundit per blerjen e librit.
         Nese deshironi te blini librin <b><?php echo $row['Titull']; ?></b> te shkruar nga <b><?php echo $row['Autor'];?></b> qe ju keni caktuar mjafton ta konfirmoni blerjen.
@@ -76,16 +78,10 @@
         width: 268px;
         height: 100px;
         ">
-            <input type="number"  placeholder=" Tel" name="tel"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
+            <input type="number"  id ="data_50" placeholder=" Tel" name="tel"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
                 class="form-control" />
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript">
-            new Pikaday({
-                field: document.getElementById('data_17')
-            });
-        </script>
+        
         <div style="padding-bottom: 18px; font-size: 20px;
         position: absolute;
         top: 318px;
@@ -119,27 +115,30 @@
         margin-left: -50px;
         width: 268px;
         height: 100px;">Sa libra deshironi te blini?</span><br/>
-            <input type="number"  placeholder=" Nr" name="sasia"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
+            <input type="number" id="data_51"  placeholder=" Nr" name="sasia"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
                 class="form-control" />
         </div>
+        <div style="left: 10%; top: 510px ; position:absolute; font-size: 20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Instruksione </div> 
         <div style="padding-bottom: 18px; font-size: 20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         position: absolute;
-        top: 556px;
-        left: 8%;
+        top: 589px;
+        left: 5%;
         margin-top: -50px;
         margin-left: 12px;
         width: 268px;
-        height: 100px;">Instruksione!<br/>
-            <textarea id="data_23" readonly name="data_23" style="max-width: 852px; background-color:chocolate; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        height: 100px;">  
+        
+         
+            <textarea id="data_23" readonly name="data_23" style="max-width: 852px; background-color:#404040 ; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             margin: 0px;
-            width: 218px;
-            height: 111px;
+            width: 200px;
+            height: 85px;
             border-radius: 25px; " rows="8" class="form-control">
         Para se te konfirmoni blerjen e librit tuaj ju lutem plotesoni te dhenat tuaja me siper!</textarea>
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;
         position:fixed;
-        top: 636px;
+        top: 600px;
         left: 75%;
         margin-top: -51px;
         margin-left: -25px;
@@ -150,7 +149,7 @@
         </div> -->
         
         <button class="login100-form-btn" type="submit" class="btn" name="Bli" 
-        style="border-radius: 25px;width: 280px; background-color: chocolate; font-family:'Lucida Sans', 'Lucida Sans Regular',
+        style="border-radius: 25px;width: 280px; background-color: #404040; font-size:large ; font-family:'Lucida Sans', 'Lucida Sans Regular',
          'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;height: 70px;"> Konfirmo Blerjen  </button> 
 
     </form>
@@ -165,8 +164,8 @@
                 alert('Mbiemër is required!');
                 return false;
             }
-            if (isEmpty(document.getElementById('data_17').value.trim())) {
-                alert('Datelindja is required!');
+            if (isEmpty(document.getElementById('data_50').value.trim())) {
+                alert('Tel is required!');
                 return false;
             }
             if (isEmpty(document.getElementById('data_18').value.trim())) {
@@ -181,14 +180,11 @@
                 alert('Adresa is required!');
                 return false;
             }
-            if (!document.getElementById('data_22_0').checked && !document.getElementById('data_22_1').checked && !document.getElementById('data_22_2').checked) {
-                alert('Sa libra deshironi te blini? is required!');
+            if (isEmpty(document.getElementById('data_51').value.trim())) {
+                alert('Nr is required!');
                 return false;
             }
-            if (isEmpty(document.getElementById('data_23').value.trim())) {
-                alert('Jeni i sigurte? is required!');
-                return false;
-            }
+            
             return true;
         }
 
