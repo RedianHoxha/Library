@@ -15,3 +15,15 @@ if (isset($_GET['del'])) {
 
 header('location: shfaqwishlist.php');
 }
+else if (isset($_GET['delete']))
+{
+    $usename =$_GET['user'];
+    $isbn =$_GET['delete']; 
+
+    $updatetable = "UPDATE wishlist set shporta='' where username = '$usename' and shporta = 'Po' and ISBN = '$isbn' ";
+     //echo $updatetable;
+   mysqli_query($link,$updatetable );
+
+   header('location: shporta.php');
+}
+?>
