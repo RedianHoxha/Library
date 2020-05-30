@@ -10,15 +10,8 @@
     if (isset($_POST['rezervo']))
      {
         $titulllibri = $_GET['rezervo'];
-        // $emriblersit = $_POST['emer'];
-        // $mbiemerblersi = $_POST['mbiemer'];
-        // $telefoni = $_POST['tel'];
-        // $emailblersi = $_POST['email'];
-        // $adresblersi = $_POST['adresa'];
         $datakthimit = $_POST['datakthimit'];
         $datasotme = date("Y-m-d");
-        // $sasailibrave = "select * from librari  where IdLibri = '$idlibri' and Statusi = 'Blere";
-        // $result=mysqli_query($link, $sasailibrave);  
         $ekzistonuseri = "select * from useri where Username = '$user'";
        // echo $ekzistonuseri;
         $resultuseri=mysqli_query($link, $ekzistonuseri);

@@ -128,7 +128,7 @@ p{
                         </div>
                     </li>
                     <li><a href="kontaktilexues.php">Kontakti</a></li>
-                    <li><a href="dhurovizitor.php">DHURO!</a></li>
+                    <li><a href="dhurolexues.php">DHURO!</a></li>
                 </ul>
             </div>
             <div class="nav2">

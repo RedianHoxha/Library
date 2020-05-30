@@ -1,7 +1,7 @@
 <?php 
 
 $link = mysqli_connect("localhost", "root", "", "library");
- 
+ //$link = new PDO('myslq :host=localhost;dbname=library','root','');
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -15,38 +15,52 @@ if($link === false){
     $adresa =mysqli_real_escape_string( $link, $_POST['adrese']);
     $password=mysqli_real_escape_string( $link,$_POST['pass1']);
     $reset_password=mysqli_real_escape_string( $link,$_POST['pass2']);
-
-
     $roli = "Vizitor";
-
-
-
-
-
 
    $passwordenkriptuar=$_POST['hidenpassword'];
 
-    
 
-   $sqlusername= "select * from useri where Username='$username'";
-   $result=mysqli_query($link, $sqlusername);
 
-   if(mysqli_num_rows($result)==0){
+$sql = "SELECT * from useri where Username =?;";
 
-    $sql = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
-    VALUES('$emri','$mbiemri', '$email',$tel , '$adresa','$username','$passwordenkriptuar','$roli')";
-  if(mysqli_query($link, $sql)){
+$stmt = mysqli_stmt_init($link);
+
+if(!mysqli_stmt_prepare($stmt,$sql))
+{
+    echo 'error';
+}
+else
+{
+    mysqli_stmt_bind_param($stmt,"s",$username);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $row =mysqli_fetch_assoc($result);
+
+    if(mysqli_num_rows($result)==0)
+    {
+        $slqinsert = "INSERT INTO useri (Emer,Mbiemer,Email,Tel,Adresa,Username,PassWord,Roli)
+            VALUES (?,?,?,?,?,?,?,?);";
+
+            $stmt = mysqli_stmt_init($link);
+            if(!mysqli_stmt_prepare($stmt,$slqinsert))
+            {
+                echo  'smund te shtohet rresht';
+            }
+            else
+            {
+                mysqli_stmt_bind_param($stmt, "sssissss" , $emri, $mbiemri, $email, $tel, $adresa, $username, $passwordenkriptuar, $roli);
+                mysqli_stmt_execute($stmt);
+                header('location:login.php');
+            }
         
-        header('location:login.php');
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
     }
-}
-else{
-    header('location:rregjistrim.php?Invalid=Please enter another Username!');
+    else
+    {
+        header('location:rregjistrim.php?Invalid=Please enter another Username!');
+    }
+
 }
 
- 
 mysqli_close($link);
 
 ?>

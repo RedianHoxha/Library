@@ -83,14 +83,15 @@
                             <td>ID Pune</td>
                             <td>Statusi</td> 
                         </tr>
-                        <?php $sqlquerypunet="Select * from shqyrtopune  where statusi  = 'Done' or statusi = 'In Progres' and userpunonjsi = '$user'";
+                        <?php $sqlquerypunet="Select * from shqyrtopune  where statusi = 'In Progres' and userpunonjsi = '$user'";
                     $resultpunet=mysqli_query($link, $sqlquerypunet);
 
                 while ($row = mysqli_fetch_array($resultpunet)) { ?>
                 <tbody>
                     <tr>
-                        <td><?php echo $row['idpune']; ?></td>
+                        <td><a href="ndryshostatuspune.php?pune=<?php echo $row['TipiPunes']; ?>&ndrysho=<?php echo $row['idpune']; ?>"><?php echo $row['idpune']; ?></a></td>   
                         <td><?php echo $row['statusi']; ?></td>
+                        <td><?php echo $row['TipiPunes']; ?></td>
                     </tr>
                 </tbody>
                 <?php } ?>

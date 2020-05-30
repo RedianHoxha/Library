@@ -13,12 +13,12 @@ if (isset($_POST['Bli']))
  
     $titull = $_GET['Bli'];
 
-    $emriblersit = $_POST['emer'];
-    $mbiemerblersi = $_POST['mbiemr'];
-    $telefoni = $_POST['tel'];
-    $emailblersi = $_POST['email'];
-    $adresblersi = $_POST['adresa'];
-    $sasilibrash = $_POST['sasia'];
+    $emriblersit = mysqli_real_escape_string( $link,$_POST['emer']);
+    $mbiemerblersi = mysqli_real_escape_string( $link, $_POST['mbiemer']);
+    $telefoni = mysqli_real_escape_string( $link,$_POST['tel']);
+    $emailblersi = mysqli_real_escape_string( $link, $_POST['email']);
+    $adresblersi =mysqli_real_escape_string( $link, $_POST['adresa']);
+    $sasilibrash = mysqli_real_escape_string( $link, $_POST['sasia']);
     
 
     $datablerjes = date("Y-m-d");
