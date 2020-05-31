@@ -42,8 +42,8 @@
         
         "> 
         Ju jeni ne hapat e fundit per blerjen e librit.
-        Nese deshironi te blini librin <b><?php echo $row['Titull']; ?></b> te shkruar nga <b><?php echo $row['Autor'];?></b> qe ju keni caktuar mjafton ta konfirmoni blerjen.
-        Ky liber kushton <b><?php echo $row['Cmimi']; ?></b>.</div>
+        Nese deshironi te blini librin <b><?php echo $row['Titull']; ?></b> te shkruar nga <b><?php echo $row['Autor'];?></b>  mjafton ta konfirmoni blerjen duke plotesuar te dhenat si me poshte:
+       Info: Ky liber kushton <b><?php echo $row['Cmimi']; ?></b>.</div>
         <p style="max-width : 450px; font-size : 12px;"></p>
         <div style="padding-bottom: 18px; padding-bottom: 30px;
         font-size: 20px;
@@ -134,7 +134,7 @@
             width: 200px;
             height: 85px;
             border-radius: 25px; " rows="8" class="form-control">
-        Para se te konfirmoni blerjen e librit tuaj ju lutem plotesoni te dhenat tuaja me siper!</textarea>
+        Para se te konfirmoni blerjen e librit tuaj ju lutem kushojini vemendje te dhenave me siper neqoftese jane te sakta. Faleminderit !</textarea>
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;
         position:fixed;
@@ -145,8 +145,7 @@
         width: 280px;
         height: 100px;
         border-radius: 25px; ">
-        <!-- <input type="submit" name="rezervo" style="border-radius: 25px;width: 280px; background-color: chocolate; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;height: 70px;" value="KONFIRMO BLERJEN"/>
-        </div> -->
+       
         
         <button class="login100-form-btn" type="submit" class="btn" name="Bli" 
         style="border-radius: 25px;width: 280px; background-color: #404040; font-size:large ; font-family:'Lucida Sans', 'Lucida Sans Regular',
