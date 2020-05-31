@@ -75,23 +75,13 @@
             <ul>
                 <li><a href="homelexues.php">Home</a></li>
                 <li class="active"><a href="#">Rreth nesh</a></li>
-                <li>
-                    <div class="menu">
-                        <button id="dd">Libraria jonë</button>
-                
-                        <ul>
-                            <li><a href="#">Autoret</a></li>
-                            <li><a href="#">Zhanret</a></li>
-                            <li><a href="#">Te dhuruar</a></li>
-                        </ul>
-                    </div>
-                </li>
-                
+                <li><a href="searchtest.php">Libraria</a> </li>
+
                 <li><a href="kontaktilexues.php">Kontakti</a></li>
                 <li><a href="dhurolexues.php">DHURO!</a></li>
             </ul>
         </div>
-        <div class="nav2">
+        <div class="nav22" style=" float: right;margin-left: 5px;margin-top: 20px;">
             <ul>
                 <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
                 <li><a href="../PHP/logout.php">Dil</a></li>

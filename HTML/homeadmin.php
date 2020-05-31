@@ -80,10 +80,11 @@
          
         }
         .col-md-4{
-        margin-top: 5%;
+        margin-top: 10%;
         padding: 5%;
         background-color:white;
         box-shadow: 1px 2px 20px 0px rgb(179, 123, 235);
+        margin-left:10%;
     }
 
 p{
@@ -97,7 +98,7 @@ p{
 
 <body>
     <header>
-        <nav>
+        <nav >
             <div class="nav">
                 <div class="logo">
                     <ul>
@@ -110,16 +111,7 @@ p{
                 <ul>
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="Rrethnesh.php">Rreth nesh</a></li>
-                    <li>
-                        <div class="menu">
-                            <button id="dd">Libraria jonë</button>
-                            <ul>
-                                <li><a href="#">Autoret</a></li>
-                                <li><a href="#">Zhanret</a></li>
-                                <li><a href="#">Te dhuruar</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="searchtest.php">Libraria</a> </li>
                     <li><a href="kontakti.php">Kontakti</a></li>
                     <li><a href="dhuro.php">DHURO!</a></li>
                 </ul>
