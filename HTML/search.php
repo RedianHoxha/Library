@@ -146,7 +146,7 @@
     if(isset($_POST['submit'])) 
         { 
             $name = $_POST['fjalekyce'];
-            echo $name;
+            // echo $name;
 
             if($name == '')
             {  
