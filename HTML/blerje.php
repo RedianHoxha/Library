@@ -30,9 +30,9 @@
             }
 
         ?>
-     
 
-        <form class="login100-form validate-form" action='procedimblerjeperdorus.php?Bli=<?php echo $row['Titull']; ?>' method='post'>
+
+        <form class="login100-form validate-form" action='procedimblerjeperdorus.php?Bli=<?php echo $row['Titull']; ?>'onsubmit="return validateForm();" method='post'>
 
         <div style="max-width: 400px;">
         </div>

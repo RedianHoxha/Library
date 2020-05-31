@@ -128,7 +128,7 @@ p{
                         </div>
                     </li>
                     <li><a href="kontaktilexues.php">Kontakti</a></li>
-                    <li><a href="dhurovizitor.php">DHURO!</a></li>
+                    <li><a href="dhurolexues.php">DHURO!</a></li>
                 </ul>
             </div>
             <div class="nav2">
@@ -141,8 +141,7 @@ p{
                 <h1>Çfarë do lexoni?</h1>
             </div>
             <div class="search">
-                <input type="text" placeholder="Kërko" />
-                <a href="search.php">Kërko</a>
+                <a href="searchtest.php">Kërko</a>
             </div>
         </nav>
         <div class="miresevini">

@@ -10,20 +10,14 @@
     if (isset($_POST['rezervo']))
      {
         $titulllibri = $_GET['rezervo'];
-        // $emriblersit = $_POST['emer'];
-        // $mbiemerblersi = $_POST['mbiemer'];
-        // $telefoni = $_POST['tel'];
-        // $emailblersi = $_POST['email'];
-        // $adresblersi = $_POST['adresa'];
         $datakthimit = $_POST['datakthimit'];
         $datasotme = date("Y-m-d");
-        // $sasailibrave = "select * from librari  where IdLibri = '$idlibri' and Statusi = 'Blere";
-        // $result=mysqli_query($link, $sasailibrave);  
         $ekzistonuseri = "select * from useri where Username = '$user'";
        // echo $ekzistonuseri;
         $resultuseri=mysqli_query($link, $ekzistonuseri);
         $rowekzistus = mysqli_fetch_array($resultuseri);
         $iduser = $rowekzistus['IdUser'];
+        $roli = $rowekzistus['Roli'];
        // echo $iduser;
 
 
@@ -38,15 +32,27 @@
             $sasiaktuale --;
 
             
-            $sqlinsertekrezervo = " insert into rezervo (DatRezervimi, Kohezgjatja, IdLibri ,IdLexusi)
-            values ('$datasotme','$datakthimit', '$idlibri', '$iduser')";
+            $sqlinsertekrezervo = " insert into rezervo (DatRezervimi, Kohezgjatja, IdLibri ,IdLexusi,statusi)
+            values ('$datasotme','$datakthimit', '$idlibri', '$iduser','To Do')";
             //echo $sqlinsertekrezervo;
             mysqli_query($link, $sqlinsertekrezervo);
 
             $sqlupdatelibrat = "update librari set Sasia = '$sasiaktuale' where IdLibri = '$idlibri' ";
             //echo $sqlupdatelibrat;
              mysqli_query($link, $sqlupdatelibrat);
-             header('location: ../HTML/homeperdorues.php');
+             if($roli === 'Admin')
+             {
+               header('location: ../HTML/homeadmin.php');
+
+             }
+             else if ($roli === 'Vizitor')
+             {
+               header('location: ../HTML/homelexues.php');
+             }
+             else{
+              header('location: ../HTML/homeperdorues.php');
+
+             }
         }
         // else {
         //     echo 'jemi ne fund';

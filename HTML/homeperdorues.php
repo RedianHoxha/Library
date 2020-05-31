@@ -122,13 +122,13 @@ p{
                         </div>
                     </li>
                     <li><a href="kontakti.php">Kontakti</a></li>
-                    <li><a href="dhurovizitor.php">DHURO!</a></li>
+                    <li><a href="dhuro.php">DHURO!</a></li>
                 </ul>
             </div>
             <div class="nav2">
             <ul>
             <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
-            <li><a href="PunonjsiHome.php">Work Page</a></li>
+            <li><a href="punonjesthjeshtehome.php">Work Page</a></li>
             <li><a href="../PHP/logout.php">Dil</a></li>
           </ul>
             </div>
@@ -136,8 +136,7 @@ p{
                 <h1>Çfarë do lexoni?</h1>
             </div>
             <div class="search">
-                <input type="text" placeholder="Kërko" />
-                <a href="search.php">Kërko</a>
+            <a href="searchtest.php">Kërko</a>
             </div>
         </nav>
         <div class="miresevini">
@@ -180,7 +179,7 @@ p{
                         <button onclick="location.href = 'blerje.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Bli</button> <br />
                         <!--para se te bej rezervim ai suhet te rregjistrohet-->
                         <button onclick="location.href = 'rezervim.php?rezervo=<?php echo $row['Titull']; ?>'" name="rezervo">Rezervo</button> <br />
-                        <button onclick="location.href = 'shtowishlist.php?edit=<?php echo $row['Titull']; ?>'">Shto ne Wishlist</button> <br />
+                        <button onclick="location.href = 'shtowishlist.php?wishlist=<?php echo $row['IdLibri']; ?>'" name="wishlist">Shto ne Wishlist</button> <br />
                     </div>
                 </div>
             </div>

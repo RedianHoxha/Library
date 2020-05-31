@@ -4,7 +4,7 @@
         $user=$_SESSION['user'];
       ?>
 <!DOCTYPE html>
-<html style="background-image: url(https://www.ppt-backgrounds.net/uploads/autumn-frame-PPT.jpg);">
+<html style=" background-image: url(https://ae01.alicdn.com/kf/HTB1EZdXy4GYBuNjy0Fnq6x5lpXaM/Old-Grungy-Grey-Concrete-Backgrounds-polyester-or-Vinyl-cloth-High-quality-Computer-print-wall-photo-backdrop.jpg)">
 
 </html>
 <body>
@@ -39,11 +39,11 @@
         font-size: 35px;
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         position: absolute;
-        top: 90px;
+        top: 110px;
         left: 50%;
         margin-top: -50px;
         margin-left: -250px;
-        width: 390px;
+        width: 450px;
         height: 100px;
          "><b><?php echo $row['Titull']; ?></b> eshte titulli i librit qe ju sapo rezervuat.Autori i i librit eshte <b><?php echo $row['Autor'];?></b>
         Permbajtja e shkurter bazohet mbi , <?php echo $row['Pershkrim']; ?></div>
@@ -128,41 +128,19 @@
             <input type="number"  placeholder=" Nr" name="datakthimit"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
                 class="form-control" />
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
-
-
-
-        <script type="text/javascript">
-            function validateForm() {
-                if (isEmpty(document.getElementById('data_11').value.trim())) {
-                    alert('DATA E KTHIMIT is required!');
-                    return false;
-                }
-                return true;
-            }
-
-            function isEmpty(str) {
-                return (str.length === 0 || !str.trim());
-            }
-
-            function validateEmail(email) {
-                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-                return isEmpty(email) || re.test(email);
-            }
-        </script>
-
+        <div style="position: absolute; left:10%; top:530px ; font-size: large;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Shenim!</div>
         <div style="padding-bottom: 18px; font-size: 20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         position: absolute;
-        top: 554px;
-        left: 8%;
+        top: 610px;
+        left: 6%;
         margin-top: -50px;
         margin-left: 12px;
         width: 275px;
         height: 100px;">Shenim !<br/>
             <textarea id="data_23" readonly name="data_23" style="max-width: 900px; background-color:chocolate; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
             margin: 0px;
-            width: 135%;
+            width: 80%;
             height: 70%;
             border-radius: 20px; " rows="13" class="form-control">
             Ju lutemi te tregoheni te kujdesshem per librat qe merrni ne dorezim,
@@ -171,7 +149,7 @@
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;
         position:fixed;
-        top: 636px;
+        top: 600px;
         left: 75%;
         margin-top: -51px;
         margin-left: -25px;
@@ -180,8 +158,10 @@
         border-radius: 25px; ">
        
        <button class="login100-form-btn" type="submit" class="btn" name="rezervo" 
+
         style="border-radius: 25px;width: 280px; background-color: chocolate; font-family:'Lucida Sans', 'Lucida Sans Regular',
          'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;height: 70px;"> Konfirmo  Rezervimin ! </button> 
+
 
     </form>
 

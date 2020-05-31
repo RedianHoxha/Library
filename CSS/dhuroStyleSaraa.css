@@ -10,6 +10,7 @@ body {
     url("../FOTO/home2.jpg");
   background-size: cover;
   background-position: top;
+  min-height: 200vh;
 }
 header {
   margin-top: -10px;
@@ -32,7 +33,7 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  color: #fff;
+  color: rgb(68, 173, 206);
   padding: 5px 20px;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -47,13 +48,18 @@ ul li a {
   margin-left: 10px;
 }
 .nav {
-  margin-top: 10px;
+  /* background: transparent; */
+  margin-top: 5px;
   margin-left: 5px;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
 }
 
 .nav2 {
   float: right;
-  margin-top: -60px;
+  margin-top: -57px;
+  margin-left: 5px;
 }
 
 ul li.active a {
@@ -62,8 +68,8 @@ ul li.active a {
 }
 
 ul li a:hover {
-  background-color: white;
-  color: rgb(68, 173, 206);
+  background-color: rgb(68, 173, 206);
+  color: white;
   transition: 0.6s ease;
   text-decoration: none;
 }
@@ -118,7 +124,7 @@ textarea {
 #dd {
   background: none;
   border: none;
-  color: white;
+  color: rgb(68, 173, 206);
   font-size: unset;
   margin: 5px;
   border-radius: 5px;
@@ -126,9 +132,9 @@ textarea {
 }
 
 #dd:hover {
-  background: white;
+  background: rgb(68, 173, 206);
   border: none;
-  color: rgb(68, 173, 206);
+  color: white;
   font-size: unset;
   margin: 5px;
   border-radius: 5px;
@@ -179,9 +185,13 @@ textarea {
 
 #bottompage {
   position: absolute;
-  top: 55%;
+  float: right;
+  padding: 30px;
+  margin-top: 50px;
+
+  /* top: 55%;
   left: 60%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 #pershendetje,
@@ -189,4 +199,13 @@ textarea {
   color: white;
   font-family: Century Gothic;
   font-weight: lighter;
+}
+
+.navbar-default {
+  transition: 500ms ease;
+  background: blue;
+}
+.navbar-default.scrolled {
+  background: rgb(68, 173, 206);
+  background-color: #fff;
 }

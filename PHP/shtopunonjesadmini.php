@@ -20,10 +20,6 @@ if($link === false){
     $roli =$_POST['option_select'];
 
 
-
-
-
-
    $passwordenkriptuar=$_POST['hidenpassword'];
 
     

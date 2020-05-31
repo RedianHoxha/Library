@@ -7,11 +7,13 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 if (isset($_GET['del'])) {
+    $usename =$_GET['del'];
 
-    $delete = "delete  FROM `wishlist` WHERE ISBN = '$_GET[del]'";
-    //echo $delete;
-    mysqli_query($link,$delete ) or die(mysql_error());
+    $fshishporten  = "DELETE from shporta  where username = '$usename'";
+     //echo $updatetable;
+   mysqli_query($link,$fshishporten );
     
 
-header('location: shfaqwishlist.php');
+header('location: shporta.php');
 }
+?>
