@@ -1,0 +1,47 @@
+<!-- NE KLIKIM KEMI MARKER DHE NE KLIKIM MARKER KEMI INFOWINDOW -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqRQUzG8s_7YAqkbG7nxTRD41eul1dMwA"></script>
+
+    <script>
+      var myCenter = new google.maps.LatLng(51.508742, -0.12085);
+
+      function initialize() {
+        var mapProp = {
+          center: myCenter,
+
+          zoom: 5,
+
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+
+        var map = new google.maps.Map(
+          document.getElementById("googleMap"),
+          mapProp
+        );
+
+        map.addListener("click", function (e) {
+          var marker = new google.maps.Marker({
+            position: e.latLng,
+          }); //e njejta gje vetem kemi nedosur e jo evnt dhe meqe kemi bere brenda initialize nuk e kemi therritur harten
+
+          marker.setMap(map); //i vendosim markerin ne cdo klikim
+
+          var infowindow = new google.maps.InfoWindow({
+            content: "Hello World!",
+          }); //do shfaqet infowindow
+
+          google.maps.event.addListener(marker, "click", function () {
+            infowindow.open(map, marker);
+          }); //meqe jane ne nje funksion
+        });
+      }
+    </script>
+  </head>
+
+  <body onload="initialize()">
+    <div id="googleMap" style="width: 500px; height: 380px;"></div>
+  </body>
+</html>

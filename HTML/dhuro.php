@@ -54,6 +54,23 @@
     <title>Forme dhurimi</title>
 </head>
 <body>
+    <style>
+
+    textarea, input {
+        color: black;
+        
+    }
+        textarea:focus,
+input:focus {
+  color: black;
+}
+
+/* input,
+select,
+textarea {
+  color: #000;
+} */
+</style>
     <script>
         jQuery(document).ready(function (e) {
             jQuery('#mymodal').trigger('click');

@@ -11,9 +11,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../CSS/styleSara.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../CSS/styleSara.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/dhuroStyleSaraa.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
+
+
+
+
         button {
             text-decoration: none;
             color: #fff;
@@ -103,8 +108,8 @@ p{
 </head>
 
 <body>
-    <header>
-        <nav>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div id="headerpage">
             <div class="nav">
                 <div class="logo">
                     <ul>
@@ -113,31 +118,36 @@ p{
                         </li>
                     </ul>
                 </div>
-
+    
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="Rrethneshlexues.php">Rreth nesh</a></li>
+                    <li><a href="../HTML/homelexues.php">Home</a></li>
+                    <li><a href="../HTML/Rrethneshlexues.php">Rreth nesh</a></li>
                     <li>
                         <div class="menu">
                             <button id="dd">Libraria jonë</button>
-
+    
                             <ul>
-                                <li><a href="#">Autoret</a></li>
+                                <li><a href="#">Autorët</a></li>
                                 <li><a href="#">Zhanret</a></li>
-                                <li><a href="#">Te dhuruar</a></li>
+                                <li><a href="#">Të dhuruar</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="kontaktilexues.php">Kontakti</a></li>
-                    <li><a href="dhurolexues.php">DHURO!</a></li>
+                    <li><a href="../HTML/kontaktilexues.php">Kontakti</a></li>
+                    <!-- <li class="active"><a href="index.php">DHURO!</a></li> -->
+                   
                 </ul>
             </div>
-            <div class="nav2">
-                <ul>
-                     <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
+    
+            <div>
+                <ul class="nav2">
+                <li><a href="NefoProfile.php"><?php echo $user ?></a></li>
                      <li><a href="../PHP/logout.php">Dil</a></li>
                 </ul>
             </div>
+        </div>
+    </nav>
+    <header>
             <div class="title">
                 <h1>Çfarë do lexoni?</h1>
             </div>
