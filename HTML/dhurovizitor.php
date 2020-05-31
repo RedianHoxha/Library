@@ -41,17 +41,8 @@
                 <ul>
                     <li><a href="../HTML/index.php">Home</a></li>
                     <li><a href="../HTML/Rreth nesh.html">Rreth nesh</a></li>
-                    <li>
-                        <div class="menu">
-                            <button id="dd">Libraria jonë</button>
-    
-                            <ul>
-                                <li><a href="#">Autorët</a></li>
-                                <li><a href="#">Zhanret</a></li>
-                                <li><a href="#">Të dhuruar</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="search.php">Libraria</a></li>
+
                     <li><a href="../HTML/kontakti.html">Kontakti</a></li>
                     <!-- <li class="active"><a href="index.php">DHURO!</a></li> -->
                    

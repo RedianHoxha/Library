@@ -100,18 +100,8 @@ else{
             <ul>
                 <li><a href=<?php echo $destinacionhome?>>Home</a></li>
                 <li class="active"><a href="#">Rreth nesh</a></li>
-                <li>
-                    <div class="menu">
-                        <button id="dd">Libraria jonë</button>
-                
-                        <ul>
-                            <li><a href="#">Autoret</a></li>
-                            <li><a href="#">Zhanret</a></li>
-                            <li><a href="#">Te dhuruar</a></li>
-                        </ul>
-                    </div>
-                </li>
-                
+                <li><a href="searchtest.php">Libraria</a> </li>
+
                 <li><a href="kontakti.php">Kontakti</a></li>
                 <li><a href="dhuro.php">DHURO!</a></li>
             </ul>
