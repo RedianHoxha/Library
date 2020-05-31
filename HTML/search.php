@@ -47,7 +47,6 @@
         border-color: #ffd6f0;
          border-radius: 10px;
         
-
     }
 
     body{
@@ -59,8 +58,9 @@
   background-position: top;
   margin-top: -10px;
 }
-    
+
     .btn{
+
        background: linear-gradient(90deg,white,#ffd6f0);
   border: none;
   color: rgb(51, 51, 51);;
@@ -78,6 +78,7 @@
     
 
     .btn:hover{
+
         background: linear-gradient(90deg,#ffd6f0,white);
         /* box-shadow: 0 0 10px violet, 0 0 40px purple, 0 0 10px violet; */
         /* background-color: violet;
@@ -110,7 +111,9 @@
                 
             </ul>
         </div>
+
         <div class="nav22" style=" float: right;margin-left: 5px;margin-top: 20px;">
+
             <ul>
                 <li><a href="../PHP/login.php">Identifikohu</a></li>
             </ul>
@@ -135,8 +138,7 @@
     if(isset($_POST['submit'])) 
         { 
             $name = $_POST['fjalekyce'];
-           
-
+            // echo $name;
 
             if($name == '')
             {  
@@ -162,8 +164,7 @@
                             </div>
 
                             <div class="butonat">
-                                
-                            <button onclick="location.href ='blerjethjeshte.php?Bli=<?php echo $row['Titull'];?>'"  type="submit" class="btn" name="Bli">Shto Ne Shporte</button> <br />
+                                <button class="shto" onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                             </div>
                         </div>
                     </div>
@@ -208,7 +209,7 @@
                                             </div>
                 
                                             <div class="butonat">
-                                            <button onclick="location.href ='blerjethjeshte.php?Bli=<?php echo $row['Titull'];?>'"  type="submit" class="btn" name="Bli">Shto Ne Shporte</button> <br />
+                                                <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                                             </div>
                                         </div>
                                     </div>
