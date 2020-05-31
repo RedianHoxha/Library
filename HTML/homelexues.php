@@ -79,10 +79,11 @@
          
         }
         .col-md-4{
-        margin-top: 5%;
+        margin-top: 10%;
         padding: 5%;
         background-color:white;
         box-shadow: 1px 2px 20px 0px rgb(179, 123, 235);
+        margin-left:10%;
     }
 
     
