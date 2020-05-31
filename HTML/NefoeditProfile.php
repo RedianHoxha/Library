@@ -54,7 +54,7 @@
           <label for="mbiemri">Mbiemri:</label><br>
           <input class="form-control" type="text" id="mbiemri" name="mbiemri"value="<?php echo $row['Mbiemer']; ?>"><br>
           <label for="username">Username:</label><br>
-          <input class="form-control" type="text" id="username" name="username"value="<?php echo $row['Username']; ?>"><br>
+          <input class="form-control" type="text" id="username" name="username"value="<?php echo $row['Username']; ?>"disabled><br>
             <label for="email">Emaili :</label><br>
             <input class="form-control" type="email" id="email" name="email"value="<?php echo $row['Email']; ?>"><br>
             <button type="submit" class="btn btn-secondary btn-lg btn-block" name="update">Update</button>
