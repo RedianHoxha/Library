@@ -19,8 +19,8 @@ if (isset($_POST['Bli']))
     $datablerjes = date("Y-m-d");
 
   $ekzistonuseri = "select * from useri where Username = '$user'";
-  //echo $ekzistonuseri;
   $resultuseri=mysqli_query($link, $ekzistonuseri);
+  
   $rowekzistus = mysqli_fetch_array($resultuseri);
   $iduser = $rowekzistus['IdUser'];
   $roli = $rowekzistus['Roli'];

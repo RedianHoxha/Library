@@ -64,7 +64,7 @@
 
         #fotodhepershkrim{
             display: inline-flex;
-            height: 100%;
+            
         }
         #foto{
          margin-top: 9%;
@@ -77,7 +77,10 @@
         padding: 5%;
         background-color:white;
         box-shadow: 1px 2px 20px 0px rgb(179, 123, 235);
+        margin-left:10%;
+
     }
+
 
 p{
     text-align:center;
@@ -90,7 +93,7 @@ p{
 
 <body>
     <header>
-        <nav>
+        <nav >
             <div class="nav">
                 <div class="logo">
                     <ul>
@@ -103,24 +106,13 @@ p{
                 <ul>
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="Rreth nesh.html">Rreth nesh</a></li>
-                    <li>
-                        <div class="menu">
-                            <button id="dd">Libraria jonë</button>
-
-                            <ul>
-                                <li><a href="#">Autoret</a></li>
-                                <li><a href="#">Zhanret</a></li>
-                                <li><a href="#">Te dhuruar</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="search.php">Libraria</a></li>
                     <li><a href="kontakti.html">Kontakti</a></li>
                     <li><a href="dhurovizitor.php">DHURO!</a></li>
                 </ul>
             </div>
-            <div class="nav2">
+            <div class="nav22" style=" float: right;margin-left: 5px;margin-top: -75px;">
                 <ul>
-                    <!-- <li><a href="shportaavizitor.php">Shporta</a></li> -->
                     <li><a href="../PHP/login.php">Identifikohu</a></li>
                 </ul>
             </div>
@@ -157,8 +149,8 @@ p{
             <div class="col-md-4">
                 <div class="properties">
                     <div id="fotodhepershkrim">
-                        <div id="foto">
-                            <img src="../FOTO/<?php echo $row['Foto']; ?>" />
+                        <div class="foto">
+                            <img src="../FOTO/<?php echo $row['Foto']; ?>" style="width:100px;height:150px;" />
                         </div>
                         <div>
                             <p> <?php echo $row['Titull']; ?></p>

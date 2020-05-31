@@ -54,6 +54,23 @@
     <title>Forme dhurimi</title>
 </head>
 <body>
+    <style>
+
+    textarea, input {
+        color: black;
+        
+    }
+        textarea:focus,
+input:focus {
+  color: black;
+}
+
+/* input,
+select,
+textarea {
+  color: #000;
+} */
+</style>
     <script>
         jQuery(document).ready(function (e) {
             jQuery('#mymodal').trigger('click');
@@ -78,17 +95,7 @@
                 <ul>
                 <li><a href=<?php echo $destinacionhome?>>Home</a></li>
                     <li><a href="../HTML/Rrethnesh.php">Rreth nesh</a></li>
-                    <li>
-                        <div class="menu">
-                            <button id="dd">Libraria jonë</button>
-    
-                            <ul>
-                                <li><a href="#">Autorët</a></li>
-                                <li><a href="#">Zhanret</a></li>
-                                <li><a href="#">Të dhuruar</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="searchtest.php">Libraria</a> </li>
                     <li><a href="kontakti.php">Kontakti</a></li>
                 </ul>
             </div>
@@ -129,7 +136,7 @@
                                     <p>Telefon</p><input type="text" id="nr" name="tel" value="<?php echo $rowuseri['Tel']; ?>"
                                         autocomplete="off">
                                     <p>Adresa</p><input type="text" id="adress" name="adresa"
-                                    value="<?php echo $rowuseri['Adresa ']; ?>" autocomplete="off">
+                                    value="<?php echo $rowuseri['Adresa']; ?>" autocomplete="off">
                                     <input type="hidden" name="hiddenValue" id="test">
                                 </div>
                             </div>

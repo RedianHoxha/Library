@@ -41,17 +41,8 @@
                 <ul>
                     <li><a href="../HTML/index.php">Home</a></li>
                     <li><a href="../HTML/Rreth nesh.html">Rreth nesh</a></li>
-                    <li>
-                        <div class="menu">
-                            <button id="dd">Libraria jonë</button>
-    
-                            <ul>
-                                <li><a href="#">Autorët</a></li>
-                                <li><a href="#">Zhanret</a></li>
-                                <li><a href="#">Të dhuruar</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="search.php">Libraria</a></li>
+
                     <li><a href="../HTML/kontakti.html">Kontakti</a></li>
                     <!-- <li class="active"><a href="index.php">DHURO!</a></li> -->
                    
@@ -80,19 +71,19 @@
 
                                 <div id="fullname">
                                     <p id="txt">First name
-                                    <p><input type="text" id="fname" name="fname" placeholder="Redian"
+                                    <p><input type="text" id="fname" name="fname" placeholder="Emri"
                                             autocomplete="off">
                                     <p id="txt">Last name
-                                    <p><input type="text" id="lname" name="lname" placeholder="Hoxha"
+                                    <p><input type="text" id="lname" name="lname" placeholder="Mbiemri"
                                             autocomplete="off">
                                 </div>
                                 <div id="contact">
                                     <p>Email</p><input type="text" id="email" name="email" autocomplete="off"
-                                        placeholder="hoxharedian@gmail.com">
-                                    <p>Telefon</p><input type="text" id="nr" name="tel" placeholder="0685308860"
+                                        placeholder="Example@gmail.com">
+                                    <p>Telefon</p><input type="text" id="nr" name="tel" placeholder="Tel"
                                         autocomplete="off">
                                     <p>Adresa</p><input type="text" id="adress" name="adresa"
-                                        placeholder="Ju lutem vendosni adresen" autocomplete="off">
+                                        placeholder="Adresa" autocomplete="off">
                                     <input type="hidden" name="hiddenValue" id="test">
                                 </div>
                             </div>
