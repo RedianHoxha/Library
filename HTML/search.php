@@ -146,8 +146,7 @@
     if(isset($_POST['submit'])) 
         { 
             $name = $_POST['fjalekyce'];
-           
-
+            // echo $name;
 
             if($name == '')
             {  
@@ -173,8 +172,7 @@
                             </div>
 
                             <div class="butonat">
-                                
-                            <button onclick="location.href ='blerjethjeshte.php?Bli=<?php echo $row['Titull'];?>'"  type="submit" class="btn" name="Bli">Shto Ne Shporte</button> <br />
+                                <button class="shto" onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                             </div>
                         </div>
                     </div>
@@ -219,7 +217,7 @@
                                             </div>
                 
                                             <div class="butonat">
-                                            <button onclick="location.href ='blerjethjeshte.php?Bli=<?php echo $row['Titull'];?>'"  type="submit" class="btn" name="Bli">Shto Ne Shporte</button> <br />
+                                                <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                                             </div>
                                         </div>
                                     </div>
