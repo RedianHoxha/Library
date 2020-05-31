@@ -136,7 +136,7 @@ textarea {
                                     <p>Telefon</p><input type="text" id="nr" name="tel" value="<?php echo $rowuseri['Tel']; ?>"
                                         autocomplete="off">
                                     <p>Adresa</p><input type="text" id="adress" name="adresa"
-                                    value="<?php echo $rowuseri['Adresa ']; ?>" autocomplete="off">
+                                    value="<?php echo $rowuseri['Adresa']; ?>" autocomplete="off">
                                     <input type="hidden" name="hiddenValue" id="test">
                                 </div>
                             </div>

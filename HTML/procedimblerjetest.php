@@ -26,6 +26,7 @@ if (isset($_GET['Bli']))
     $statuslibriblere = 'Blere';
     $bleres = 'Bleres';
     $blerespass = 'Bleres';
+
     $statuslibridhuruar = 'Dhuruar';
     $statuspune = 'To Do';
     $p1 = substr($emriblersit,0,4);
@@ -196,7 +197,8 @@ if (isset($_GET['Bli']))
                             else
                             {
                                 Echo 'fatkeqesisht ne librarine tone te gjith librat me titull '.  $titull. 
-                                ' jane shitur por ju mund ta rezervoni nje te tille per ta lexuar deri sa ne te marrim ne librarine tone kete liber perseri'; 
+                                ' jane shitur por ju mund ta rezervoni nje te tille per ta lexuar deri sa ne te
+                                 marrim ne librarine tone kete liber perseri'; 
                             }
 
                         }
