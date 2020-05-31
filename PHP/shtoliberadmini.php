@@ -19,13 +19,13 @@
                         
 
                         <label for="isbn">ISBN:</label>
-                        <input type='text' id="isbn" name="isbn" value=""></br></br>
+                        <input type='text' id="isbn" name="isbn" value="" autocomplete="off"></br></br>
                         <label for="titull">Titulli:</label>
-                        <input type='text' id="titull" name="titull" value=""></br></br>
+                        <input type='text' id="titull" name="titull" value="" autocomplete="off"></br></br>
                         <label for="autor">Autori:</label>
-                        <input type='text' id="autori" name="autori" value=""></br></br>
+                        <input type='text' id="autori" name="autori" value="" autocomplete="off"></br></br>
                         <label for="pershkrim">Pershkrim:</label>
-                        <textarea id="pershkrim"  name="pershkrimi" rows="4" cols="50" value=""></textarea><br>
+                        <textarea id="pershkrim"  name="pershkrimi" rows="4" cols="50" value="" autocomplete="off"></textarea><br>
                         <label for="zhanri">Zgjidhni zhanrin e librit:</label><br>
                                 <select id="zhanri" name="zhanri" value="">
                                     <option value="fantazi">Fantazi</option>
@@ -44,11 +44,11 @@
                                     <option value="biografi">Biografi</option>
                                 </select><br></br>
                                 <label for="cmim">Cmim:</label>
-                                <input type="number" id="cmim" name="cmimi" value=""><br></br>
+                                <input type="number" id="cmim" name="cmimi" value="" autocomplete="off"><br></br>
                                 <label for="cmim">Sasia:</label>
-                                <input type="number" id="sasia" name="sasia" value=""><br></br>
+                                <input type="number" id="sasia" name="sasia" value="" autocomplete="off"><br></br>
                                 <label for="cmim">Statusi:</label>
-                                <input type="text" id="sasia" name="statusi" value="Blere"><br></br>
+                                <input type="text" id="sasia" name="statusi" value="Blere" disabled><br></br>
                                 <div> 
                                      <form action="upload.php" method="post" enctype="multipart/form-data"> 
                                      <label for="cmim">Kopertina:</label>
