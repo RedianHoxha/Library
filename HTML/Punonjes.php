@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Librat</title>
     <h2>This Table is About?</h2>
 <link rel="stylesheet" type="text/css" href="crud_theme.css">
-</head>
+</head> -->
 
 
 
@@ -21,9 +21,7 @@
       </div>
      <div id="foo">  
         <table id="fixed-table" class="table features-table">
-
-
-        <?php $link = mysqli_connect("localhost", "root", "", "library");
+            <?php $link = mysqli_connect("localhost", "root", "", "library");
         
         // Check connection
         if($link === false){

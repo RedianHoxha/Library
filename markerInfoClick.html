@@ -1,0 +1,58 @@
+<!-- MARKER DHE INFOWINDOW NE CLICK -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqRQUzG8s_7YAqkbG7nxTRD41eul1dMwA"></script>
+
+    <script>
+      var map; //deklarojme variablin per harten
+
+      var myCenter = new google.maps.LatLng(51.508742, -0.12085); //deklarojme qendren e hartes me ane te google.maps.LatLng()
+
+      function initialize() {
+        //funksioni qe do behet load ne body
+        var mapProp = {
+          //properties te hartes qendra me ane te myCenter, shkallen dhe tipin e hartes
+          center: myCenter,
+          zoom: 5,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }; // mbyllet funksioni
+
+        map = new google.maps.Map( //krijimi i hartes me ane te google.maps.map
+          document.getElementById("googleMap"), //i cili merr id e divit qe do vendoset harta
+          mapProp //dhe properties qe kemi deklaruar
+        );
+
+        google.maps.event.addListener(map, "click", function (event) {
+          //shtojme nje listener qe kur te klikohet ne harte te ndodhi funksioni
+          placeMarker(event.latLng);
+        });
+      }
+
+      function placeMarker(location) {
+        var marker = new google.maps.Marker({
+          //krijojme nje marker
+          position: location, //ne pozicionin ku klikohet
+
+          map: map, //mbi harte
+        }); //mbyllim funksionin
+
+        var infowindow = new google.maps.InfoWindow({
+          // krijimi i infowindow me ane te google.maps.infowindow
+          //qe ka kete permbajtje
+          content:
+            "Latitude: " + location.lat() + "<br>Longitude: " + location.lng(),
+        }); //do marri nga eventi i klikimit lat location.lat() dhe lng me location.lng(), mbyllim fnx
+
+        infowindow.open(map, marker); //kjo ben shfaqjen e infowindow ne harte ne marker
+      }
+    </script>
+  </head>
+
+  <body onload="initialize()">
+    <!--do behet funksioni i shfaqjes se hartes -->
+    <div id="googleMap" style="width: 500px; height: 380px;"></div>
+    <!-- ne divin me keto permasa -->
+  </body>
+</html>
