@@ -11,7 +11,7 @@
             <legend style="font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Rivendosja e password-it te ri.</legend>
 
 
-                <input type="text" placeholder="Username" style="height: 37px; border-radius: 25px; text-align: center; font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; top: 44px; left: 36%; position: absolute;"
+                <input type="text" placeholder="Username"  autocomplete="off" style="height: 37px; border-radius: 25px; text-align: center; font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; top: 44px; left: 36%; position: absolute;"
                 name="username" id="username" >
 
                 <input type="password" placeholder="Password" style="height: 37px; border-radius: 25px; text-align: center; font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifposition; position: absolute; top: 107px; left:36%;"

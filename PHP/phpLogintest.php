@@ -14,20 +14,13 @@ if (isset($_POST['login_user'])) {
 
    $rest = substr($passwordenkriptuar, 2, -2);
 
-   $sql = "select * from useri where u"
-    
+$ekzistonuseri = "select * from useri where Username = '$username' and Password = '$passwordenkriptuar'";
+$resultuseri=mysqli_query($link, $ekzistonuseri);
 
-        //echo 'ketusiper';
-        mysqli_stmt_bind_param($stmt,"s",$username);
-        mysqli_stmt_execute($stmt);
-        //echo $stmt;
-        $result = mysqli_stmt_get_result($stmt);
-        $row =mysqli_fetch_assoc($result);
-
-        //echo mysqli_num_rows($result);
-
-        if(mysqli_num_rows($result)!=0)
+        if(mysqli_num_rows($resultuseri)!=0)
         {
+            $row = mysqli_fetch_array($resultuseri);
+
             //echo 'ketu';
         
             session_start();
@@ -56,6 +49,10 @@ if (isset($_POST['login_user'])) {
                         $_SESSION['user']= $username;
                         header('location: ../HTML/homelexues.php');
             }
+       }
+       else
+       {
+        echo 'gabim passs';
        }
 }
 

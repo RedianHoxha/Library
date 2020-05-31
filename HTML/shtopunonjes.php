@@ -28,7 +28,7 @@
 
 
                 <div class="wrap-input100 ">
-                    <input class="input100" id="form_fname" type="text" name="emer"placeholder="Emri juaj:">
+                    <input class="input100" id="form_fname" type="text" name="emer"placeholder="Emri juaj:"autocomplete="off">
                     <span class="error_form" id="fname_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -36,7 +36,7 @@
                     </span>
                 </div>
                 <div class="wrap-input100 ">
-                    <input class="input100" id="form_lname" type="text" name="mbiemer" placeholder="Mbiemri juaj:">
+                    <input class="input100" id="form_lname" type="text" name="mbiemer" placeholder="Mbiemri juaj:"autocomplete="off">
                     <span class="error_form" id="lname_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -44,7 +44,7 @@
                     </span>
                 </div>
                 <div class="wrap-input100 ">
-                    <input class="input100" id="username" type="text" name="username" placeholder="Username:">
+                    <input class="input100" id="username" type="text" name="username" placeholder="Username:" autocomplete="off">
                     <span class="error_form" id="username_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -52,7 +52,7 @@
                     </span>
                 </div>
                 <div class="wrap-input100 " >
-                    <input class="input100" id="form_email"type="email" name="email" placeholder="Vendosni emailin:">
+                    <input class="input100" id="form_email"type="email" name="email" placeholder="Vendosni emailin:"autocomplete="off" >
                     <span class="error_form" id="email_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -60,7 +60,7 @@
                     </span>
                 </div>
                 <div class="wrap-input100 " >
-                    <input class="input100" id="form_tel"type="number" name="tel" placeholder="Vendosni nr. cel:">
+                    <input class="input100" id="form_tel"type="number" name="tel" placeholder="Vendosni nr. cel:" autocomplete="off">
                     <span class="error_form" id="tel_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -68,7 +68,7 @@
                     </span>
                 </div>
                   <div class="wrap-input100">
-                    <input class="input100" id="form_address" type="text" name="adrese"  placeholder="Vendosni adresen:">
+                    <input class="input100" id="form_address" type="text" name="adrese"  placeholder="Vendosni adresen:" autocomplete="off">
                     <span class="error_form" id="address_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">

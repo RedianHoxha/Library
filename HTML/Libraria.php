@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Librat</title>
-    <h2>This Table is About?</h2>
-<link rel="stylesheet" type="text/css" href="crud_theme.css">
-</head>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
   <head>
       <title>Librat</title>
       <link rel="stylesheet" type="text/css" href="../CSS/crud_sofia.css">
@@ -35,10 +25,8 @@
                         <th>Autor</th>
                         <th>Pershkrim</th>
                         <th>Zhanri</th>
-                        <th>Sasia</th>
                         <th>Status</th>
                         <th>Cmimi</th>
-                        <th>Foto</th>
                         <th colspan="2">Action</th>
                     </tr>
                 </thead>
@@ -55,10 +43,8 @@
                         <td><?php echo $row['Autor']; ?></td>
                         <td><?php echo $row['Pershkrim']; ?></td>
                         <td><?php echo $row['Zhanri']; ?></td>
-                        <td><?php echo $row['Sasia']; ?></td>
                         <td><?php echo $row['Statusi']; ?></td>
                         <td><?php echo $row['Cmimi']; ?></td>
-                        <td><?php echo $row['Foto']; ?></td>
                         <td>
                             <a href="formarregjistrimlibri.php?edit=<?php echo $row['IdLibri']; ?>" class="edit_btn" >Edit</a>
                         </td>
