@@ -1,3 +1,35 @@
+<?php 
+
+        $user=$_SESSION['user'];
+
+        $link = mysqli_connect("localhost", "root", "", "library");
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+$ekzistonuseri = "select * from useri where Username = '$user'";
+//echo $ekzistonuseri;
+$resultuseri=mysqli_query($link, $ekzistonuseri);
+$rowekzistus = mysqli_fetch_array($resultuseri);
+$roli = $rowekzistus['Roli'];
+
+$destinacionhome;
+
+if($roli === 'Admin')
+{ 
+    $destinacionhome = "homeadmin.php";
+}
+else if($roli=== 'Vizitor'){
+    $destinacionhome = "homelexues.php";
+}
+else
+{   
+    $destinacionhome = "homeperdorues.php";
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,13 +58,9 @@
                 justify-content: center;
                 flex-direction: column;
                 height: 100%;
+                margin-top: -30px;
             }
-            .test {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
+        
             .buttonconatiner{
                 background-color:rgb(108, 117, 126);
                 margin-bottom: 10%;
@@ -51,14 +79,26 @@
                 font-size: 100%;
             }
             body{
-                background-image: url("Untitled.png");
+                background-image: url("../FOTO/marble.jpg");
             }
+            .home{
+                margin-top: 10px;  
+                margin-left: 10px;
+            }
+            a {
+            color: white;
+            font-size: 100%;
+            }
+
         </style>
     </head>
     <body>
         <div style="display:flex;">
             <div class="nav-mask"></div>
             <div class="side-nav ">
+                <div class="home">
+                    <button type="button" class="btn btn-secondary"><a href=<?php echo $destinacionhome ?> name="edit" >Kthehu ne home </a></button>
+                </div>
                 <div class="nav-content ">
                     <div class="buttonconatiner">
                         <div class="button_text " ><a class="example_e" href="../HTML/NefoeditProfile.php" name="edit" ><i class="fa fa-pencil"> Profili juaj/modifiko!</i></a> </div>
@@ -70,7 +110,7 @@
                         <div class="button_text" ><a class="example_e" href="shporta.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Shporta!</i></a></div><br>
                     </div>
                     <div class="buttonconatiner">
-                        <div class="button_text" ><a class="example_e" href="rezervime.php" rel="nofollow noopener"><i class="fa fa-shopping-cart"></i> Rezervimet tuaja!</i></a></div><br>
+                        <div class="button_text" ><a class="example_e" href="../PHP/logout.php" rel="nofollow noopener"><i class="fa fa-sign-out" aria-hidden="true"></i> Shkycu!</i></a></div><br>
                     </div>
                 </div>
             </div>

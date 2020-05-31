@@ -23,6 +23,7 @@ if (isset($_POST['login_user'])) {
     else
     {
         echo $rest;
+        echo $passwordenkriptuar;
 
         //echo 'ketusiper';
         mysqli_stmt_bind_param($stmt,"s",$username);
@@ -64,7 +65,8 @@ if (isset($_POST['login_user'])) {
                         header('location: ../HTML/homelexues.php');
             }
         }
-        else{
+        else
+        {
             echo 'ketu poshte';
         }
     }

@@ -9,9 +9,9 @@ if($link === false){
 if (isset($_GET['del'])) {
     $usename =$_GET['del'];
 
-    $updatetable = "UPDATE wishlist set shporta='' where username = '$usename' and shporta = 'Po' ";
+    $fshishporten  = "DELETE from shporta  where username = '$usename'";
      //echo $updatetable;
-   mysqli_query($link,$updatetable );
+   mysqli_query($link,$fshishporten );
     
 
 header('location: shporta.php');

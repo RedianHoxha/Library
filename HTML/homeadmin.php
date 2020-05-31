@@ -135,8 +135,7 @@ p{
                 <h1>Çfarë do lexoni?</h1>
             </div>
             <div class="search">
-                <input type="text" placeholder="Kërko" />
-                <a href="search.php">Kërko</a>
+            <a href="searchtest.php">Kërko</a>
             </div>
         </nav>
         <div class="miresevini">
