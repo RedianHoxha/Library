@@ -2,7 +2,7 @@ function dekripto()
 {
 
     var pass = $("#password").val();
-    alert(pass);
+    //alert(pass);
 
 var length =pass.length;
 var gjysma=length/2;

@@ -50,9 +50,9 @@
                 color: white;
                 font-size: 100%;
             }
-            body{
-                background-image: url("Untitled.png");
-            }
+            /* body{
+                background-image: url("download.jpg");
+            } */
         </style>
     </head>
     <body>

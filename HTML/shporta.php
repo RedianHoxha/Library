@@ -52,7 +52,7 @@
         <th class="text-left">Veprimi</th> 
       </tr>
     </thead>
-                <?php $sqlquery="Select * from wishlist  where username  = '$user' and shporta = 'Po'";
+                <?php $sqlquery="Select * from shporta  where username  = '$user'";
                 //echo $sqlquery;
                     $result=mysqli_query($link, $sqlquery);
 
@@ -65,15 +65,18 @@
         <td class="text-left"><?php echo $row['Zhanri']; ?></td>
         <td class="text-left"><?php echo $row['Cmimi']; ?></td>
         <td class="text-left">
-        <button class="butoni-personalizuar"  onclick="location.href = 'fshingawishlist.php?user=<?php echo $user ?>&delete=<?php echo $row['ISBN']; ?>'" >Hiq </button> 
+        <button class="butoni-personalizuar"  onclick="location.href = 'fshingashporta.php?user=<?php echo $user ?>&delete=<?php echo $row['ISBN']; ?>'" >Hiq </button> 
       </td>
         
     </tr>
                 </tbody>
                 <?php } ?>
             </table>
-            <button class="butoni-personalizuar"  onclick="location.href = 'fshigjithshporten.php?del=<?php echo $user ?>'" >Hiq </button> 
-    </div>  
+            <div style="display: inline-flex">
+                <button class="butoni-personalizuar"  onclick="location.href = 'fshigjithshporten.php?del=<?php echo $user ?>'" >Pastro</button> 
+                <button class="butoni-personalizuar"  onclick="location.href = 'fshigjithshporten.php?del=<?php echo $user ?>'" >Paguaj</button> 
+            </div>
+          </div>  
   </div>
 </div> 
 </body>

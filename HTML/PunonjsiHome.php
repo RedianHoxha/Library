@@ -5,7 +5,7 @@
         //include('../PHP/session.php');
         $user=$_SESSION['user'];
         $link = mysqli_connect("localhost", "root", "", "library");
-    
+    $data  = date("Y-m-d");
     // Check connection
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -19,8 +19,8 @@
         <title>Punonjsi</title>
         <div id="top-page">
                 <div id="top-page-left">
-                <p>Today is: 12/Prill/2020</p>
-                <p>Punen e sotme mos e ler per neser mor ta marsha</p>
+                <p>Today is:<?php echo $data ?></p>
+                <p>Mire se erdhet ne pune</p>
                 </div>
                 <div id="top-page-right">
                     <input  class="button" type="button"  value="<?php echo $user ?>" onclick="window.location='NefoProfile.php'">

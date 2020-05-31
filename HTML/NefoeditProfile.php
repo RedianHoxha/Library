@@ -24,6 +24,9 @@
                 flex-direction: column;
                 justify-content: space-between;
     }
+    body{
+                background-image: url("../FOTO/download.jpg");
+            }
     </style>
 </head>
 <body>
