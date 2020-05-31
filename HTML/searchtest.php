@@ -113,7 +113,7 @@
                             }
                             else
                             {
-                                header('location:search.php?Invalid=Me kete fjale qe ju sapo kerkuar nuk rezulton asgje!Faleminderit');
+                                header('location:searchtest.php?Invalid=Me kete fjale qe ju sapo kerkuar nuk rezulton asgje!Faleminderit');
                             }
                         }
 

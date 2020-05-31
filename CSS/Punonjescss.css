@@ -24,6 +24,7 @@ body {
 }
 
 #page-down {
+  width: 100%;
   height: 80%;
   display: inline-flex;
   border-color: brown;

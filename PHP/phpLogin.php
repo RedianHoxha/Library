@@ -13,7 +13,7 @@ if (isset($_POST['login_user'])) {
 
 
    $rest = substr($passwordenkriptuar, 2, -2);
-    $sqlquery="Select * from useri where Username=? and Password = ?";
+    $sqlquery="Select * from useri where Username=?";
     $stmt = mysqli_stmt_init($link);
 
     if(!mysqli_stmt_prepare($stmt,$sqlquery))
@@ -26,7 +26,7 @@ if (isset($_POST['login_user'])) {
         echo $passwordenkriptuar;
 
         //echo 'ketusiper';
-        mysqli_stmt_bind_param($stmt,"ss",$username,$passwordenkriptuar);
+        mysqli_stmt_bind_param($stmt,"s",$username);
         mysqli_stmt_execute($stmt);
         //echo $stmt;
         $result = mysqli_stmt_get_result($stmt);

@@ -6,6 +6,7 @@
         $user=$_SESSION['user'];
         $link = mysqli_connect("localhost", "root", "", "library");
     $data  = date("Y-m-d");
+    $time = date("h:i:sa");
     // Check connection
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -19,7 +20,7 @@
         <title>Punonjsi</title>
         <div id="top-page">
                 <div id="top-page-left">
-                <p>Today is:<?php echo $data ?></p>
+                <p>Today is:<?php echo $data ?> Time is:<?php echo $time?></p>
                 <p>Mire se erdhet ne pune</p>
                 </div>
                 <div id="top-page-right">

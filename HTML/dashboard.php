@@ -1,3 +1,35 @@
+<?php 
+
+        $user=$_SESSION['user'];
+
+        $link = mysqli_connect("localhost", "root", "", "library");
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+$ekzistonuseri = "select * from useri where Username = '$user'";
+//echo $ekzistonuseri;
+$resultuseri=mysqli_query($link, $ekzistonuseri);
+$rowekzistus = mysqli_fetch_array($resultuseri);
+$roli = $rowekzistus['Roli'];
+
+$destinacionhome;
+
+if($roli === 'Admin')
+{ 
+    $destinacionhome = "homeadmin.php";
+}
+else if($roli=== 'Vizitor'){
+    $destinacionhome = "homelexues.php";
+}
+else
+{   
+    $destinacionhome = "homeperdorues.php";
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -65,7 +97,7 @@
             <div class="nav-mask"></div>
             <div class="side-nav ">
                 <div class="home">
-                    <button type="button" class="btn btn-secondary"><a href="homelexues.php" name="edit" >Kthehu ne home </a></button>
+                    <button type="button" class="btn btn-secondary"><a href=<?php echo $destinacionhome ?> name="edit" >Kthehu ne home </a></button>
                 </div>
                 <div class="nav-content ">
                     <div class="buttonconatiner">
