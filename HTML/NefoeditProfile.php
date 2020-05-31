@@ -24,6 +24,35 @@
   margin-top: -30px;
 }
     </style>
+    <script>
+    function myFunction()                                    
+{ 
+    var name = document.forms["myForm"]["emri"];  
+    var surname = document.forms["myForm"]["mbiemri"];             
+    var email = document.forms["myForm"]["email"];    
+    
+    if (name.value == "")                                  
+    { 
+        window.alert("Ju lutem vendosni emrin."); 
+        name.focus(); 
+        return false; 
+    } 
+   
+    if (surname.value == "")                                  
+    { 
+        window.alert("Ju lutem vendosni mbiemrin."); 
+        name.focus(); 
+        return false; 
+    }        
+    if (email.value == "")                                   
+    { 
+        window.alert("Ju lutem vendosni nje adrese te sakte emaili."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    return true; 
+}</script> 
 </head>
 <body>
 <div class="container-fluid">
@@ -48,7 +77,7 @@
         ?>
    
     <div class="form-group test">
-       <form class="h5 py-4"action='../PHP/editProfile.php?editProfile=<?php echo $row['IdUser'] ?>' method='post'>
+       <form name="myForm"class="h5 py-4"action='../PHP/editProfile.php?editProfile=<?php echo $row['IdUser'] ?>' method='post'onsubmit="return myFunction()">
          <label  for="emri">Emri:</label><br>
          <input class="form-control" type="text" id="emri" name="emri"  value="<?php echo $row['Emer']; ?>" ><br>
          <label for="mbiemri">Mbiemri:</label><br>
@@ -56,7 +85,7 @@
          <label for="username">Username:</label><br>
          <input class="form-control" type="text" id="username" name="username"value="<?php echo $row['Username']; ?>"disabled><br>
            <label for="email">Emaili :</label><br>
-           <input class="form-control" type="email" id="email" name="email"value="<?php echo $row['Email']; ?>"><br>
+           <input class="form-control" type="email" id="email" name="email"value="<?php echo $row['Email']; ?>" pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/" required><br>
            <button type="submit" class="btn btn-secondary btn-lg btn-block" name="update">Update</button>
        </form>
      </div>
