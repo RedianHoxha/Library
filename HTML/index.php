@@ -120,6 +120,7 @@ p{
             </div>
             <div class="nav2">
                 <ul>
+                    <!-- <li><a href="shportaavizitor.php">Shporta</a></li> -->
                     <li><a href="../PHP/login.php">Identifikohu</a></li>
                 </ul>
             </div>
