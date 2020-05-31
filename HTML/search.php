@@ -4,15 +4,136 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/styleSara.css" />
+<style>
 
+
+      #control
+      {
+        position: absolute;
+  top: 18.4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+      }
+
+      .kerko {
+          background: linear-gradient(90deg,white,#ffd6f0);
+  /* border: none; */
+  width: 100px;
+  color: rgb(51, 51, 51);;
+  font-size: unset;
+  /* font-weight: bolder; */
+  /* margin: 5px; */
+  /* padding: 2%; */
+  /* border-radius: 5px; */
+  cursor: pointer;
+      }
+      
+      .kerko:hover {
+          background: linear-gradient(90deg,#ffd6f0,white);
+        /* box-shadow: 0 0 10px violet, 0 0 40px purple, 0 0 10px violet; */
+        /* background-color: violet;
+        color: white; */
+        transition: 0.6s ease;
+      }
+    .row{
+        margin: 100px;
+        /* padding: %; */
+        height: 140px;
+        background-color:  rgba(255, 255, 255, 0.7);
+        
+        width: 600px;
+        /* border: solid; */
+        border-color: #ffd6f0;
+         border-radius: 10px;
+        
+
+    }
+
+    body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../FOTO/home2.jpg");
+
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  margin-top: -10px;
+}
+    
+    .shto{
+       background: linear-gradient(90deg,white,#ffd6f0);
+  border: none;
+  color: rgb(51, 51, 51);;
+  font-size: unset;
+  /* font-weight: bolder; */
+  /* margin: 5px; */
+  padding: 2%;
+  border-radius: 5px;
+  cursor: pointer;
+    }
+
+    .control{
+   padding: 10px;
+}
+    
+
+    .shto:hover{
+        background: linear-gradient(90deg,#ffd6f0,white);
+        /* box-shadow: 0 0 10px violet, 0 0 40px purple, 0 0 10px violet; */
+        /* background-color: violet;
+        color: white; */
+        transition: 0.6s ease;
+    }
+
+    .foto{
+        width:1000px;
+        height:100px;
+    }
+    
+
+    
+    </style>
 </head>
 <body>
+<header>
+        <div class="nav">
+            <div class="logo">
+                <ul>
+                    <li>
+                        <img src="../FOTO/logo.png" /></li>
+            </div>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="Rreth nesh.html">Rreth nesh</a></li>
+                <li>
+                    <div class="menu">
+                        <button id="dd" >Libraria jonë</button>
+                
+                        <ul>
+                            <li><a href="#">Autoret</a></li>
+                            <li><a href="#">Zhanret</a></li>
+                            <li><a href="#">Te dhuruar</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li ><a href="#">Kontakti</a></li>
+                <li><a href="dhurovizitor.php">DHURO!</a></li>
+                
+            </ul>
+        </div>
+        <div class="nav2">
+            <ul>
+                <li><a href="../PHP/login.php">Identifikohu</a></li>
+            </ul>
+        </div>
+
+
     
 <div>
         <div id ="control">
             <form id="forma" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <input type="text"  name= "fjalekyce" placeholder="Kërko" />
-                    <input type="submit" name="submit" value="Kerko"><br>
+                    <input class="kerko" type="submit" name="submit" value="Kerko"><br>
             </form>
         </div>
         <div id= "fushalibrave">
@@ -40,7 +161,7 @@
                     <div class="col-6">
                         <div class="properties">
                             <div id="fotodhepershkrim">
-                                <div id="foto" style="width:20%;height:30%">
+                                <div id="foto" >
                                     <img src="../FOTO/<?php echo $row['Foto']; ?>" />
                                 </div>
                                 <div>
@@ -51,7 +172,7 @@
                             </div>
 
                             <div class="butonat">
-                                <button onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
+                                <button class="shto" onclick="location.href = 'blerjethjeshte.php?Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                             </div>
                         </div>
                     </div>
