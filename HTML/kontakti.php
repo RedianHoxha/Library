@@ -16,13 +16,16 @@
         $rowekzistus = mysqli_fetch_array($resultuseri);
         $roli = $rowekzistus['Roli'];
         $destinacioni;
+        $destinacionhome;
         
         if($roli === 'Admin')
         { 
             $destinacioni = "PunonjsiHome.php";
+            $destinacionhome = "homeadmin.php";
         }
         else{
             $destinacioni = "punonjesthjeshtehome.php";
+            $destinacionhome = "homeperdorues.php";
         }
       ?>
 <!DOCTYPE html>
@@ -47,7 +50,7 @@
                         <img src="../FOTO/logo.png" /></li>
             </div>
             <ul>
-                <li><a href="homeperdorues.php">Home</a></li>
+                <li><a href=<?php echo $destinacionhome?>>Home</a></li>
                 <li><a href="Rrethnesh.php">Rreth nesh</a></li>
                 <li>
                     <div class="menu">

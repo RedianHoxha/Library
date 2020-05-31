@@ -5,7 +5,8 @@
      //include('../PHP/session.php');
      $user=$_SESSION['user'];
      $link = mysqli_connect("localhost", "root", "", "library");
- 
+     $data  = date("Y-m-d");
+    $time = date("h:i:sa");
  // Check connection
  if($link === false){
      die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -18,9 +19,9 @@
         <link  href="../CSS/Punonjescss.css" rel="stylesheet" type="text/css">
         <title>Punonjsi</title>
         <div id="top-page">
-                <div id="top-page-left">
-                <p>Today is: 12/Prill/2020</p>
-                <p>Punen e sotme mos e ler per neser mor ta marsha</p>
+        <div id="top-page-left">
+                <p>Today is:<?php echo $data ?> Time is:<?php echo $time?></p>
+                <p>Mire se erdhet ne pune</p>
                 </div>
                 <div id="top-page-right">
                     <input  class="button" type="button"  value="<?php echo $user ?>" onclick="window.location='NefoProfile.php'">
@@ -83,14 +84,15 @@
                             <td>ID Pune</td>
                             <td>Statusi</td> 
                         </tr>
-                        <?php $sqlquerypunet="Select * from shqyrtopune  where statusi  = 'Done' or statusi = 'In Progres' and userpunonjsi = '$user'";
+                        <?php $sqlquerypunet="Select * from shqyrtopune  where statusi = 'In Progres' and userpunonjsi = '$user'";
                     $resultpunet=mysqli_query($link, $sqlquerypunet);
 
                 while ($row = mysqli_fetch_array($resultpunet)) { ?>
                 <tbody>
                     <tr>
-                        <td><?php echo $row['idpune']; ?></td>
+                        <td><a href="ndryshostatuspune.php?pune=<?php echo $row['TipiPunes']; ?>&ndrysho=<?php echo $row['idpune']; ?>"><?php echo $row['idpune']; ?></a></td>   
                         <td><?php echo $row['statusi']; ?></td>
+                        <td><?php echo $row['TipiPunes']; ?></td>
                     </tr>
                 </tbody>
                 <?php } ?>

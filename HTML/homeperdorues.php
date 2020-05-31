@@ -113,6 +113,7 @@ p{
                     <li>
                         <div class="menu">
                             <button id="dd">Libraria jonë</button>
+
                             <ul>
                                 <li><a href="#">Autoret</a></li>
                                 <li><a href="#">Zhanret</a></li>
@@ -121,7 +122,7 @@ p{
                         </div>
                     </li>
                     <li><a href="kontakti.php">Kontakti</a></li>
-                    <li><a href="dhurovizitor.php">DHURO!</a></li>
+                    <li><a href="dhuro.php">DHURO!</a></li>
                 </ul>
             </div>
             <div class="nav2">
@@ -135,8 +136,7 @@ p{
                 <h1>Çfarë do lexoni?</h1>
             </div>
             <div class="search">
-                <input type="text" placeholder="Kërko" />
-                <a href="search.php">Kërko</a>
+            <a href="searchtest.php">Kërko</a>
             </div>
         </nav>
         <div class="miresevini">

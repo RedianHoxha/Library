@@ -21,12 +21,14 @@
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
+    session_start();
+    //include('../PHP/session.php');
+    $user=$_SESSION['user'];
 
     if(isset($_POST['submit'])) 
         { 
             $name = $_POST['fjalekyce'];
-           
-
+            echo $name;
 
             if($name == '')
             {  
@@ -53,7 +55,7 @@
 
                             <div class="butonat">
                                 
-                            <button onclick="location.href ='blerjethjeshte.php?Bli=<?php echo $row['Titull'];?>'"  type="submit" class="btn" name="Bli">Shto Ne Shporte</button> <br />
+                            <button onclick="location.href ='shtoneshportethjeshte.php?user=<?php Echo $user?>&isbn=<?php echo $row['ISBN'];?>&Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                             </div>
                         </div>
                     </div>
@@ -98,7 +100,7 @@
                                             </div>
                 
                                             <div class="butonat">
-                                            <button onclick="location.href ='blerjethjeshte.php?Bli=<?php echo $row['Titull'];?>'"  type="submit" class="btn" name="Bli">Shto Ne Shporte</button> <br />
+                                            <button onclick="location.href ='shtoneshportethjeshte.php?user = <?php Echo $user?>&isbn=<?php echo $row['ISBN'];?>&Bli=<?php echo $row['Titull']; ?>'" name="Bli">Shto Ne Shporte</button> <br />
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +113,7 @@
                             }
                             else
                             {
-                                header('location:search.php?Invalid=Me kete fjale qe ju sapo kerkuar nuk rezulton asgje!Faleminderit');
+                                header('location:searchtest.php?Invalid=Me kete fjale qe ju sapo kerkuar nuk rezulton asgje!Faleminderit');
                             }
                         }
 

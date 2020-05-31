@@ -3,9 +3,9 @@
 
 function enkripto()
 {
-alert('hello');
+//alert('hello');
     var pass = $("#form_password").val();
-    alert(pass);
+    //alert(pass);
 
 var length =pass.length;
 var gjysma=length/2;
@@ -16,7 +16,7 @@ var gjysmadyte=pass.substring(gjysma, length);
  var gjysmadytembrapsh=reverseString(gjysmadyte); 
 
 var passperfundimtar=gjysmaparmbrapsh.concat(gjysmadytembrapsh);
-alert(passperfundimtar);
+//alert(passperfundimtar);
 $("#hidenpassword").val(JSON.stringify(passperfundimtar));
 //localStorage.setItem("password",JSON.stringify(passperfundimtar));
  

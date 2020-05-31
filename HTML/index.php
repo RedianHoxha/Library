@@ -120,6 +120,7 @@ p{
             </div>
             <div class="nav2">
                 <ul>
+                    <!-- <li><a href="shportaavizitor.php">Shporta</a></li> -->
                     <li><a href="../PHP/login.php">Identifikohu</a></li>
                 </ul>
             </div>
@@ -127,7 +128,6 @@ p{
                 <h1>Çfarë do lexoni?</h1>
             </div>
             <div class="search">
-                <input type="text" placeholder="Kërko" />
                 <a href="search.php">Kërko</a>
             </div>
         </nav>
