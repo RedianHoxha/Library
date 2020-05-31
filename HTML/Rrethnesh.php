@@ -27,7 +27,7 @@ else{
     $destinacioni = "punonjesthjeshtehome.php";
     $destinacionhome = "homeperdorues.php";
 }
-      ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -20,9 +20,9 @@ else if (isset($_GET['delete']))
     $usename =$_GET['user'];
     $isbn =$_GET['delete']; 
 
-    $updatetable = "UPDATE wishlist set shporta='' where username = '$usename' and shporta = 'Po' and ISBN = '$isbn' ";
+    $delete = "DELETE from shporta where username = '$usename'  and ISBN = '$isbn' ";
      //echo $updatetable;
-   mysqli_query($link,$updatetable );
+   mysqli_query($link,$delete );
 
    header('location: shporta.php');
 }

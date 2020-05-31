@@ -18,7 +18,7 @@ if(isset($_GET['editProfile']))
     $email =mysqli_real_escape_string( $link, $_POST['email']);
     $id = $_GET['editProfile'];
 
-    $sql = "UPDATE  useri set Emer = ?, Mbiemer =?, Username = ?, Email =? 
+    $sql = "UPDATE  useri set Emer = ?, Mbiemer =?, Email =? 
     WHERE IdUser = ?;";
 
         $stmt = mysqli_stmt_init($link);
@@ -30,7 +30,7 @@ if(isset($_GET['editProfile']))
         else
         {
             
-            mysqli_stmt_bind_param($stmt,"ssssi",$emri,$mbiemri,$username,$email,$id);
+            mysqli_stmt_bind_param($stmt,"sssi",$emri,$mbiemri,$email,$id);
             mysqli_stmt_execute($stmt);
             header('location: ../HTML/NefoeditProfile.php');
 
@@ -41,3 +41,4 @@ else
         echo 'Error';
     }
 ?>
+

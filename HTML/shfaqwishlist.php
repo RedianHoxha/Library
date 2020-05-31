@@ -20,8 +20,8 @@
 
     <title>Edit</title>
     <style>
-    .profile h3{
-      margin-bottom: 6px;
+    h3{
+      margin-bottom: 10px;
     }
     .form-group{
       margin-right: 70px;
@@ -41,7 +41,8 @@
        <?php include 'dashboard.php' ?>
     </div>
     <div class="col-sm-8">
-    <h3><i class="fa fa-heart"></i> YOUR WISHLIST</h3>
+    <h2></h2>
+    <h3 class="shadow-sm p-3 mb-5 bg-white rounded"><i class="fa fa-heart"></i> YOUR WISHLIST</h3>
     <table id="fixed-table" class="table features-table">
     <table class="table-fill">
     <thead>
