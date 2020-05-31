@@ -60,7 +60,7 @@
   margin-top: -10px;
 }
     
-    .shto{
+    .btn{
        background: linear-gradient(90deg,white,#ffd6f0);
   border: none;
   color: rgb(51, 51, 51);;
@@ -77,7 +77,7 @@
 }
     
 
-    .shto:hover{
+    .btn:hover{
         background: linear-gradient(90deg,#ffd6f0,white);
         /* box-shadow: 0 0 10px violet, 0 0 40px purple, 0 0 10px violet; */
         /* background-color: violet;
@@ -105,23 +105,12 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="Rreth nesh.html">Rreth nesh</a></li>
-                <li>
-                    <div class="menu">
-                        <button id="dd" >Libraria jonë</button>
-                
-                        <ul>
-                            <li><a href="#">Autoret</a></li>
-                            <li><a href="#">Zhanret</a></li>
-                            <li><a href="#">Te dhuruar</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li ><a href="#">Kontakti</a></li>
+                <li ><a href="kontakti.html">Kontakti</a></li>
                 <li><a href="dhurovizitor.php">DHURO!</a></li>
                 
             </ul>
         </div>
-        <div class="nav2">
+        <div class="nav22" style=" float: right;margin-left: 5px;margin-top: 20px;">
             <ul>
                 <li><a href="../PHP/login.php">Identifikohu</a></li>
             </ul>

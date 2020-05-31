@@ -95,17 +95,7 @@ textarea {
                 <ul>
                 <li><a href=<?php echo $destinacionhome?>>Home</a></li>
                     <li><a href="../HTML/Rrethnesh.php">Rreth nesh</a></li>
-                    <li>
-                        <div class="menu">
-                            <button id="dd">Libraria jonë</button>
-    
-                            <ul>
-                                <li><a href="#">Autorët</a></li>
-                                <li><a href="#">Zhanret</a></li>
-                                <li><a href="#">Të dhuruar</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="searchtest.php">Libraria</a> </li>
                     <li><a href="kontakti.php">Kontakti</a></li>
                 </ul>
             </div>

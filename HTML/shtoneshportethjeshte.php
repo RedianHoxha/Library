@@ -23,7 +23,7 @@
         //     $updatetable = "UPDATE wishlist set shporta='Po' where username = '$user' and Titull ='$titull'";
         //   //  echo $updatetable;
         //   mysqli_query($link,$updatetable );
-        header('location:search.php');
+        header('location:searchtest.php');
         //echo 'sbejme gje';
 
         }
@@ -49,7 +49,7 @@
                // echo $shtolibernshporte;
 
                 mysqli_query($link, $shtolibernshporte);
-               header('location:search.php');
+               header('location:searchtest.php');
             }
             else
             {
