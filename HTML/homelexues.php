@@ -91,6 +91,8 @@
         background-color:white;
         box-shadow: 1px 2px 20px 0px rgb(179, 123, 235);
         margin-left:10%;
+        border-radius:10px;
+
     }
 
     
