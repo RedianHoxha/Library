@@ -124,7 +124,7 @@
 <div>
         <div id ="control">
             <form id="forma" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                    <input type="text"  name= "fjalekyce" placeholder="Kërko" />
+                    <input type="text"  name= "fjalekyce" placeholder="Kërko"  autocomplete="off"/>
                     <input class="kerko" type="submit" name="submit" value="Kerko"><br>
             </form>
         </div>

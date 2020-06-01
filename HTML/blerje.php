@@ -127,7 +127,7 @@
         margin-left: -50px;
         width: 268px;
         height: 100px;">Sa libra deshironi te blini?</span><br/>
-            <input type="number"  placeholder=" Nr" name="sasia"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
+            <input type="number"  placeholder="Sasia" name="sasia"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
                 class="form-control" />
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

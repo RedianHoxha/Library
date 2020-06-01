@@ -6,7 +6,6 @@ html {
 }
 
 table {
-  position: fixed;
   border-collapse: collapse;
 }
 thead {
@@ -16,8 +15,7 @@ thead {
 tbody {
   overflow: hidden;
 }
-td,
-th {
+td,th {
   min-width: 100px;
   height: 50px;
   border: 5px solid;
