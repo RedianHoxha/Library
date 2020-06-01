@@ -55,7 +55,7 @@
         width: 268px;
         height: 100px;
         ">
-            <input type="text" id="data_28" placeholder=" EMER" name="emer"   style="width: 210px; text-align: center; height: 40px; border-radius: 25px;" class="form-control" />
+            <input type="text" id="data_28" placeholder=" EMER" name="emer" autocomplete="off"   style="width: 210px; text-align: center; height: 40px; border-radius: 25px;" class="form-control" />
         </div>
         <div style="padding-bottom: 18px; padding-bottom: 30px;
         font-size: 20px;
@@ -67,7 +67,7 @@
         margin-left: -50px;
         width: 268px;
         height: 100px;">
-            <input type="text" id="data_29" placeholder=" MBIEMER" name="mbiemr"   style="width: 210px; height: 40px; text-align: center;border-radius: 25px;" class="form-control" />
+            <input type="text" id="data_29" placeholder=" MBIEMER" name="mbiemr"   autocomplete="off" style="width: 210px; height: 40px; text-align: center;border-radius: 25px;" class="form-control" />
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;
         position: absolute;
@@ -78,7 +78,7 @@
         width: 268px;
         height: 100px;
         ">
-            <input type="number"  id ="data_50" placeholder=" Tel" name="tel"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
+            <input type="number"  id ="data_50" placeholder=" Tel" name="tel"   autocomplete="off"style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
                 class="form-control" />
         </div>
         
@@ -91,7 +91,7 @@
         width: 268px;
         height: 100px;
         ">
-            <input type="text" id="data_18" placeholder=" EMAIL" name="email"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
+            <input type="text" id="data_18" placeholder=" EMAIL" name="email"    autocomplete="off" style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
                 class="form-control" />
         </div>
         
@@ -104,7 +104,7 @@
         width: 268px;
         height: 100px;
         ">
-            <input type="text" id="data_21" placeholder=" ADRESA" name="adresa"   style="width: 210px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; height: 40px; border-radius: 25px;"
+            <input type="text" id="data_21" placeholder=" ADRESA" name="adresa"    autocomplete="off"  style="width: 210px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; height: 40px; border-radius: 25px;"
                 class="form-control" />
         </div>
         <div style="padding-bottom: 18px; font-size: 20px;
@@ -115,7 +115,7 @@
         margin-left: -50px;
         width: 268px;
         height: 100px;">Sa libra deshironi te blini?</span><br/>
-            <input type="number" id="data_51"  placeholder=" Nr" name="sasia"  style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
+            <input type="number" id="data_51"  placeholder=" Nr" name="sasia"      autocomplete="off" style="width: 210px; height: 40px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-radius: 25px;"
                 class="form-control" />
         </div>
         <div style="left: 10%; top: 510px ; position:absolute; font-size: 20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Instruksione </div> 
