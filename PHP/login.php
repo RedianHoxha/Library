@@ -17,9 +17,17 @@
                 <span class="login100-form-title">
                    <h1> Mire se vini! </h1>
                 </span>
+                <?php 
+                    if(@$_GET['Invalid']== true)
+                    {
+                        ?>
+                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid']?>
+                    <?php
+                    }
+                    ?></br>
 
                 <div class="wrap-input100 validate-input" data-validate=" ss">
-                    <input class="input100" id="username" type="text" name="username" placeholder="Username:">
+                    <input class="input100" id="username" type="text" name="username" autocomplete="off" placeholder="Username:">
                     <span class="error_form" id="username_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -28,7 +36,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Password eshte i domosdoshem.">
-                    <input class="input100" id="password" type="password" name="password" placeholder="Password:">
+                    <input class="input100" id="password" type="password" name="password" placeholder="Password:" autocomplete="off">
                     <span class="error_form" id="password_error_message"></span>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
