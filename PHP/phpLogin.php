@@ -12,8 +12,9 @@ if (isset($_POST['login_user'])) {
    $passwordenkriptuar=mysqli_real_escape_string($link,$_POST['hidenpassword']);
 
 
-   $rest = substr($passwordenkriptuar, 2, -2);
-    $sqlquery="Select * from useri where Username=?";
+   $rest = substr($passwordenkriptuar, 1, -2);
+   $rest.='"';
+    $sqlquery="Select * from useri where Username=? and PassWord=?";
     $stmt = mysqli_stmt_init($link);
 
     if(!mysqli_stmt_prepare($stmt,$sqlquery))
@@ -26,7 +27,7 @@ if (isset($_POST['login_user'])) {
         echo $passwordenkriptuar;
 
         //echo 'ketusiper';
-        mysqli_stmt_bind_param($stmt,"s",$username);
+        mysqli_stmt_bind_param($stmt,"ss",$username,$rest);
         mysqli_stmt_execute($stmt);
         //echo $stmt;
         $result = mysqli_stmt_get_result($stmt);
@@ -37,37 +38,50 @@ if (isset($_POST['login_user'])) {
         if(mysqli_num_rows($result)!=0)
         {
             //echo 'ketu';
-        
-            session_start();
+            $pass= $row['PassWord'];
+            //echo $pass;
             $rolilogusit = $row['Roli'];
 
-            $_SESSION['user']= $username;
-
-            
-            if($rolilogusit != 'Vizitor')
-            {
-                    if($rolilogusit == 'Admin')
-                    {
-                        //echo $rolilogusit;
-                        header('location: ../HTML/PunonjsiHome.php');
-                    }
-                    else
-                    {
-                        //echo $rolilogusit . '2';
-                        header('location: ../HTML/punonjesthjeshtehome.php');
-                    }
-            
+            // if($pass == $rest)
+            // {
+                
         
-            }
-            else{
-            //echo 'ti nuk je admin';
-                        $_SESSION['user']= $username;
-                        header('location: ../HTML/homelexues.php');
-            }
+                session_start();
+
+                $_SESSION['user']= $username;
+
+                
+                if($rolilogusit != 'Vizitor')
+                {
+                        if($rolilogusit == 'Admin')
+                        {
+                            //echo $rolilogusit;
+                            header('location: ../HTML/PunonjsiHome.php');
+                        }
+                        else
+                        {
+                            //echo $rolilogusit . '2';
+                            header('location: ../HTML/punonjesthjeshtehome.php');
+                        }
+                
+            
+                }
+                else{
+                //echo 'ti nuk je admin';
+                            $_SESSION['user']= $username;
+                            header('location: ../HTML/homelexues.php');
+                }
+
+            // }
+            // else
+            // {
+            //         echo 'pass gabim';
+            // }
+
         }
         else
         {
-            echo 'ketu poshte';
+            header('location:login.php?Invalid=Username or PassWord is wrong!');
         }
     }
 }

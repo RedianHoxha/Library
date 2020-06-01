@@ -12,11 +12,19 @@
             <div class="login100-pic js-tilt">
                 <img src="../FOTO/librari_login.svg" alt="libraria">
 </div>
-            <form class="login100-form validate-form" id="login_form" method="POST" action="phpLogintest.php">
+            <form class="login100-form validate-form" id="login_form" method="POST" action="phpLogin.php">
 
                 <span class="login100-form-title">
                    <h1> Mire se vini! </h1>
                 </span>
+                <?php 
+                    if(@$_GET['Invalid']== true)
+                    {
+                        ?>
+                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid']?>
+                    <?php
+                    }
+                    ?></br>
 
                 <div class="wrap-input100 validate-input" data-validate=" ss">
                     <input class="input100" id="username" type="text" name="username" autocomplete="off" placeholder="Username:">
